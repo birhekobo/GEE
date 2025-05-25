@@ -179,6 +179,9 @@ const Training = () => {
             >
               Enroll Now
             </button>
+            <Link to={course.preview} className="preview-link">
+              Course Preview
+            </Link>
           </div>
         ))}
       </div>
