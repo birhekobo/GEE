@@ -1,4 +1,7 @@
+# Ignore build folder (build artifacts) so that the build folder is not pushed to GitHub
+build/
+
+# Ignore node_modules, dist, and .vscode directories
 node_modules/
 dist/
-.vscode/
-unwanted/ 
+.vscode/ 
