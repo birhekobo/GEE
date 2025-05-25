@@ -1,0 +1,93 @@
+.data-methodology-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f8fbff;
+  min-height: 100vh;
+}
+
+.data-methodology-main h2 {
+  color: #1565c0;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  text-align: left;
+}
+
+.methodology-intro {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 0 3rem 0;
+  line-height: 1.6;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.data-grid,
+.methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2.5em;
+}
+
+.data-method-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(21,101,192,0.07);
+  padding: 1.5em 1.2em;
+  transition: box-shadow 0.2s;
+  border-left: 5px solid #1565c0;
+}
+
+.data-method-card h4,
+.data-method-card h3 {
+  color: #1565c0;
+  margin-top: 0;
+  margin-bottom: 0.7em;
+  font-size: 1.2rem;
+}
+
+.data-method-card p {
+  color: #222;
+  font-size: 1.05em;
+  margin-bottom: 1rem;
+}
+
+.card-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-links a {
+  color: #1565c0;
+  text-decoration: underline;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.card-links a:hover {
+  color: #0d47a1;
+}
+
+.methodology-note {
+  text-align: center;
+  color: #7f8c8d;
+  font-style: italic;
+  margin-top: 2rem;
+}
+
+@media (max-width: 700px) {
+  .data-methodology-main {
+    padding: 1rem;
+  }
+  .data-methodology-main h2 {
+    font-size: 2rem;
+  }
+  .data-grid,
+  .methodology-grid {
+    grid-template-columns: 1fr;
+  }
+} 

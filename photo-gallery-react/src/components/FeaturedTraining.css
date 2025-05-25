@@ -1,0 +1,28 @@
+/* Featured Training Section Styles */
+.featured-training {
+    background: #f5f7fa;
+    border-radius: 8px;
+    padding: 2em;
+    margin: 2em 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.featured-training h2 {
+    margin-top: 0;
+}
+
+.featured-training ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1em 0;
+}
+
+.featured-training li {
+    margin-bottom: 0.5em;
+}
+
+.featured-link {
+    color: #005fa3;
+    text-decoration: underline;
+    font-weight: bold;
+} 

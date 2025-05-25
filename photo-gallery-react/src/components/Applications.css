@@ -1,0 +1,178 @@
+.applications {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.applications-content {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.applications h1 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.applications p {
+  color: #34495e;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.applications em {
+  color: #3498db;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .applications {
+    padding: 1rem;
+  }
+
+  .applications-content {
+    padding: 1.5rem;
+  }
+}
+
+.applications-casestudies {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f8fbff;
+  min-height: 100vh;
+}
+
+.acs-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.header-logo {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #e0e0e0;
+  background: #fff;
+}
+
+.acs-header h1 {
+  font-size: 2rem;
+  color: #1a237e;
+  margin: 0;
+}
+
+main > h2 {
+  color: #1565c0;
+  margin-bottom: 0.5em;
+  font-size: 2rem;
+  text-align: left;
+}
+
+main > p {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 2em;
+  max-width: 800px;
+}
+
+.applications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2.5em;
+}
+
+.application-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(21,101,192,0.07);
+  padding: 1.5em 1.2em;
+  transition: box-shadow 0.2s;
+  border-left: 5px solid #1565c0;
+}
+
+.application-card h3 {
+  color: #1565c0;
+  margin-top: 0;
+  margin-bottom: 0.7em;
+  font-size: 1.2rem;
+}
+
+.application-card ul {
+  margin: 0 0 0 1.2em;
+  padding: 0;
+  color: #222;
+  font-size: 1.05em;
+}
+
+.application-card li {
+  margin-bottom: 0.7em;
+  line-height: 1.5;
+}
+
+.gallery-link {
+  text-align: center;
+  margin-top: 2em;
+  font-size: 1.1em;
+}
+
+.gallery-link a {
+  color: #1565c0;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.acs-footer {
+  margin-top: 3em;
+  padding: 2em 0 1em 0;
+  background: #e3eafc;
+  border-radius: 0 0 16px 16px;
+  text-align: center;
+}
+
+.acs-footer p {
+  margin: 0.5em 0;
+  color: #1a237e;
+  font-size: 1em;
+}
+
+.attribution {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.footer-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #b0bec5;
+  background: #fff;
+}
+
+@media (max-width: 700px) {
+  .acs-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .applications-grid {
+    grid-template-columns: 1fr;
+  }
+  .acs-header h1 {
+    font-size: 1.3rem;
+  }
+} 

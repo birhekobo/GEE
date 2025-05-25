@@ -1,0 +1,384 @@
+.course-preview {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.course-hero {
+  position: relative;
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  color: white;
+  padding: 4rem 2rem;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  overflow: hidden;
+}
+
+.course-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.course-hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.course-hero h1 {
+  position: relative;
+  z-index: 2;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.course-hero p {
+  position: relative;
+  z-index: 2;
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.course-main-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.course-details {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.course-details h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin: 2rem 0 1rem;
+}
+
+.course-details h2:first-child {
+  margin-top: 0;
+}
+
+.course-details p {
+  color: #34495e;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.course-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+
+.course-details li {
+  color: #34495e;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.course-details li:last-child {
+  border-bottom: none;
+}
+
+.course-details li strong {
+  color: #2c3e50;
+}
+
+.course-sidebar {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.course-sidebar h3 {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  margin: 0 0 1rem;
+}
+
+.course-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+
+.course-sidebar li {
+  color: #34495e;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.course-sidebar li:last-child {
+  border-bottom: none;
+}
+
+.course-sidebar p {
+  color: #34495e;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.enroll-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+}
+
+.enroll-btn:hover {
+  background-color: #c0392b;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #3498db;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.testimonials {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial {
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  background: #f8f9fa;
+  border-left: 4px solid #3498db;
+  border-radius: 5px;
+  font-style: italic;
+  color: #34495e;
+  line-height: 1.6;
+}
+
+.testimonial:last-child {
+  margin-bottom: 0;
+}
+
+.faq-section {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-section h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.faq {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.faq:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.faq-question {
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.faq-answer {
+  color: #34495e;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .course-preview {
+    padding: 1rem;
+  }
+
+  .course-hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .course-hero h1 {
+    font-size: 2rem;
+  }
+
+  .course-main-content {
+    grid-template-columns: 1fr;
+  }
+
+  .course-details,
+  .course-sidebar,
+  .testimonials,
+  .faq-section {
+    padding: 1.5rem;
+  }
+
+  .testimonial {
+    padding: 1rem;
+  }
+}
+
+.course-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  height: 100%;
+  overflow: hidden;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.course-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.course-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.course-instructor {
+  color: #666;
+  margin: 0 0 8px 0;
+  font-size: 0.9rem;
+}
+
+.course-level {
+  color: #666;
+  margin: 0 0 12px 0;
+  font-size: 0.9rem;
+}
+
+.course-description {
+  color: #444;
+  margin: 0 0 16px 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.course-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.topic-chip {
+  background: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.course-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.detail-icon {
+  font-size: 1.1rem;
+}
+
+.course-actions {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.enroll-button {
+  background: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.enroll-button:hover {
+  background: #0056b3;
+}
+
+.details-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.details-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+} 

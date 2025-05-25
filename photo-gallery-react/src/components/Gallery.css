@@ -1,0 +1,232 @@
+/* Gallery Styles */
+.gallery-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+.gallery-intro h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.gallery-intro > p {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    background-color: #FFFFFF;
+    border: 1px solid #DDEEFF;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(51, 102, 204, 0.25);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item-info {
+    padding: 15px;
+    font-size: 0.9rem;
+    background-color: rgba(255, 255, 255, 0.97);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transform: translateY(100%);
+}
+
+.gallery-item:hover .gallery-item-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery-item-info p {
+    margin: 5px 0;
+    color: #333333;
+}
+
+.image-description {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 8px;
+    line-height: 1.4;
+}
+
+/* Loading Styles */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3366CC;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Lightbox Styles */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox-content {
+    max-width: 80%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #FFFFFF;
+    font-size: 30px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    border: none;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav-button.prev {
+    left: 20px;
+}
+
+.nav-button.next {
+    right: 20px;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+.caption p {
+    margin: 5px 0;
+}
+
+.caption .image-description {
+    color: #DDDDDD;
+    font-size: 0.9em;
+    max-width: 800px;
+    margin: 10px auto 0;
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .gallery-intro h2 {
+        font-size: 2rem;
+    }
+
+    .lightbox-content {
+        max-width: 95%;
+    }
+
+    .nav-button {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .caption {
+        padding: 15px;
+    }
+} 
