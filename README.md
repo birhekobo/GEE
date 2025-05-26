@@ -14,7 +14,7 @@ A modern web application showcasing satellite remote sensing consultancy service
 
 ## 🚀 Live Demo
 
-Visit the live website: [https://gee-birhanu.vercel.app](https://gee-birhanu.vercel.app)
+Visit the live website: [https://birhanuasmerom.vercel.app](https://birhanuasmerom.vercel.app)
 
 ## 🛠️ Tech Stack
 
@@ -81,7 +81,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Birhanu Asmerom**
-- Website: [https://gee-birhanu.vercel.app](https://gee-birhanu.vercel.app)
+- Website: [https://birhanuasmerom.vercel.app](https://birhanuasmerom.vercel.app)
 - Email: birhanu.asmerom@gmail.com
 
 ## 🙏 Acknowledgments
