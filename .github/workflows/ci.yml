@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x, 18.x]
+        node-version: [18.x]
 
     steps:
     - uses: actions/checkout@v3
@@ -34,12 +34,18 @@ jobs:
         cd photo-gallery-react
         npm run lint
     
+    - name: Check for security vulnerabilities
+      run: |
+        cd photo-gallery-react
+        npm audit --production
+    
     - name: Build
       run: |
         cd photo-gallery-react
         npm run build
       env:
         CI: false # This prevents treating warnings as errors
+        REACT_APP_VERSION: ${{ github.sha }}
     
     - name: Cache build
       uses: actions/cache@v3
@@ -64,4 +70,9 @@ jobs:
         vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
         vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
         working-directory: ./photo-gallery-react
-        vercel-args: '--prod' 
+        vercel-args: '--prod'
+    
+    - name: Verify deployment
+      run: |
+        echo "Deployment completed. Please verify at https://birhanuasmerom.vercel.app"
+        echo "Commit SHA: ${{ github.sha }}" 
