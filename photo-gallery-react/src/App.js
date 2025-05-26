@@ -21,7 +21,6 @@ import Contact from "./components/Contact";
 import Training from "./components/Training";
 import Applications from "./components/Applications";
 import Publications from "./components/Publications/Publications";
-import CoursesPage from "./components/CoursesPage";
 import AIResearch from "./components/AIResearch";
 
 function App() {
@@ -39,7 +38,6 @@ function App() {
             element={<ProjectsAndCollaboration />}
           />
           <Route path="/data-methodology" element={<DataMethodology />} />
-          <Route path="/courses" element={<CoursesPage />} />
           <Route path="/courses/matlab" element={<MatlabCoursePreview />} />
           <Route path="/courses/ml" element={<MlCoursePreview />} />
           <Route

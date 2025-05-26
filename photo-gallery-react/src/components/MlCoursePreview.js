@@ -94,31 +94,6 @@ function MlCoursePreview() {
         </div>
       </div>
 
-      <div className="related-course-preview">
-        <h3>Preview: Google Earth Engine for Environmental Monitoring</h3>
-        <img
-          src="https://earthengine.google.com/static/images/earth-engine-logo.png"
-          alt="Google Earth Engine"
-          style={{ width: "100%", maxWidth: 200, margin: "1rem 0" }}
-        />
-        <p>
-          Learn how to use Google Earth Engine for large-scale environmental
-          monitoring and geospatial analysis. This course covers remote sensing,
-          data processing, and AI applications for real-world environmental
-          challenges.
-        </p>
-        <ul>
-          <li>Land cover classification</li>
-          <li>Deforestation detection</li>
-          <li>Flood mapping and prediction</li>
-          <li>AI for geospatial data</li>
-          <li>Hands-on coding exercises</li>
-        </ul>
-        <a href="/gee-course" className="enroll-btn">
-          Preview Course
-        </a>
-      </div>
-
       <section className="testimonials">
         <h2>Student Testimonials</h2>
         <div className="testimonial">

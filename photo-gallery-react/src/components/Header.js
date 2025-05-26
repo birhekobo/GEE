@@ -40,9 +40,6 @@ function Header() {
               <Link to="/ai-research">AI Research</Link>
             </li>
             <li>
-              <Link to="/courses">Courses</Link>
-            </li>
-            <li>
               <Link to="/training">Training</Link>
             </li>
             <li>
