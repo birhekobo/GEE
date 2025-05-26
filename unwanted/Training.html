@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Programs - Satellite Remote Sensing Consultancy</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .course-container {
+            margin: 20px 0;
+        }
+
+        .course-header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .course-header:hover {
+            background-color: #34495e;
+        }
+
+        .course-content {
+            display: none;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 0 0 5px 5px;
+            margin-top: -5px;
+        }
+
+        .course-content.active {
+            display: block;
+        }
+
+        .arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .arrow.active {
+            transform: rotate(180deg);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="images/Wollo University Logo.jpg" alt="Wollo University Logo" class="header-logo">
+        <div class="header-content-wrapper">
+            <h1>Satellite Remote Sensing Consultancy</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html">Photo Gallery</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="data-methodology.html">Data & Methodology</a></li>
+                    <li><a href="Applications.html">Applications</a></li>
+                    <li class="current-page"><a href="Training.html">Training</a></li>
+                    <li><a href="Projects and Collaboration.html">Projects & Collaboration</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="training" class="training-section">
+            <h1 class="training-title">Our Training Programs</h1>
+            <p class="training-intro">Boost your expertise in satellite remote sensing and geospatial analysis. Our hands-on, expert-led courses are designed for all levels and delivered in a modern, interactive format.</p>
+            <div class="training-grid">
+                <div class="course-container">
+                    <div class="course-header" onclick="toggleCourse(this)">
+                        <span>MATLAB</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>MATLAB Training</h3>
+                        <p>Learn MATLAB programming for scientific computing and data analysis.</p>
+                        <ul>
+                            <li>Basic MATLAB syntax and operations</li>
+                            <li>Data visualization and plotting</li>
+                            <li>Matrix operations and linear algebra</li>
+                            <li>Signal processing applications</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-container">
+                    <div class="course-header" onclick="toggleCourse(this)">
+                        <span>Machine Learning</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>Machine Learning Course</h3>
+                        <p>Comprehensive introduction to machine learning concepts and applications.</p>
+                        <ul>
+                            <li>Supervised and unsupervised learning</li>
+                            <li>Classification and regression</li>
+                            <li>Neural networks and deep learning</li>
+                            <li>Model evaluation and optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-container">
+                    <div class="course-header" onclick="toggleCourse(this)">
+                        <span>Numerical MATLAB</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>Numerical Methods in MATLAB</h3>
+                        <p>Advanced numerical computing techniques using MATLAB.</p>
+                        <ul>
+                            <li>Numerical integration and differentiation</li>
+                            <li>Solving differential equations</li>
+                            <li>Optimization techniques</li>
+                            <li>Numerical linear algebra</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-container">
+                    <div class="course-header" onclick="toggleCourse(this)">
+                        <span>Python</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>Python Programming</h3>
+                        <p>Learn Python programming for data science and scientific computing.</p>
+                        <ul>
+                            <li>Python basics and syntax</li>
+                            <li>Data structures and algorithms</li>
+                            <li>Scientific computing with NumPy and SciPy</li>
+                            <li>Data analysis with Pandas</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-container">
+                    <div class="course-header" onclick="toggleCourse(this)">
+                        <span>QGIS</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>QGIS Training</h3>
+                        <p>Master QGIS for spatial data analysis and mapping.</p>
+                        <ul>
+                            <li>QGIS interface and tools</li>
+                            <li>Vector and raster data processing</li>
+                            <li>Spatial analysis techniques</li>
+                            <li>Map creation and visualization</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-container">
+                    <div class="course-header" onclick="toggleCourse(this)">
+                        <span>Intro Remote Sensing</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>Introduction to Remote Sensing</h3>
+                        <p>Learn the fundamentals of remote sensing and satellite imagery analysis.</p>
+                        <ul>
+                            <li>Remote sensing principles</li>
+                            <li>Satellite imagery interpretation</li>
+                            <li>Image processing techniques</li>
+                            <li>Applications in environmental monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-container">
+                    <div class="course-header" onclick="toggleCourse(this)">
+                        <span>LaTeX</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>LaTeX Document Preparation</h3>
+                        <p>Learn LaTeX for professional document preparation and academic writing.</p>
+                        <ul>
+                            <li>LaTeX basics and syntax</li>
+                            <li>Document structure and formatting</li>
+                            <li>Mathematical equations and symbols</li>
+                            <li>Bibliography and citations</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-container">
+                    <div class="course-header" onclick="toggleCourse(this)">
+                        <span>GEE (Google Earth Engine)</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>Google Earth Engine Training</h3>
+                        <p>Master Google Earth Engine for geospatial analysis and big data processing.</p>
+                        <ul>
+                            <li>GEE platform overview</li>
+                            <li>JavaScript programming for GEE</li>
+                            <li>Satellite data processing</li>
+                            <li>Time series analysis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="training-benefits">
+                <h2>Why Choose Our Training?</h2>
+                <ul>
+                    <li>Expert Instructors with real-world experience</li>
+                    <li>Hands-on, project-based learning</li>
+                    <li>Flexible online and in-person options</li>
+                    <li>Certification upon completion</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <nav class="section-nav">
+        <ul>
+            <li><a href="#training" class="active">Training Programs</a></li>
+            <li><a href="#publications">Publications</a></li>
+        </ul>
+    </nav>
+
+    <section id="publications" class="publications-section">
+        <h1 class="publications-title">Our Publications</h1>
+        <p class="publications-intro">Explore our research contributions and scientific publications in the field of remote sensing and geospatial analysis.</p>
+        
+        <div class="filter-buttons">
+            <button class="filter-button active" data-category="all">All Publications</button>
+            <button class="filter-button" data-category="research">Research Papers</button>
+            <button class="filter-button" data-category="review">Review Articles</button>
+        </div>
+
+        <div id="publications-container"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Satellite Remote Sensing Consultancy. All rights reserved.</p>
+    </footer>
+
+    <link rel="stylesheet" href="src/publications.css">
+    <script src="src/publications.js"></script>
+    <script>
+        function toggleCourse(element) {
+            const content = element.nextElementSibling;
+            const arrow = element.querySelector('.arrow');
+            
+            content.classList.toggle('active');
+            arrow.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html> 
