@@ -129,25 +129,42 @@ function Gallery() {
   const [currentImage, setCurrentImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [loadError, setLoadError] = useState(null);
 
   useEffect(() => {
-    // Preload images
+    // Preload images with timeout
     const loadImages = async () => {
       const imagePromises = galleryData.map((image) => {
         return new Promise((resolve, reject) => {
           const img = new Image();
           img.src = image.src;
-          img.onload = resolve;
-          img.onerror = reject;
+
+          // Add timeout to prevent hanging
+          const timeout = setTimeout(() => {
+            reject(new Error(`Timeout loading image: ${image.src}`));
+          }, 10000); // 10 second timeout
+
+          img.onload = () => {
+            clearTimeout(timeout);
+            resolve();
+          };
+          img.onerror = (error) => {
+            clearTimeout(timeout);
+            reject(error);
+          };
         });
       });
 
       try {
         await Promise.all(imagePromises);
         setImagesLoaded(true);
+        setLoadError(null);
       } catch (error) {
         console.error("Error loading images:", error);
-        setImagesLoaded(true); // Still set to true to show gallery even if some images fail
+        setLoadError(
+          "Some images failed to load. Please refresh the page or try again later."
+        );
+        setImagesLoaded(true); // Still show gallery even if some images fail
       }
     };
 
@@ -211,6 +228,20 @@ function Gallery() {
     );
   }
 
+  if (loadError) {
+    return (
+      <div className="error-container">
+        <p className="error-message">{loadError}</p>
+        <button
+          className="retry-button"
+          onClick={() => window.location.reload()}
+        >
+          Retry Loading
+        </button>
+      </div>
+    );
+  }
+
   return (
     <section className="gallery-intro">
       <h2>Gallery</h2>
@@ -227,7 +258,15 @@ function Gallery() {
             className="gallery-item"
             onClick={() => openLightbox(image, index)}
           >
-            <img src={image.src} alt={image.alt} loading="lazy" />
+            <img
+              src={image.src}
+              alt={image.alt}
+              loading="lazy"
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = "/images/placeholder.png"; // Add a placeholder image
+              }}
+            />
             <div className="gallery-item-info">
               <p>Location: {image.location}</p>
               <p>Date: {image.date}</p>

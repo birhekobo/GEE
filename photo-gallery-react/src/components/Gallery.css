@@ -48,6 +48,9 @@
     object-fit: cover;
     display: block;
     transition: transform 0.3s ease;
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .gallery-item:hover img {
@@ -229,4 +232,41 @@
     .caption {
         padding: 15px;
     }
+}
+
+/* Error Styles */
+.error-container {
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    background-color: #fff3f3;
+    border: 1px solid #ffcdd2;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.error-message {
+    color: #d32f2f;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.retry-button {
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.retry-button:hover {
+    background-color: #1976d2;
+}
+
+.retry-button:active {
+    background-color: #1565c0;
 } 

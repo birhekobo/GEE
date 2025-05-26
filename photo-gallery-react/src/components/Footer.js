@@ -6,11 +6,17 @@ function Footer() {
     <footer>
       <p>Copyright © 2025, All Right Reserved | Birhanu Asmerom</p>
       <div className="attribution">
-        <img
-          src="/images/Wollo University logo.jpg"
-          alt="Wollo University Logo"
-          className="footer-logo"
-        />
+        <div className="footer-logo-container">
+          <img
+            src="/images/Wollo University Logo.jpg"
+            alt="Wollo University Logo"
+            className="footer-logo"
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = "/images/Wollo University Logo1.jpg";
+            }}
+          />
+        </div>
         <p>
           Developed By Wollo University Department of Physics Atmospheric
           Science Research group

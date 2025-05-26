@@ -8,8 +8,12 @@ function Header() {
       <div className="header-content">
         <Link to="/" className="logo">
           <img
-            src="/images/Wollo University logo.jpg"
+            src="/images/Wollo University Logo.jpg"
             alt="Wollo University Logo"
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = "/images/Wollo University Logo1.jpg";
+            }}
           />
           <h1>Satellite Remote Sensing Consultancy</h1>
         </Link>
