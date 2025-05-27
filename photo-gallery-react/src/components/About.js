@@ -109,7 +109,7 @@ function About() {
               <h3>Birhanu Asmerom</h3>
               <p className="team-role">Lead Consultant</p>
               <p className="team-expertise">Expert in Remote Sensing and GIS</p>
-              <p className="team-qualification">Ph.D. in Geospatial Sciences</p>
+              <p className="team-qualification">Ph.D. in Atmospheric Physics</p>
             </div>
           </div>
           <div className="team-member">
