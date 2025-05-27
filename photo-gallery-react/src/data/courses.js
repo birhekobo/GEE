@@ -28,7 +28,7 @@ export const matlabCourse = {
     },
     {
       text: "The course structure and practical examples made complex concepts easy to understand. Highly recommended!",
-      author: "Michael Chen, GIS Analyst",
+      author: "Birhanu Asmerom, GIS Analyst",
     },
   ],
   faqs: [

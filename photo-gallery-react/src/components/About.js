@@ -127,10 +127,10 @@ function About() {
           </div>
           <div className="team-member">
             <div className="team-image">
-              <img src="/images/birhanu-asmerom.jpg" alt="Michael Chen" />
+              <img src="/images/birhanu-asmerom.jpg" alt="Birhanu Asmerom" />
             </div>
             <div className="team-content">
-              <h3>Michael Chen</h3>
+              <h3>Birhanu Asmerom</h3>
               <p className="team-role">Technical Lead</p>
               <p className="team-expertise">GIS and Data Analysis Expert</p>
               <p className="team-qualification">Certified GIS Professional</p>
