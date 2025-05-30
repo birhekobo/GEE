@@ -1,22 +1,23 @@
 import React, { useState, useEffect, useCallback } from "react";
 import "./Gallery.css";
+import ErrorBoundary from "./ErrorBoundary";
 
 const galleryData = [
   {
     src: "/images/Picture2.jpg",
-    alt: "Picture 2",
-    location: "Location for Picture 2",
-    date: "Date for Picture 2",
+    alt: "Picture 1",
+    location: "Earth Atmosphere",
+    date: "Satellite Principle",
     description:
-      "High-resolution satellite image showing a detailed view of the landscape. This image is used for monitoring land cover changes, urban expansion, and environmental analysis. It provides valuable data for researchers and decision-makers in understanding spatial patterns and trends over time.",
+      "Satellite remote sensing operates by capturing solar radiation that is reflected from the Earth's surface. The Sun emits incident solar radiation, which passes through the atmosphere and interacts with various surface features such as buildings, roads, grass, water, and forests. Each surface type reflects solar energy differently. Satellites equipped with sensors detect this reflected solar radiation from space. The collected data is then transmitted to ground servers for processing and analysis. This principle enables the monitoring and mapping of land cover, environmental changes, and other surface characteristics without direct contact, providing essential information for scientific research and decision-making.",
   },
   {
-    src: "/images/FIG2.png",
-    alt: "South Woll Topography from SRTM data",
-    location: "South Woll",
+    src: "/images/FIG22.png",
+    alt: "South Wollo Topography from SRTM data",
+    location: "South Wollo",
     date: "SRTM Data Year",
     description:
-      "This image displays the topography of South Woll, derived from Shuttle Radar Topography Mission (SRTM) data. The elevation information helps in understanding terrain features, watershed analysis, and planning for infrastructure or environmental management in the region.",
+      "This image displays the topography of South Wollo, derived from Shuttle Radar Topography Mission (SRTM) data. The SRTM provides for the first time a near-global high-resolution digital elevation model (DEM). The elevation information helps in understanding terrain features, watershed analysis, and planning for infrastructure or environmental management in the region.",
   },
   {
     src: "/images/FIG4.png",
@@ -92,7 +93,7 @@ const galleryData = [
   },
   {
     src: "/images/FIG13.png",
-    alt: "CALIPSO Satellite Data Image 13",
+    alt: "CALIPSO Satellite Data Image 15",
     location: "Global",
     date: "CALIPSO Mission",
     description:
@@ -107,15 +108,7 @@ const galleryData = [
       "This image displays drought conditions as observed by the GRACE (Gravity Recovery and Climate Experiment) satellite mission. GRACE measures changes in Earth's gravity field to monitor variations in terrestrial water storage, including groundwater, soil moisture, and surface water. The data is essential for drought assessment, water resource management, and understanding the impacts of climate variability on hydrological systems.",
   },
   {
-    src: "/images/FIG15.png",
-    alt: "CALIPSO Satellite Data Image 15",
-    location: "Global",
-    date: "CALIPSO Mission",
-    description:
-      "This image presents data from the CALIPSO (Cloud-Aerosol Lidar and Infrared Pathfinder Satellite Observation) satellite mission. CALIPSO uses lidar technology to provide vertical profiles of clouds and aerosols in the atmosphere. The data is crucial for studying cloud structure, aerosol transport, air quality, and their impacts on weather, climate, and human health.",
-  },
-  {
-    src: "/images/FIG16.png",
+    src: "/images/FIG22.png",
     alt: "MISR Aerosol Data Image 16",
     location: "Global",
     date: "MISR Mission",
@@ -130,6 +123,8 @@ function Gallery() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const [loadError, setLoadError] = useState(null);
+  const [failedImages, setFailedImages] = useState([]);
+  const [retryCount, setRetryCount] = useState(0);
 
   useEffect(() => {
     // Preload images with timeout
@@ -142,7 +137,7 @@ function Gallery() {
           // Add timeout to prevent hanging
           const timeout = setTimeout(() => {
             reject(new Error(`Timeout loading image: ${image.src}`));
-          }, 10000); // 10 second timeout
+          }, 15000); // 15 second timeout
 
           img.onload = () => {
             clearTimeout(timeout);
@@ -150,7 +145,7 @@ function Gallery() {
           };
           img.onerror = (error) => {
             clearTimeout(timeout);
-            reject(error);
+            reject({ error, image });
           };
         });
       });
@@ -159,16 +154,32 @@ function Gallery() {
         await Promise.all(imagePromises);
         setImagesLoaded(true);
         setLoadError(null);
+        setFailedImages([]);
       } catch (error) {
         console.error("Error loading images:", error);
-        setLoadError(
-          "Some images failed to load. Please refresh the page or try again later."
-        );
+        const failedImage = error.image || { src: 'unknown' };
+        setFailedImages(prev => {
+          if (prev.includes(failedImage.src)) {
+            return prev;
+          }
+          const newFailedImages = [...prev, failedImage.src];
+          setLoadError(
+            `Failed to load ${newFailedImages.length} image(s). Please check your internet connection and try again.`
+          );
+          return newFailedImages;
+        });
         setImagesLoaded(true); // Still show gallery even if some images fail
       }
     };
 
     loadImages();
+  }, [retryCount]);
+
+  const handleRetry = useCallback(() => {
+    setRetryCount(prev => prev + 1);
+    setLoadError(null);
+    setFailedImages([]);
+    setImagesLoaded(false);
   }, []);
 
   const openLightbox = useCallback((image, index) => {
@@ -232,86 +243,106 @@ function Gallery() {
     return (
       <div className="error-container">
         <p className="error-message">{loadError}</p>
-        <button
-          className="retry-button"
-          onClick={() => window.location.reload()}
-        >
-          Retry Loading
-        </button>
+        <div className="retry-options">
+          <button
+            className="retry-button"
+            onClick={handleRetry}
+          >
+            Retry Loading
+          </button>
+          <button
+            className="retry-button secondary"
+            onClick={() => window.location.reload()}
+          >
+            Refresh Page
+          </button>
+        </div>
+        {failedImages.length > 0 && (
+          <div className="failed-images">
+            <p>Failed to load the following images:</p>
+            <ul>
+              {[...new Set(failedImages)].map((src, index) => (
+                <li key={index}>{src}</li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     );
   }
 
   return (
-    <section className="gallery-intro">
-      <h2>Gallery</h2>
-      <p>
-        Explore our curated collection of satellite images showcasing diverse
-        landscapes, environmental changes, and the power of remote sensing
-        technology. Click on any image to learn more about its location, date,
-        and significance.
-      </p>
-      <div className="gallery-grid" aria-label="Satellite Image Gallery">
-        {galleryData.map((image, index) => (
-          <div
-            key={index}
-            className="gallery-item"
-            onClick={() => openLightbox(image, index)}
-          >
-            <img
-              src={image.src}
-              alt={image.alt}
-              loading="lazy"
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.src = "/images/placeholder.png"; // Add a placeholder image
+    <ErrorBoundary>
+      <section className="gallery-intro">
+        <h2>Gallery</h2>
+        <p>
+          Explore our curated collection of satellite images showcasing diverse
+          landscapes, environmental changes, and the power of remote sensing
+          technology. Click on any image to learn more about its location, date,
+          and significance.
+        </p>
+        <div className="gallery-grid" aria-label="Satellite Image Gallery">
+          {galleryData.map((image, index) => (
+            <div
+              key={index}
+              className="gallery-item"
+              onClick={() => openLightbox(image, index)}
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                loading="lazy"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = "/images/placeholder.png"; // Add a placeholder image
+                }}
+              />
+              <div className="gallery-item-info">
+                <p>Location: {image.location}</p>
+                <p>Date: {image.date}</p>
+                <p className="image-description">{image.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        {lightboxOpen && currentImage && (
+          <div className="lightbox" onClick={closeLightbox}>
+            <span className="close-button">&times;</span>
+            <button
+              className="nav-button prev"
+              onClick={(e) => {
+                e.stopPropagation();
+                navigateImage(-1);
               }}
+            >
+              &#10094;
+            </button>
+            <img
+              className="lightbox-content"
+              src={currentImage.src}
+              alt={currentImage.alt}
+              onClick={(e) => e.stopPropagation()}
             />
-            <div className="gallery-item-info">
-              <p>Location: {image.location}</p>
-              <p>Date: {image.date}</p>
-              <p className="image-description">{image.description}</p>
+            <button
+              className="nav-button next"
+              onClick={(e) => {
+                e.stopPropagation();
+                navigateImage(1);
+              }}
+            >
+              &#10095;
+            </button>
+            <div className="caption">
+              <p>{currentImage.alt}</p>
+              <p>
+                Location: {currentImage.location} | Date: {currentImage.date}
+              </p>
+              <p className="image-description">{currentImage.description}</p>
             </div>
           </div>
-        ))}
-      </div>
-      {lightboxOpen && currentImage && (
-        <div className="lightbox" onClick={closeLightbox}>
-          <span className="close-button">&times;</span>
-          <button
-            className="nav-button prev"
-            onClick={(e) => {
-              e.stopPropagation();
-              navigateImage(-1);
-            }}
-          >
-            &#10094;
-          </button>
-          <img
-            className="lightbox-content"
-            src={currentImage.src}
-            alt={currentImage.alt}
-            onClick={(e) => e.stopPropagation()}
-          />
-          <button
-            className="nav-button next"
-            onClick={(e) => {
-              e.stopPropagation();
-              navigateImage(1);
-            }}
-          >
-            &#10095;
-          </button>
-          <div className="caption">
-            <p>{currentImage.alt}</p>
-            <p>
-              Location: {currentImage.location} | Date: {currentImage.date}
-            </p>
-            <p className="image-description">{currentImage.description}</p>
-          </div>
-        </div>
-      )}
-    </section>
+        )}
+      </section>
+    </ErrorBoundary>
   );
 }
 
