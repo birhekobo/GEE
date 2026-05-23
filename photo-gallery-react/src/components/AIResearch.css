@@ -1,0 +1,341 @@
+.ai-research-container {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ai-research-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.ai-research-header h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.ai-research-header p {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.research-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.research-card:hover {
+  transform: translateY(-5px);
+}
+
+.research-image-container {
+  position: relative;
+  height: 200px;
+}
+
+.research-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.research-category {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.research-category span {
+  background-color: #3498db;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.research-content {
+  padding: 1.5rem;
+}
+
+.research-content h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.research-content p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.research-features {
+  margin-bottom: 1.5rem;
+}
+
+.research-features h4 {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.research-features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.research-features li {
+  display: flex;
+  align-items: center;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.research-features li i {
+  color: #2ecc71;
+  margin-right: 0.5rem;
+}
+
+.learn-more-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #2980b9;
+}
+
+.research-highlights {
+  background: white;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+
+.research-highlights h3 {
+  font-size: 2rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.highlight-item {
+  text-align: center;
+}
+
+.highlight-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #3498db;
+  margin-bottom: 0.5rem;
+}
+
+.highlight-item p {
+  color: #666;
+}
+
+.explore-research {
+  text-align: center;
+}
+
+.explore-btn {
+  padding: 1rem 2rem;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: #1a252f;
+}
+
+@media (max-width: 768px) {
+  .ai-research-container {
+    padding: 2rem 1rem;
+  }
+
+  .ai-research-header h2 {
+    font-size: 2rem;
+  }
+
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ai-gis-container {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.ai-gis-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.ai-gis-header h2 {
+  font-size: 2.8rem;
+  color: #222b3a;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.ai-gis-header p {
+  font-size: 1.25rem;
+  color: #5a5a5a;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.ai-gis-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ai-gis-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(44, 62, 80, 0.08);
+  overflow: hidden;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.ai-gis-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.ai-gis-card-image {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #eaeaea;
+}
+
+.ai-gis-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ai-gis-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #2563eb;
+  color: #fff;
+  padding: 6px 18px;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+}
+
+.ai-gis-card h3 {
+  font-size: 1.35rem;
+  color: #222b3a;
+  font-weight: 600;
+  margin: 1.5rem 1.5rem 0.5rem 1.5rem;
+}
+
+.ai-gis-card p {
+  color: #444;
+  margin: 0 1.5rem 1rem 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.ai-gis-features {
+  margin: 0 1.5rem 1.5rem 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.ai-gis-features li {
+  color: #1a7f37;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.ai-gis-features li:before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #22c55e;
+  font-size: 1.1em;
+}
+
+.ai-gis-learn-more {
+  margin: 0 1.5rem 1.5rem 1.5rem;
+  padding: 0.85rem 0;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ai-gis-learn-more:hover {
+  background: #1741a6;
+}
+
+@media (max-width: 1200px) {
+  .ai-gis-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ai-gis-card {
+    width: 90%;
+    max-width: 500px;
+  }
+} 

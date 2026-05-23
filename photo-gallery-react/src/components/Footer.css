@@ -1,0 +1,24 @@
+/* Footer Styles */
+footer {
+    background-color: #3366CC;
+    color: #FFFFFF;
+    padding: 1rem 20px;
+    text-align: center;
+}
+
+.attribution {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.footer-logo {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.attribution p {
+    margin: 0;
+} 

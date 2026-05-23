@@ -1,9 +1,25 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 // Keep CSS for pseudo-elements, hover/focus effects, and media queries
 import "./Contact.css";
 
 function Contact() {
+=======
+import React, { useState } from "react";
+import {
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedin,
+} from "react-icons/fa";
+import "./Contact.css";
+
+const Contact = () => {
+>>>>>>> 28a16a96c48c11086b9e84a45187ba445707b84b
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -11,6 +27,7 @@ function Contact() {
     message: "",
   });
 
+<<<<<<< HEAD
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
   const [errorDetails, setErrorDetails] = useState("");
@@ -31,6 +48,8 @@ function Contact() {
     }
   }, []);
 
+=======
+>>>>>>> 28a16a96c48c11086b9e84a45187ba445707b84b
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -39,6 +58,7 @@ function Contact() {
     }));
   };
 
+<<<<<<< HEAD
   const sendConfirmation = async (senderEmail, senderName, messageDetails) => {
     try {
       console.log("Attempting to send confirmation email to:", senderEmail);
@@ -162,21 +182,33 @@ Wollo University Physics Department
     } finally {
       setIsSubmitting(false);
     }
+=======
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    console.log("Form submitted:", formData);
+>>>>>>> 28a16a96c48c11086b9e84a45187ba445707b84b
   };
 
   return (
     <div className="contact-container">
       <div className="contact-header">
+<<<<<<< HEAD
         <h2>Get in Touch</h2>
         <p>
           Have questions about our courses or services? We're here to help.
           Reach out to us through any of the following channels or fill out the
           contact form below.
         </p>
+=======
+        <h1>Contact Us</h1>
+        <p>Get in touch with us for any questions or inquiries</p>
+>>>>>>> 28a16a96c48c11086b9e84a45187ba445707b84b
       </div>
 
       <div className="contact-content">
         <div className="contact-info">
+<<<<<<< HEAD
           <div className="info-section">
             <h3>Contact Information</h3>
             <div className="info-item">
@@ -340,10 +372,110 @@ Wollo University Physics Department
               </button>
             </form>
           )}
+=======
+          <div className="info-item">
+            <FaEnvelope className="icon" />
+            <div>
+              <h3>Email</h3>
+              <p>info@photogallery.com</p>
+            </div>
+          </div>
+
+          <div className="info-item">
+            <FaPhone className="icon" />
+            <div>
+              <h3>Phone</h3>
+              <p>+1 (555) 123-4567</p>
+            </div>
+          </div>
+
+          <div className="info-item">
+            <FaMapMarkerAlt className="icon" />
+            <div>
+              <h3>Address</h3>
+              <p>123 Photography Street, New York, NY 10001</p>
+            </div>
+          </div>
+
+          <div className="social-links">
+            <a href="#" className="social-icon">
+              <FaFacebook />
+            </a>
+            <a href="#" className="social-icon">
+              <FaTwitter />
+            </a>
+            <a href="#" className="social-icon">
+              <FaInstagram />
+            </a>
+            <a href="#" className="social-icon">
+              <FaLinkedin />
+            </a>
+          </div>
+        </div>
+
+        <div className="contact-form">
+          <h2>Send us a Message</h2>
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label htmlFor="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="subject">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" className="submit-btn">
+              Send Message
+            </button>
+          </form>
+>>>>>>> 28a16a96c48c11086b9e84a45187ba445707b84b
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> 28a16a96c48c11086b9e84a45187ba445707b84b
 
 export default Contact;
