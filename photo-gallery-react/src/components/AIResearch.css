@@ -263,6 +263,12 @@
   display: block;
 }
 
+.ai-gis-card-image--logo img {
+  object-fit: contain;
+  padding: 1.25rem;
+  background: #f4f7fb;
+}
+
 .ai-gis-badge {
   position: absolute;
   top: 16px;

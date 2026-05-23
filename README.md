@@ -88,4 +88,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Thanks to all contributors and supporters
 - Special thanks to the open-source community
-- Built with React and modern web technologies
+- Built with React and modern web technologies 

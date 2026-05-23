@@ -7,8 +7,9 @@ function FeaturedTraining() {
       <h2>Featured Training Programs</h2>
       <p>
         Enhance your skills in satellite remote sensing and geospatial analysis
-        with our expert-led training programs. Courses are available for all
-        levels, from beginners to advanced professionals.
+        with our expert-led training programs. Free introductory courses are
+        available, and certificate programs include a transparent course fee
+        plus a one-time payment processing fee.
       </p>
       <ul>
         <li>

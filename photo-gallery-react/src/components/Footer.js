@@ -1,26 +1,28 @@
 import React from "react";
 import "./Footer.css";
 
+const WOLLO_LOGO = "/images/Wollo University Logo.png";
+
 function Footer() {
   return (
-    <footer>
-      <p>Copyright © 2025, All Right Reserved | Birhanu Asmerom</p>
-      <div className="attribution">
-        <div className="footer-logo-container">
+    <footer className="site-footer">
+      <div className="footer-inner">
+        <p className="footer-copyright">
+          Copyright © 2026. All Rights Reserved | Developed by Birhanu
+          Asmerom
+        </p>
+
+        <div className="footer-attribution">
           <img
-            src="/images/Wollo University Logo.jpg"
+            src={WOLLO_LOGO}
             alt="Wollo University Logo"
             className="footer-logo"
-            onError={(e) => {
-              e.target.onerror = null;
-              e.target.src = "/images/Wollo University Logo1.jpg";
-            }}
           />
+          <div className="footer-attribution-text">
+            <p>Atmospheric Science Research Group</p>
+            <p>Department of Physics, Wollo University.</p>
+          </div>
         </div>
-        <p>
-          Developed By Wollo University Department of Physics Atmospheric
-          Science Research group
-        </p>
       </div>
     </footer>
   );

@@ -427,10 +427,6 @@ const ProjectsAndCollaboration = () => {
           Contact Us
         </Link>
       </section>
-
-      <div className="copyright-footer">
-        Copyright © 2025, All Right Reserved | Birhanu Asmerom
-      </div>
     </div>
   );
 };

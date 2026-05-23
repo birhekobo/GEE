@@ -89,7 +89,7 @@ function NumericalMatlabPreview() {
           <p>
             Birhanu Asmerom
             <br />
-            Professor of Applied Mathematics
+            Computational physics
             <br />
             Wollo University
           </p>

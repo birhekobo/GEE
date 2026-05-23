@@ -13,6 +13,30 @@
   text-align: center;
 }
 
+.enrollment-pricing {
+  background: #f8fbff;
+  border: 1px solid #dde8f5;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.enrollment-pricing p {
+  margin: 0.35rem 0;
+  color: #444;
+}
+
+.enrollment-total {
+  font-size: 1.05rem;
+  color: #005fa3;
+}
+
+.enrollment-pricing-note {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem !important;
+}
+
 .success-message {
   background-color: #d4edda;
   color: #155724;

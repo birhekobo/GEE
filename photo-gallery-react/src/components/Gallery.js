@@ -2,6 +2,12 @@ import React, { useState, useEffect, useCallback } from "react";
 import "./Gallery.css";
 import ErrorBoundary from "./ErrorBoundary";
 
+const IMAGE_PLACEHOLDER =
+  "data:image/svg+xml," +
+  encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200"><rect fill="#e8eef5" width="400" height="200"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#6c757d" font-family="Arial,sans-serif" font-size="14">Image unavailable</text></svg>'
+  );
+
 const galleryData = [
   {
     src: "/images/Picture2.jpg",
@@ -12,7 +18,7 @@ const galleryData = [
       "Satellite remote sensing operates by capturing solar radiation that is reflected from the Earth's surface. The Sun emits incident solar radiation, which passes through the atmosphere and interacts with various surface features such as buildings, roads, grass, water, and forests. Each surface type reflects solar energy differently. Satellites equipped with sensors detect this reflected solar radiation from space. The collected data is then transmitted to ground servers for processing and analysis. This principle enables the monitoring and mapping of land cover, environmental changes, and other surface characteristics without direct contact, providing essential information for scientific research and decision-making.",
   },
   {
-    src: "/images/FIG22.png",
+    src: "/images/FIG2.png",
     alt: "South Wollo Topography from SRTM data",
     location: "South Wollo",
     date: "SRTM Data Year",
@@ -108,7 +114,7 @@ const galleryData = [
       "This image displays drought conditions as observed by the GRACE (Gravity Recovery and Climate Experiment) satellite mission. GRACE measures changes in Earth's gravity field to monitor variations in terrestrial water storage, including groundwater, soil moisture, and surface water. The data is essential for drought assessment, water resource management, and understanding the impacts of climate variability on hydrological systems.",
   },
   {
-    src: "/images/FIG22.png",
+    src: "/images/FIG15.png",
     alt: "MISR Aerosol Data Image 16",
     location: "Global",
     date: "MISR Mission",
@@ -117,81 +123,85 @@ const galleryData = [
   },
 ];
 
+function preloadImage(image, timeoutMs = 15000) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    const timeout = setTimeout(() => {
+      reject(new Error(`Timeout loading image: ${image.src}`));
+    }, timeoutMs);
+
+    img.onload = () => {
+      clearTimeout(timeout);
+      resolve(image.src);
+    };
+    img.onerror = () => {
+      clearTimeout(timeout);
+      reject(new Error(`Failed to load image: ${image.src}`));
+    };
+    img.src = image.src;
+  });
+}
+
 function Gallery() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [imagesLoaded, setImagesLoaded] = useState(false);
-  const [loadError, setLoadError] = useState(null);
+  const [imagesReady, setImagesReady] = useState(false);
   const [failedImages, setFailedImages] = useState([]);
   const [retryCount, setRetryCount] = useState(0);
 
   useEffect(() => {
-    // Preload images with timeout
+    let cancelled = false;
+
     const loadImages = async () => {
-      const imagePromises = galleryData.map((image) => {
-        return new Promise((resolve, reject) => {
-          const img = new Image();
-          img.src = image.src;
+      const results = await Promise.allSettled(
+        galleryData.map((image) => preloadImage(image))
+      );
 
-          // Add timeout to prevent hanging
-          const timeout = setTimeout(() => {
-            reject(new Error(`Timeout loading image: ${image.src}`));
-          }, 15000); // 15 second timeout
+      if (cancelled) return;
 
-          img.onload = () => {
-            clearTimeout(timeout);
-            resolve();
-          };
-          img.onerror = (error) => {
-            clearTimeout(timeout);
-            reject({ error, image });
-          };
-        });
-      });
+      const failed = results
+        .map((result, index) =>
+          result.status === "rejected" ? galleryData[index].src : null
+        )
+        .filter(Boolean);
 
-      try {
-        await Promise.all(imagePromises);
-        setImagesLoaded(true);
-        setLoadError(null);
-        setFailedImages([]);
-      } catch (error) {
-        console.error("Error loading images:", error);
-        const failedImage = error.image || { src: 'unknown' };
-        setFailedImages(prev => {
-          if (prev.includes(failedImage.src)) {
-            return prev;
-          }
-          const newFailedImages = [...prev, failedImage.src];
-          setLoadError(
-            `Failed to load ${newFailedImages.length} image(s). Please check your internet connection and try again.`
-          );
-          return newFailedImages;
-        });
-        setImagesLoaded(true); // Still show gallery even if some images fail
-      }
+      setFailedImages(failed);
+      setImagesReady(true);
     };
 
+    setImagesReady(false);
     loadImages();
+
+    return () => {
+      cancelled = true;
+    };
   }, [retryCount]);
 
   const handleRetry = useCallback(() => {
-    setRetryCount(prev => prev + 1);
-    setLoadError(null);
+    setRetryCount((prev) => prev + 1);
     setFailedImages([]);
-    setImagesLoaded(false);
   }, []);
+
+  const handleImageError = useCallback((src) => {
+    setFailedImages((prev) => (prev.includes(src) ? prev : [...prev, src]));
+  }, []);
+
+  const getImageSrc = useCallback(
+    (src) => (failedImages.includes(src) ? IMAGE_PLACEHOLDER : src),
+    [failedImages]
+  );
 
   const openLightbox = useCallback((image, index) => {
     setCurrentImage(image);
     setCurrentIndex(index);
     setLightboxOpen(true);
-    document.body.style.overflow = "hidden"; // Prevent scrolling when lightbox is open
+    document.body.style.overflow = "hidden";
   }, []);
 
   const closeLightbox = useCallback(() => {
     setLightboxOpen(false);
-    document.body.style.overflow = "auto"; // Restore scrolling
+    document.body.style.overflow = "auto";
   }, []);
 
   const navigateImage = useCallback(
@@ -225,12 +235,10 @@ function Gallery() {
     };
 
     window.addEventListener("keydown", handleKeyDown);
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, [lightboxOpen, navigateImage, closeLightbox]);
 
-  if (!imagesLoaded) {
+  if (!imagesReady) {
     return (
       <div className="loading-container">
         <div className="loading-spinner"></div>
@@ -239,37 +247,7 @@ function Gallery() {
     );
   }
 
-  if (loadError) {
-    return (
-      <div className="error-container">
-        <p className="error-message">{loadError}</p>
-        <div className="retry-options">
-          <button
-            className="retry-button"
-            onClick={handleRetry}
-          >
-            Retry Loading
-          </button>
-          <button
-            className="retry-button secondary"
-            onClick={() => window.location.reload()}
-          >
-            Refresh Page
-          </button>
-        </div>
-        {failedImages.length > 0 && (
-          <div className="failed-images">
-            <p>Failed to load the following images:</p>
-            <ul>
-              {[...new Set(failedImages)].map((src, index) => (
-                <li key={index}>{src}</li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </div>
-    );
-  }
+  const hasFailures = failedImages.length > 0;
 
   return (
     <ErrorBoundary>
@@ -281,58 +259,112 @@ function Gallery() {
           technology. Click on any image to learn more about its location, date,
           and significance.
         </p>
+
+        {hasFailures && (
+          <div className="gallery-warning" role="status">
+            <p>
+              {failedImages.length} of {galleryData.length} image(s) could not
+              be loaded. Placeholders are shown below. Ensure image files exist
+              in <code>public/images/</code> or check your connection.
+            </p>
+            <button type="button" className="retry-button" onClick={handleRetry}>
+              Retry Loading
+            </button>
+          </div>
+        )}
+
         <div className="gallery-grid" aria-label="Satellite Image Gallery">
-          {galleryData.map((image, index) => (
-            <div
-              key={index}
-              className="gallery-item"
-              onClick={() => openLightbox(image, index)}
-            >
-              <img
-                src={image.src}
-                alt={image.alt}
-                loading="lazy"
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src = "/images/placeholder.png"; // Add a placeholder image
+          {galleryData.map((image, index) => {
+            const failed = failedImages.includes(image.src);
+            return (
+              <div
+                key={`${image.src}-${index}`}
+                className={`gallery-item${failed ? " gallery-item--failed" : ""}`}
+                onClick={() => openLightbox(image, index)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    openLightbox(image, index);
+                  }
                 }}
-              />
-              <div className="gallery-item-info">
-                <p>Location: {image.location}</p>
-                <p>Date: {image.date}</p>
-                <p className="image-description">{image.description}</p>
+                role="button"
+                tabIndex={0}
+                aria-label={`View ${image.alt}`}
+              >
+                <img
+                  src={getImageSrc(image.src)}
+                  alt={image.alt}
+                  loading="lazy"
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    handleImageError(image.src);
+                    e.target.src = IMAGE_PLACEHOLDER;
+                  }}
+                />
+                {failed && (
+                  <span className="gallery-item-badge">Unavailable</span>
+                )}
+                <div className="gallery-item-info">
+                  <p>Location: {image.location}</p>
+                  <p>Date: {image.date}</p>
+                  <p className="image-description">{image.description}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
+
         {lightboxOpen && currentImage && (
-          <div className="lightbox" onClick={closeLightbox}>
-            <span className="close-button">&times;</span>
+          <div
+            className="lightbox"
+            onClick={closeLightbox}
+            role="dialog"
+            aria-modal="true"
+            aria-label={currentImage.alt}
+          >
+            <span
+              className="close-button"
+              onClick={closeLightbox}
+              role="button"
+              tabIndex={0}
+              aria-label="Close gallery"
+            >
+              &times;
+            </span>
             <button
+              type="button"
               className="nav-button prev"
               onClick={(e) => {
                 e.stopPropagation();
                 navigateImage(-1);
               }}
+              aria-label="Previous image"
             >
               &#10094;
             </button>
             <img
               className="lightbox-content"
-              src={currentImage.src}
+              src={getImageSrc(currentImage.src)}
               alt={currentImage.alt}
               onClick={(e) => e.stopPropagation()}
+              onError={(e) => {
+                e.target.onerror = null;
+                handleImageError(currentImage.src);
+                e.target.src = IMAGE_PLACEHOLDER;
+              }}
             />
             <button
+              type="button"
               className="nav-button next"
               onClick={(e) => {
                 e.stopPropagation();
                 navigateImage(1);
               }}
+              aria-label="Next image"
             >
               &#10095;
             </button>
-            <div className="caption">
+            <div className="caption" onClick={(e) => e.stopPropagation()}>
               <p>{currentImage.alt}</p>
               <p>
                 Location: {currentImage.location} | Date: {currentImage.date}

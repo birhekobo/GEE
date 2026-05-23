@@ -1,8 +1,17 @@
 import React, { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
+import {
+  PAYMENT_FEE_ETB,
+  formatCourseFee,
+  getEnrollmentTotal,
+  getCourseByTitle,
+} from "../data/courses";
 import "./Enrollment.css";
 
-const Enrollment = ({ courseTitle, isContactForm = false }) => {
+const Enrollment = ({ course, courseTitle, isContactForm = false }) => {
+  const resolvedCourse =
+    course || (courseTitle ? getCourseByTitle(courseTitle) : null);
+  const title = resolvedCourse?.title || courseTitle;
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -77,7 +86,9 @@ Email: ${formData.email}
 Phone: ${formData.phone || "Not provided"}
 Organization: ${formData.organization || "Not provided"}
 
-${!isContactForm ? `Course: ${courseTitle || "Course Enrollment"}\n` : ""}
+${!isContactForm ? `Course: ${title || "Course Enrollment"}\n` : ""}
+${!isContactForm && resolvedCourse ? `Course fee: ${formatCourseFee(resolvedCourse)}\n` : ""}
+${!isContactForm && resolvedCourse && !resolvedCourse.isFree ? `Payment processing fee: ${PAYMENT_FEE_ETB} ETB\nTotal due: ${getEnrollmentTotal(resolvedCourse).toLocaleString()} ETB\n` : ""}
 
 Message:
 ------------------
@@ -92,9 +103,17 @@ ${formData.message || "No additional message provided"}
         subject: isContactForm
           ? `[CONTACT] New message from ${formData.name}`
           : `[ENROLLMENT] New request from ${formData.name} - ${
-              courseTitle || "Course Enrollment"
+              title || "Course Enrollment"
             }`,
-        course_title: courseTitle || "Course Enrollment",
+        course_title: title || "Course Enrollment",
+        course_fee: resolvedCourse ? formatCourseFee(resolvedCourse) : "N/A",
+        payment_fee:
+          resolvedCourse && !resolvedCourse.isFree
+            ? `${PAYMENT_FEE_ETB} ETB`
+            : "0 ETB",
+        total_due: resolvedCourse
+          ? `${getEnrollmentTotal(resolvedCourse).toLocaleString()} ETB`
+          : "N/A",
         phone: formData.phone,
         organization: formData.organization,
         message: formattedMessage,
@@ -165,7 +184,34 @@ ${formData.message || "No additional message provided"}
 
   return (
     <div className="enrollment-container">
-      <h2>{isContactForm ? "Contact Us" : `Enroll in ${courseTitle}`}</h2>
+      <h2>{isContactForm ? "Contact Us" : `Enroll in ${title}`}</h2>
+      {!isContactForm && resolvedCourse && (
+        <div className="enrollment-pricing">
+          <p>
+            <strong>Course fee:</strong> {formatCourseFee(resolvedCourse)}
+          </p>
+          {!resolvedCourse.isFree && (
+            <>
+              <p>
+                <strong>Payment processing fee:</strong>{" "}
+                {PAYMENT_FEE_ETB.toLocaleString()} ETB
+              </p>
+              <p className="enrollment-total">
+                <strong>Total due:</strong>{" "}
+                {getEnrollmentTotal(resolvedCourse).toLocaleString()} ETB
+              </p>
+              <p className="enrollment-pricing-note">
+                Payment instructions will be sent after you submit this form.
+              </p>
+            </>
+          )}
+          {resolvedCourse.isFree && (
+            <p className="enrollment-pricing-note">
+              This is a free course — no payment is required.
+            </p>
+          )}
+        </div>
+      )}
       {submitStatus === "success" && (
         <div className="success-message">
           {isContactForm

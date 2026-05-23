@@ -108,8 +108,13 @@ function About() {
             <div className="team-content">
               <h3>Birhanu Asmerom</h3>
               <p className="team-role">Lead Consultant</p>
-              <p className="team-expertise">Expert in Remote Sensing and GIS</p>
-              <p className="team-qualification">Ph.D. in Atmospheric Physics</p>
+              <p className="team-expertise">
+                Atmospheric Physics/Meteorology and Air Quality, Remote Sensing
+                Expert
+              </p>
+              <p className="team-qualification">
+                Expert in Remote Sensing and GIS
+              </p>
             </div>
           </div>
           <div className="team-member">
