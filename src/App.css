@@ -1,0 +1,29 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #F4F8FF; /* Very light cool blue */
+    color: #333333; /* Standard dark grey text */
+    line-height: 1.6;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #FFFFFF; /* White for main content area */
+    box-shadow: 0 0 15px rgba(0,0,0,0.12);
+    flex: 1;
+} 
