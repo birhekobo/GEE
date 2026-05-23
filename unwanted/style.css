@@ -1,0 +1,653 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #F4F8FF; /* Very light cool blue */
+    color: #333333; /* Standard dark grey text */
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #3366CC; /* Strong professional blue */
+    color: #FFFFFF; /* White text */
+    padding: 1rem 20px;
+    border-bottom: #4A90E2 4px solid; /* Brighter blue accent border */
+    display: flex;
+    flex-direction: column; /* Stack top content and nav vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.header-top-content {
+    display: flex;
+    align-items: center; /* Align logo and title vertically */
+    justify-content: center; /* Center logo and title horizontally */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    width: 100%; /* Ensure it takes available width */
+    margin-bottom: 10px; /* Space between title/logo block and nav */
+}
+
+.header-logo {
+    height: 50px; /* Adjust as needed */
+    width: auto;
+    margin-right: 20px; /* Space between logo and the content wrapper */
+    flex-shrink: 0; /* Prevent logo from shrinking */
+}
+
+header h1 {
+    margin: 0 0 10px 0; /* Bottom margin to space from nav */
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center; /* Ensure h1 text is centered if block is centered */
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Reset margin, spacing handled by h1 margin-bottom */
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #FFFFFF; /* White navigation links */
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active /* Style for active link if implemented */
+{
+    background-color: #4A90E2; /* Brighter blue accent for hover */
+    color: #F4F8FF; /* Lightest blue text on hover for contrast */
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #FFFFFF; /* White for main content area */
+    box-shadow: 0 0 15px rgba(0,0,0,0.12);
+}
+
+/* Gallery Styles */
+.gallery-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.gallery-intro h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    background-color: #FFFFFF;
+    border: 1px solid #DDEEFF; /* Lighter blue border */
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(51, 102, 204, 0.25); /* Shadow using primary blue */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px; /* Fixed height for uniform look */
+    object-fit: cover; /* Ensures image covers the area, might crop */
+    display: block;
+}
+
+.gallery-item-info {
+    padding: 10px;
+    font-size: 0.9rem;
+    background-color: rgba(255, 255, 255, 0.97); /* Almost opaque white */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-item-info {
+    opacity: 1;
+}
+
+.gallery-item-info p {
+    margin: 5px 0;
+    color: #333333; /* Standard dark grey text */
+}
+
+.image-description {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #9FBFFF; /* Lighter tint of Accent 1 blue */
+    margin-top: 8px; /* Add a bit of space above the description */
+}
+
+/* Featured Course Card Styles */
+.featured-course-card {
+    background: #f8fbff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(51,102,204,0.07);
+    margin: 2em 0;
+    padding: 2em 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.featured-course-info {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    max-width: 900px;
+}
+
+.featured-course-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 2px 8px rgba(51,102,204,0.13);
+}
+
+.featured-link {
+    color: #005fa3;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Featured Training Section Styles */
+.featured-training {
+    background: #f5f7fa;
+    border-radius: 8px;
+    padding: 2em;
+    margin: 2em 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.featured-training h2 {
+    margin-top: 0;
+}
+
+.featured-training ul {
+    margin: 1em 0;
+    padding-left: 1.2em;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background: #005fa3;
+    color: #fff;
+    padding: 0.6em 1.4em;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1em;
+    transition: background 0.2s;
+}
+
+.btn-secondary:hover {
+    background: #003d6b;
+}
+
+.training-section {
+    margin: 2em 0;
+    padding: 2em 1em;
+    background: #f8fbff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(51,102,204,0.07);
+}
+
+.training-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #3366CC;
+    margin-bottom: 0.5em;
+}
+
+.training-intro {
+    text-align: center;
+    font-size: 1.15rem;
+    color: #333;
+    margin-bottom: 2em;
+}
+
+.training-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 2em;
+    margin-bottom: 2em;
+}
+
+.training-card {
+    background: #fff;
+    border: 1px solid #DDEEFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(51,102,204,0.06);
+    padding: 1.5em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.training-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(51,102,204,0.13);
+}
+
+.training-card h3 {
+    margin-top: 0;
+    color: #005fa3;
+    font-size: 1.2rem;
+    margin-bottom: 0.5em;
+}
+
+.training-card p {
+    flex: 1;
+    color: #444;
+    margin-bottom: 1em;
+}
+
+.training-card .btn-secondary {
+    align-self: flex-end;
+}
+
+.training-benefits {
+    background: #eaf1ff;
+    border-radius: 8px;
+    padding: 1.5em 1em;
+    margin: 0 auto;
+    max-width: 600px;
+    box-shadow: 0 1px 4px rgba(51,102,204,0.05);
+}
+
+.training-benefits h2 {
+    margin-top: 0;
+    color: #3366CC;
+    font-size: 1.3rem;
+}
+
+.training-benefits ul {
+    margin: 1em 0 0 1.2em;
+    color: #333;
+    font-size: 1.05rem;
+}
+
+.hero-section {
+    background: linear-gradient(90deg, #3366CC 60%, #f8fbff 100%);
+    color: #fff;
+    padding: 2.5em 1em 2em 1em;
+    border-radius: 0 0 24px 24px;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.3rem;
+    margin-bottom: 0.5em;
+    color: #fff;
+}
+
+.hero-content p {
+    font-size: 1.15rem;
+    color: #eaf1ff;
+    margin: 0 auto 1.5em auto;
+    max-width: 600px;
+}
+
+.hero-content .btn-secondary {
+    font-size: 1.1rem;
+    padding: 0.8em 2em;
+}
+
+.gallery-heading {
+    text-align: center;
+    font-size: 2rem;
+    color: #3366CC;
+    margin-bottom: 1.2em;
+    margin-top: 0;
+}
+
+.featured-training-list {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0 1.5em 0;
+}
+
+.featured-training-list li {
+    font-size: 1.08em;
+    margin-bottom: 0.7em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.why-remote-sensing {
+    background: #f8fbff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(51,102,204,0.07);
+    margin: 2em 0;
+    padding: 2em 1em;
+}
+
+.why-remote-sensing h2 {
+    text-align: center;
+    color: #3366CC;
+    margin-top: 0;
+}
+
+.why-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.why-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(51,102,204,0.06);
+    padding: 1.5em 1em;
+    max-width: 320px;
+    flex: 1 1 250px;
+    text-align: center;
+}
+
+.why-icon {
+    font-size: 2.2em;
+    margin-bottom: 0.5em;
+}
+
+@media (max-width: 900px) {
+    .why-grid {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+}
+
+@media (max-width: 700px) {
+    .featured-course-info {
+        flex-direction: column;
+        gap: 1em;
+        text-align: center;
+    }
+    .featured-course-img {
+        margin: 0 auto;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.attribution {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 10px; /* Space between logo and text */
+}
+
+.footer-logo {
+    height: 40px; /* Adjust as needed */
+    width: auto;
+}
+
+.attribution p {
+    margin: 0; /* Remove default paragraph margin */
+}
+
+/* Example of using Accent 2 (Violet/Plum) */
+.special-highlight {
+    color: #883D78; /* Muted violet/plum */
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .featured-course-info {
+        flex-direction: column;
+    }
+
+    .featured-course-img {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+
+.lightbox-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-height: 80%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    overflow: auto;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Applications Section Styles */
+.applications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.application-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.application-card:hover {
+    transform: translateY(-5px);
+}
+
+.application-card h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.application-card ul {
+    list-style: disc;
+    padding-left: 1.2rem;
+}
+
+.application-card li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.application-card li strong {
+    color: #333;
+}
+
+/* Responsive Adjustments for Applications Grid */
+@media (max-width: 768px) {
+    .applications-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .applications-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* About Page Team Section Styles */
+.team-member img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.8rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member img:hover {
+    transform: scale(1.05);
+}
+
+.team-member h4 {
+    margin-bottom: 0.4rem;
+    color: #2c3e50;
+}
+
+.team-member p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* About Page Team Row Layout */
+.team-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem; /* Space between cards */
+    margin-top: 1.5rem;
+}
+
+.team-member {
+    flex-basis: 200px; /* Suggest a base width */
+    flex-grow: 1; /* Allow cards to grow */
+    max-width: 250px; /* Max width to prevent too wide cards on large screens */
+    text-align: center;
+    padding: 1rem;
+    background: #f9f9f9; /* Slightly different background for cards */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+/* Data and Methodology Page Styles */
+.data-grid,
+.methodology-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.data-method-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.data-method-card:hover {
+    transform: translateY(-5px);
+}
+
+.data-method-card h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+}
+
+.data-method-card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Responsive Adjustments for Data/Methodology Grids */
+@media (max-width: 600px) {
+    .data-grid,
+    .methodology-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+.teal-background {
+    background-color: #0B6B6B;
+    color: white;
+} 

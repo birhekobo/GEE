@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects & Collaboration - Satellite Remote Sensing Consultancy</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .projects-hero {
+            background: linear-gradient(90deg, #3366CC 60%, #f8fbff 100%);
+            color: #fff;
+            padding: 2.5em 1em 2em 1em;
+            text-align: center;
+            border-radius: 0 0 24px 24px;
+            margin-bottom: 2em;
+        }
+        .projects-hero h1 {
+            margin: 0 0 0.5em 0;
+            font-size: 2.5rem;
+            color: #fff;
+        }
+        .projects-hero p {
+            font-size: 1.2rem;
+            color: #eaf1ff;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2em;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2em;
+        }
+        .project-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(51,102,204,0.07);
+            padding: 1.5em;
+            transition: transform 0.2s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .project-card h3 {
+            color: #3366CC;
+            margin-top: 0;
+        }
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1em;
+        }
+        .collaboration-section {
+            background: #f8fbff;
+            padding: 3em 2em;
+            margin: 2em 0;
+        }
+        .collaboration-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .collaboration-content h2 {
+            color: #3366CC;
+            text-align: center;
+            margin-bottom: 1.5em;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2em;
+            margin-top: 2em;
+        }
+        .benefit-card {
+            background: #fff;
+            padding: 1.5em;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(51,102,204,0.05);
+        }
+        .benefit-card h3 {
+            color: #3366CC;
+            margin-top: 0;
+        }
+        .cta-section {
+            text-align: center;
+            padding: 3em 2em;
+            background: #eaf1ff;
+            margin: 2em 0;
+        }
+        .cta-section h2 {
+            color: #3366CC;
+            margin-bottom: 1em;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #005fa3;
+            color: #fff;
+            padding: 1em 2em;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1em;
+            transition: background 0.2s;
+        }
+        .cta-button:hover {
+            background: #003d6b;
+        }
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+                padding: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/Wollo University Logo.jpg" alt="Wollo University Logo" class="header-logo">
+        <div class="header-content-wrapper">
+            <h1>Satellite Remote Sensing Consultancy</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html">Photo Gallery</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="data-methodology.html">Data & Methodology</a></li>
+                    <li><a href="applications-casestudies.html">Applications</a></li>
+                    <li><a href="Training.html">Training</a></li>
+                    <li><a href="Projects and Collaboration.html">Projects & Collaboration</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="projects-hero">
+            <h1>Projects & Collaboration</h1>
+            <p>Join us in advancing remote sensing research and applications through innovative projects and strategic partnerships.</p>
+        </section>
+
+        <section class="projects-grid">
+            <div class="project-card">
+                <img src="images/land-use.jpg" alt="Land Use Monitoring Project">
+                <h3>Land Use Change Monitoring</h3>
+                <p>Long-term monitoring of land use changes in Ethiopia using satellite imagery and machine learning techniques.</p>
+                <ul>
+                    <li>Multi-temporal analysis</li>
+                    <li>Machine learning classification</li>
+                    <li>Change detection algorithms</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <img src="images/climate.jpg" alt="Climate Impact Assessment">
+                <h3>Climate Impact Assessment</h3>
+                <p>Assessment of climate change impacts on agricultural productivity using remote sensing data.</p>
+                <ul>
+                    <li>NDVI analysis</li>
+                    <li>Weather data integration</li>
+                    <li>Yield prediction models</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <img src="images/urban.jpg" alt="Urban Growth Analysis">
+                <h3>Urban Growth Analysis</h3>
+                <p>Analysis of urban expansion patterns and their environmental impacts in major Ethiopian cities.</p>
+                <ul>
+                    <li>Spatial analysis</li>
+                    <li>Urban heat island effects</li>
+                    <li>Infrastructure planning</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="collaboration-section">
+            <div class="collaboration-content">
+                <h2>Collaboration Opportunities</h2>
+                <p>We welcome partnerships with academic institutions, research organizations, and industry partners to advance remote sensing applications and research.</p>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h3>Research Collaboration</h3>
+                        <ul>
+                            <li>Joint research projects</li>
+                            <li>Data sharing agreements</li>
+                            <li>Publication opportunities</li>
+                            <li>Student exchange programs</li>
+                        </ul>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Technical Partnership</h3>
+                        <ul>
+                            <li>Technology transfer</li>
+                            <li>Software development</li>
+                            <li>Methodology development</li>
+                            <li>Capacity building</li>
+                        </ul>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Industry Solutions</h3>
+                        <ul>
+                            <li>Custom solutions development</li>
+                            <li>Consulting services</li>
+                            <li>Training programs</li>
+                            <li>Technical support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Interested in Collaborating?</h2>
+            <p>Let's discuss how we can work together to achieve your research or business objectives.</p>
+            <a href="contact.html" class="cta-button">Contact Us</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Remote Sensing Gallery</p>
+        <div class="attribution">
+            <img src="images/Matlab_logo.jpg" alt="Wollo University Logo" class="footer-logo">
+            <p>Developed By Wollo University Department of Physics Atmospheric Science Research group</p>
+        </div>
+    </footer>
+</body>
+</html> 

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to LaTeX - Course Preview</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .course-hero {
+            background: linear-gradient(90deg, #3366CC 60%, #f8fbff 100%);
+            color: #fff;
+            padding: 2.5em 1em 2em 1em;
+            text-align: center;
+            border-radius: 0 0 24px 24px;
+            margin-bottom: 2em;
+            position: relative;
+        }
+        .course-hero img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            margin-bottom: 1em;
+            box-shadow: 0 2px 8px rgba(51,102,204,0.13);
+        }
+        .course-hero h1 {
+            margin: 0 0 0.5em 0;
+            font-size: 2.5rem;
+            color: #fff;
+        }
+        .course-hero p {
+            font-size: 1.2rem;
+            color: #eaf1ff;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        .course-main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+            max-width: 1100px;
+            margin: 0 auto 2em auto;
+        }
+        .course-details {
+            flex: 2 1 350px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(51,102,204,0.07);
+            padding: 2em 1.5em;
+        }
+        .course-details h2 {
+            color: #3366CC;
+            margin-top: 0;
+        }
+        .course-details ul {
+            margin: 1.5em 0 1em 1.5em;
+        }
+        .course-details li {
+            margin-bottom: 0.7em;
+            font-size: 1.08em;
+        }
+        .course-details li strong {
+            color: #005fa3;
+        }
+        .course-sidebar {
+            flex: 1 1 260px;
+            background: #f5f7fa;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(51,102,204,0.05);
+            padding: 1.5em 1em;
+            min-width: 220px;
+            max-width: 320px;
+            align-self: flex-start;
+        }
+        .course-sidebar h3 {
+            color: #3366CC;
+            margin-top: 0;
+        }
+        .course-sidebar ul {
+            margin: 1em 0 0 1.2em;
+            font-size: 1em;
+        }
+        .enroll-btn {
+            display: inline-block;
+            background: #005fa3;
+            color: #fff;
+            padding: 0.9em 2em;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 2em;
+            font-size: 1.15em;
+            box-shadow: 0 2px 8px rgba(51,102,204,0.08);
+            transition: background 0.2s;
+        }
+        .enroll-btn:hover {
+            background: #003d6b;
+        }
+        .back-link {
+            display: inline-block;
+            margin: 2em 0 0 0;
+            color: #3366CC;
+            text-decoration: underline;
+            font-size: 1em;
+        }
+        .testimonials {
+            background: #f8fbff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(51,102,204,0.05);
+            max-width: 900px;
+            margin: 2em auto;
+            padding: 2em 1.5em;
+        }
+        .testimonials h2 {
+            color: #3366CC;
+            margin-top: 0;
+        }
+        .testimonial {
+            margin-bottom: 1.5em;
+            padding-left: 1.5em;
+            border-left: 4px solid #3366CC;
+            font-style: italic;
+            color: #444;
+        }
+        .testimonial:last-child {
+            margin-bottom: 0;
+        }
+        .faq-section {
+            background: #eaf1ff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(51,102,204,0.05);
+            max-width: 900px;
+            margin: 2em auto;
+            padding: 2em 1.5em;
+        }
+        .faq-section h2 {
+            color: #3366CC;
+            margin-top: 0;
+        }
+        .faq {
+            margin-bottom: 1.2em;
+        }
+        .faq-question {
+            font-weight: bold;
+            color: #005fa3;
+        }
+        .faq-answer {
+            margin-left: 1em;
+            color: #333;
+        }
+        @media (max-width: 900px) {
+            .course-main-content {
+                flex-direction: column;
+            }
+            .course-sidebar {
+                max-width: 100%;
+                margin-top: 2em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="images/Wollo University Logo.jpg" alt="Wollo University Logo" class="header-logo">
+        <div class="header-content-wrapper">
+            <h1>Satellite Remote Sensing Consultancy</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html">Photo Gallery</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="data-methodology.html">Data & Methodology</a></li>
+                    <li><a href="applications-casestudies.html">Applications</a></li>
+                    <li><a href="Training.html">Training</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="course-hero">
+            <img src="images/latex-logo.jpg" alt="Introduction to LaTeX" />
+            <h1>Introduction to LaTeX</h1>
+            <p>Master document preparation with LaTeX for academic and professional writing. Learn to create beautiful, structured documents with mathematical equations and scientific notation.</p>
+        </section>
+        <div class="course-main-content">
+            <div class="course-details">
+                <h2>Course Overview</h2>
+                <p>This comprehensive course introduces you to LaTeX, the professional typesetting system widely used in academia and scientific publishing. Learn how to create beautifully formatted documents, mathematical equations, and complex scientific papers with ease.</p>
+                <h2>What You'll Learn</h2>
+                <ul>
+                    <li>📝 Understanding LaTeX fundamentals and document structure</li>
+                    <li>🔢 Creating and formatting mathematical equations</li>
+                    <li>📚 Managing references and citations with BibTeX</li>
+                    <li>📊 Working with tables, figures, and graphics</li>
+                    <li>🎨 Customizing document styles and templates</li>
+                    <li>📑 Creating professional presentations with Beamer</li>
+                    <li>📋 Best practices for academic writing</li>
+                </ul>
+                <a href="contact.html" class="enroll-btn">Enroll Now</a>
+                <a href="Training.html" class="back-link">&larr; Back to Training</a>
+            </div>
+            <aside class="course-sidebar">
+                <h3>Quick Facts</h3>
+                <ul>
+                    <li><strong>Level:</strong> Beginner to Intermediate</li>
+                    <li><strong>Format:</strong> Online with hands-on exercises</li>
+                    <li><strong>Duration:</strong> 8 weeks</li>
+                    <li><strong>Prerequisites:</strong> Basic computer skills</li>
+                    <li><strong>Certificate:</strong> Included upon completion</li>
+                </ul>
+                <h3>Instructor</h3>
+                <ul>
+                    <li>Birhanu Asmerom, Lead Consultant</li>
+                </ul>
+            </aside>
+        </div>
+        <section class="testimonials">
+            <h2>What Our Students Say</h2>
+            <div class="testimonial">"The LaTeX course was incredibly helpful for my thesis writing. The instructor made complex concepts easy to understand."<br><strong>- Yohannes M.</strong></div>
+            <div class="testimonial">"Excellent course for academic writing. The hands-on practice with mathematical equations was particularly valuable."<br><strong>- Bethel T.</strong></div>
+        </section>
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq">
+                <div class="faq-question">Do I need prior experience with LaTeX?</div>
+                <div class="faq-answer">No prior experience is required. The course starts with the basics and gradually progresses to more advanced topics.</div>
+            </div>
+            <div class="faq">
+                <div class="faq-question">What software will I need?</div>
+                <div class="faq-answer">We'll help you set up a free LaTeX distribution (TeX Live or MiKTeX) and a suitable editor. All required software is open-source.</div>
+            </div>
+            <div class="faq">
+                <div class="faq-question">Is this course suitable for my field of study?</div>
+                <div class="faq-answer">Yes! LaTeX is widely used across all academic disciplines, especially in STEM fields, social sciences, and humanities.</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Remote Sensing Gallery</p>
+        <div class="attribution">
+            <img src="images/Matlab_logo.jpg" alt="Wollo University Logo" class="footer-logo">
+            <p>Developed By Wollo University Department of Physics Atmospheric Science Research group</p>
+        </div>
+    </footer>
+</body>
+
+</html> 
