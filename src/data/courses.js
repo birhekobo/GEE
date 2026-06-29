@@ -53,6 +53,38 @@ export const trainingCourses = [
     preview: "/courses/gee",
   },
   {
+    title: "Introduction to Open Source Geospatial Tools",
+    description:
+      "Discover free and open source geospatial software including QGIS, GDAL, and more. Learn to manage, visualize, and analyze spatial data without licensing costs.",
+    isFree: true,
+    fee: 0,
+    contents: [
+      "Overview of open source geospatial ecosystem",
+      "Getting started with QGIS interface",
+      "Working with vector and raster data using GDAL",
+      "Basic spatial analysis and geoprocessing",
+      "Creating maps and visualizations",
+      "Resources for continued learning",
+    ],
+    preview: "/courses/open-source-geospatial",
+  },
+  {
+    title: "Data Visualization for Scientific Research",
+    description:
+      "Learn to create publication-quality figures and visualizations for research papers, theses, and reports using freely available tools.",
+    isFree: true,
+    fee: 0,
+    contents: [
+      "Principles of effective scientific visualization",
+      "Introduction to Python Matplotlib and Seaborn",
+      "Creating charts, graphs, and heatmaps",
+      "Visualizing geospatial and remote sensing data",
+      "Designing figures for publications",
+      "Interactive visualizations with Plotly",
+    ],
+    preview: "/courses/data-visualization",
+  },
+  {
     title: "Satellite Data Analysis with Python",
     description:
       "Analyze satellite imagery using Python. Covers NumPy, Pandas, Matplotlib, and real-world examples.",
@@ -153,6 +185,40 @@ export const trainingCourses = [
       "Case studies: Environmental and urban mapping",
     ],
     preview: "/courses/matlab",
+  },
+  {
+    title: "Advanced Spatial Data Science and Analytics",
+    description:
+      "Take your geospatial skills to the next level with advanced spatial statistics, predictive modeling, and data-driven decision-making techniques using Python and R.",
+    isFree: false,
+    fee: 6000,
+    contents: [
+      "Review of spatial data structures and formats",
+      "Exploratory spatial data analysis (ESDA)",
+      "Spatial autocorrelation and clustering",
+      "Geographically weighted regression (GWR)",
+      "Machine learning for spatial prediction",
+      "Time series analysis of satellite imagery",
+      "Capstone project: real-world spatial analysis workflow",
+    ],
+    preview: "/courses/advanced-spatial-data-science",
+  },
+  {
+    title: "Web GIS and Interactive Mapping Applications",
+    description:
+      "Build interactive web maps and geospatial applications using modern web technologies. Deploy dynamic dashboards for environmental monitoring and urban planning.",
+    isFree: false,
+    fee: 5000,
+    contents: [
+      "Fundamentals of web mapping and Web GIS",
+      "Leaflet and MapLibre GL JS for interactive maps",
+      "Serving geospatial data with GeoServer and MapServer",
+      "Building geospatial dashboards with React",
+      "Integrating satellite imagery layers on the web",
+      "Deploying and hosting web GIS applications",
+      "Case study: real-time environmental monitoring dashboard",
+    ],
+    preview: "/courses/web-gis",
   },
 ];
 

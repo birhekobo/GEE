@@ -14,6 +14,10 @@ import QgisCoursePreview from "./components/QgisCoursePreview";
 import IntroRemoteSensingPreview from "./components/IntroRemoteSensingPreview";
 import LatexCoursePreview from "./components/LatexCoursePreview";
 import GeeCoursePreview from "./components/GeeCoursePreview";
+import OpenSourceGeospatialPreview from "./components/OpenSourceGeospatialPreview";
+import DataVisualizationPreview from "./components/DataVisualizationPreview";
+import AdvancedSpatialDataSciencePreview from "./components/AdvancedSpatialDataSciencePreview";
+import WebGisPreview from "./components/WebGisPreview";
 import NotFoundPage from "./components/NotFoundPage";
 import ProjectsAndCollaboration from "./components/ProjectsAndCollaboration";
 import Gallery from "./components/Gallery";
@@ -53,6 +57,10 @@ function App() {
           <Route path="/courses/latex" element={<LatexCoursePreview />} />
           <Route path="/courses/gee" element={<GeeCoursePreview />} />
           <Route path="/gee-course-preview" element={<GeeCoursePreview />} />
+          <Route path="/courses/open-source-geospatial" element={<OpenSourceGeospatialPreview />} />
+          <Route path="/courses/data-visualization" element={<DataVisualizationPreview />} />
+          <Route path="/courses/advanced-spatial-data-science" element={<AdvancedSpatialDataSciencePreview />} />
+          <Route path="/courses/web-gis" element={<WebGisPreview />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/training" element={<Training />} />
           <Route path="/publications" element={<Publications />} />

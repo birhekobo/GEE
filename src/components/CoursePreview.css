@@ -330,7 +330,7 @@
   color: #555;
 }
 
-.course-details {
+.course-content .course-details {
   display: flex;
   flex-direction: column;
   gap: 8px;
