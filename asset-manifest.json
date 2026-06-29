@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/GEE/static/css/main.58667765.css",
+    "main.js": "/GEE/static/js/main.b5d47340.js",
+    "index.html": "/GEE/index.html",
+    "main.58667765.css.map": "/GEE/static/css/main.58667765.css.map",
+    "main.b5d47340.js.map": "/GEE/static/js/main.b5d47340.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.58667765.css",
+    "static/js/main.b5d47340.js"
+  ]
+}
