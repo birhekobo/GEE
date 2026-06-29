@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-# GEE - Photo Gallery React Application
-
-A modern web application built with React for showcasing photos and courses. This project includes features for displaying various courses including GEE (Google Earth Engine), MATLAB, Python, and more.
-
-## Features
-- Responsive photo gallery
-- Course previews and information
-- Modern React with React Router
-- Vercel deployment ready
-
-## Technologies Used
-- React 18
-- React Router v6
-- Create React App
-- EmailJS for contact forms
-
-## Getting Started
-1. Clone the repository
-2. Run `npm install`
-3. Run `npm start` for development
-4. Run `npm run build` for production build
-
-## Deployment
-This project is configured for deployment on Vercel. 
-=======
 # Satellite Remote Sensing Consultancy Website
 
 A modern web application showcasing satellite remote sensing consultancy services, training programs, and research work.
@@ -114,5 +88,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Thanks to all contributors and supporters
 - Special thanks to the open-source community
-- Built with React and modern web technologies 
->>>>>>> 28a16a96c48c11086b9e84a45187ba445707b84b
+- Built with React and modern web technologies
