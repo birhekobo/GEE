@@ -36,3 +36,4 @@ node_modules/
 dist/
 .vscode/ 
 >>>>>>> 28a16a96c48c11086b9e84a45187ba445707b84b
+.vercel
