@@ -2,11 +2,20 @@
 
 Short, ready-to-share posts and a print-ready flyer for **GeoSat Intelligence**.
 
-## Social posts (`social/`)
+## Social posts
+
+Plain-text versions for copy/paste live in `social/`:
 
 - `linkedin.txt` — professional announcement for LinkedIn
 - `telegram.txt` — concise version for Telegram
 - `whatsapp.txt` — short, casual version for WhatsApp
+
+Attractive A5 LaTeX cards live in `latex/social/`, with both the `.tex` source
+and a compiled `.pdf` for each platform:
+
+- `linkedin-post.tex` / `.pdf`
+- `telegram-post.tex` / `.pdf`
+- `whatsapp-post.tex` / `.pdf`
 
 All posts link to https://birhanuasmerom.vercel.app and cover the website launch,
 training courses, and a short introduction to the service.
@@ -16,11 +25,15 @@ training courses, and a short introduction to the service.
 `latex/geosat-flyer.tex` is a one-page A4 flyer about the website. A compiled
 `geosat-flyer.pdf` is included.
 
-To rebuild the PDF with MiKTeX / TeX Live:
+To rebuild the PDFs with MiKTeX / TeX Live:
 
 ```bash
 cd promo/latex
 pdflatex -interaction=nonstopmode geosat-flyer.tex
+cd social
+pdflatex -interaction=nonstopmode linkedin-post.tex
+pdflatex -interaction=nonstopmode telegram-post.tex
+pdflatex -interaction=nonstopmode whatsapp-post.tex
 ```
 
 The source uses only standard packages (`geometry`, `xcolor`, `tabularx`,

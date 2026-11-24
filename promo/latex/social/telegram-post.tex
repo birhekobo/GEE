@@ -1,0 +1,61 @@
+\documentclass[a5paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[table]{xcolor}
+\usepackage[margin=0cm]{geometry}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{hyperref}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\definecolor{accent}{HTML}{229ED9}
+\definecolor{branddark}{HTML}{123326}
+\definecolor{brandpale}{HTML}{E9F5ED}
+\definecolor{brandmuted}{HTML}{5B6B62}
+
+\hypersetup{colorlinks=true,urlcolor=accent,linkcolor=accent}
+
+\begin{document}
+
+\noindent\begin{tikzpicture}[remember picture,overlay]
+  \fill[accent] (current page.north west) rectangle ([yshift=-3.1cm] current page.north east);
+  \fill[brandpale] (current page.south west) rectangle ([yshift=2.1cm] current page.south east);
+  \node[fill=white, minimum size=0.95cm, rounded corners=3pt]
+    at ([xshift=-1.25cm,yshift=-1.55cm] current page.north east)
+    {\bfseries\color{accent} GI};
+\end{tikzpicture}
+
+\begin{center}
+  \vspace*{-0.35cm}
+  {\Huge\bfseries\color{white} Telegram}\\[1mm]
+  {\small\color{white} Short update}
+\end{center}
+
+\vspace{0.65cm}
+
+\noindent\hspace{1.15cm}\begin{minipage}{\dimexpr\paperwidth-2.3cm\relax}
+
+{\Large\bfseries\color{branddark} GeoSat Intelligence is live!}\par\vspace{4mm}
+
+Remote sensing consultancy, practical training (GEE, QGIS, Python, MATLAB, ML)
+and research resources --- all in one place.\par\vspace{4mm}
+
+{\color{accent}\url{https://birhanuasmerom.vercel.app}}\par\vspace{4mm}
+
+{\small\color{brandmuted} Take a look and share it with anyone working with satellite data.}
+
+\end{minipage}
+
+\vfill
+
+\begin{center}
+  {\bfseries\color{branddark} GeoSat Intelligence}\\[1mm]
+  {\small\color{brandmuted} birhanu.asmerom@gmail.com}
+\end{center}
+\vspace{0.85cm}
+
+\end{document}
