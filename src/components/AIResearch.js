@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from "react";
+import { Link } from "react-router-dom";
 import "./AIResearch.css";
 
 const IMAGE_PLACEHOLDER =
@@ -11,11 +12,12 @@ const researchCards = [
   {
     id: "machine-learning",
     imageClass: "",
-    src: "/images/FIG4.png",
-    fallback: "/images/FIG5.png",
-    alt: "Machine learning and atmospheric satellite data",
+    src: "/images/ai_image/AI-Powered Atmospheric Data Insights.png",
+    fallback: "/images/Gallery/FIG5.png",
+    alt: "AI-powered atmospheric data insights",
     badge: "Machine Learning",
     title: "AI-Powered Atmospheric Data Analysis",
+    learnMore: "/courses/ml",
     description:
       "Advanced machine learning algorithms for processing and analyzing atmospheric data from multiple sources.",
     features: [
@@ -28,11 +30,12 @@ const researchCards = [
   {
     id: "gis",
     imageClass: "",
-    src: "/images/FIG2.png",
-    fallback: "/images/FIG6.png",
-    alt: "GIS and topographic mapping",
+    src: "/images/ai_image/GIS Applications in Climate Studies.png",
+    fallback: "/images/Gallery/FIG6.png",
+    alt: "GIS applications in climate studies",
     badge: "GIS",
     title: "GIS Applications in Climate Studies",
+    learnMore: "/courses/qgis",
     description:
       "Geographic Information Systems enhanced with AI for comprehensive climate analysis and visualization.",
     features: [
@@ -45,11 +48,12 @@ const researchCards = [
   {
     id: "deep-learning",
     imageClass: "",
-    src: "/images/FIG15.png",
-    fallback: "/images/FIG16.png",
-    alt: "Deep learning remote sensing analysis",
+    src: "/images/ai_image/AI-Powered Earth Observation Infographic.png",
+    fallback: "/images/Gallery/FIG16.png",
+    alt: "Deep learning for remote sensing infographic",
     badge: "Deep Learning",
-    title: "Remote Sensing with Deep Learning",
+    title: "Deep Learning for Remote Sensing",
+    learnMore: "/courses/ai-geospatial",
     description:
       "Deep learning models for processing satellite imagery and remote sensing data for environmental monitoring, including Google Earth Engine integration.",
     features: [
@@ -62,12 +66,13 @@ const researchCards = [
   },
   {
     id: "gee",
-    imageClass: "ai-gis-card-image--logo",
-    src: "/images/gee-course.png",
-    fallback: "/images/FIG12.png",
-    alt: "Google Earth Engine",
+    imageClass: "",
+    src: "/images/ai_image/AI-Powered Earth Engine Applications.png",
+    fallback: "/images/Gallery/FIG12.png",
+    alt: "AI-powered Earth Engine applications",
     badge: "Google Earth Engine",
-    title: "AI Applications in Google Earth Engine",
+    title: "AI-Powered Earth Engine Applications",
+    learnMore: "/courses/gee",
     description:
       "Harnessing the power of AI and Google Earth Engine for advanced geospatial analysis and environmental monitoring.",
     features: [
@@ -107,7 +112,10 @@ function AIResearch() {
   return (
     <div className="ai-gis-container">
       <div className="ai-gis-header">
-        <h2>AI in Atmospheric Research, GIS & Remote Sensing</h2>
+        <h2>
+          Practical Training in Air Quality, Atmospheric Research, Climate &amp;
+          Environmental Health
+        </h2>
         <p>
           Exploring the intersection of artificial intelligence, geographic
           information systems, and remote sensing technologies for advanced
@@ -131,9 +139,9 @@ function AIResearch() {
                 <li key={feature}>{feature}</li>
               ))}
             </ul>
-            <button type="button" className="ai-gis-learn-more">
+            <Link to={card.learnMore} className="ai-gis-learn-more">
               Learn More
-            </button>
+            </Link>
           </div>
         ))}
       </div>

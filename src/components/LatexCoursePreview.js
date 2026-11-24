@@ -6,7 +6,7 @@ function LatexCoursePreview() {
   return (
     <div className="course-preview">
       <section className="course-hero">
-        <img src="/images/latex-logo.png" alt="LaTeX for Academic Writing" />
+        <img src="/images/latex-logo.svg" alt="LaTeX for Academic Writing" />
         <h1>LaTeX for Academic Writing</h1>
         <p>
           Master LaTeX typesetting for professional academic documents, research

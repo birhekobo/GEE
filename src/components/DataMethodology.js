@@ -1,255 +1,202 @@
 import React from "react";
 import "./DataMethodology.css";
 
+const sections = [
+  {
+    id: "optical",
+    title: "Optical",
+    icon: "\uD83D\uDEE0\uFE0F",
+    items: [
+      "Landsat 8/9 OLI (30m, 16-day)",
+      "Sentinel-2 MSI (10m, 5-day)",
+      "PlanetScope Dove (3m, daily)",
+      "WorldView-3/4 (0.31m pan)",
+    ],
+  },
+  {
+    id: "radar",
+    title: "Radar",
+    icon: "\uD83D\uDCF6",
+    items: [
+      "Sentinel-1 C-SAR (10m, 6-day)",
+      "RADARSAT-2 (3m Spotlight)",
+      "TerraSAR-X / TanDEM-X (1m)",
+      "ALOS-2 PALSAR-2 (L-band)",
+    ],
+  },
+  {
+    id: "thermal",
+    title: "Thermal & Hyperspectral",
+    icon: "\uD83C\uDF21\uFE0F",
+    items: [
+      "Landsat 8/9 TIRS (100m TIR)",
+      "MODIS Terra/Aqua (1km daily)",
+      "PRISMA (30m, 239 bands)",
+      "EnMAP (30m, 242 bands)",
+    ],
+  },
+  {
+    id: "elevation",
+    title: "Elevation & DEM",
+    icon: "\u26F0\uFE0F",
+    items: [
+      "SRTM (30m) / NASADEM",
+      "Copernicus DEM (30m)",
+      "ALOS World 3D (30m)",
+      "GEDI LiDAR (full-waveform)",
+    ],
+  },
+  {
+    id: "climate",
+    title: "Climate & Atmospheric",
+    icon: "\u2601\uFE0F",
+    items: [
+      "ERA5 Reanalysis (0.25\u00B0, hourly)",
+      "CHIRPS Rainfall (5km, daily)",
+      "GPM IMERG (10km, 30-min)",
+      "TROPOMI S5P (7km gases)",
+    ],
+  },
+  {
+    id: "landcover",
+    title: "Land Cover & Land Use",
+    icon: "\uD83C\uDF0D",
+    items: [
+      "ESA CCI Land Cover (300m)",
+      "Dynamic World (10m, real-time)",
+      "Global Forest Change (30m)",
+      "Global Surface Water (30m)",
+    ],
+  },
+];
+
+const methodologyData = [
+  {
+    title: "Pre-Processing",
+    icon: "\u2699\uFE0F",
+    items: [
+      "Atmospheric correction (DOS, FLAASH, Sen2Cor)",
+      "Pan-sharpening & cloud masking",
+      "Mosaicking & gap-filling",
+    ],
+  },
+  {
+    title: "Spectral Indices",
+    icon: "\uD83C\uDF1F",
+    items: ["NDVI, EVI, NDWI, MNDWI", "NDBI, SAVI, NBR"],
+  },
+  {
+    title: "Classification",
+    icon: "\uD83D\uDCCB",
+    items: [
+      "RF, SVM, Maximum Likelihood",
+      "Deep Learning: CNN, U-Net",
+    ],
+  },
+  {
+    title: "Change Detection",
+    icon: "\uD83D\uDCC8",
+    items: [
+      "CCDC, LandTrendr, BFAST",
+      "Post-classification comparison",
+    ],
+  },
+  {
+    title: "Validation",
+    icon: "\u2705",
+    items: [
+      "Confusion matrix & F1-score",
+      "Area-adjusted accuracy",
+    ],
+  },
+  {
+    title: "Cloud Computing",
+    icon: "\u2601\uFE0F",
+    items: [
+      "Google Earth Engine",
+      "Planetary Computer, STAC API",
+    ],
+  },
+];
+
+const workflowSteps = [
+  { step: 1, title: "Acquisition", desc: "Multi-sensor imagery from optical, radar, and thermal sources." },
+  { step: 2, title: "Pre-Processing", desc: "Atmospheric/geometric corrections, cloud masking, mosaicking." },
+  { step: 3, title: "Analysis", desc: "Spectral indices, classification, change detection, time-series." },
+  { step: 4, title: "Validation", desc: "Accuracy assessment with ground truth and confusion matrices." },
+  { step: 5, title: "Output", desc: "Thematic maps, dashboards, reports, publications." },
+];
+
+const tools = [
+  "Google Earth Engine", "QGIS", "Python (GDAL, Rasterio)",
+  "TensorFlow / PyTorch", "ArcGIS Pro", "SNAP", "PostGIS",
+  "Dask / Spark", "Leaflet / Mapbox", "Django / FastAPI",
+];
+
 const DataMethodology = () => {
   return (
-    <div className="data-methodology">
-      <div className="hero-section">
+    <div className="dm">
+      <div className="dm-hero">
         <h2>Data & Methodology</h2>
         <p>
-          Our approach combines advanced satellite data with cutting-edge
-          methodologies to deliver accurate and actionable insights.
+          Multi-sensor satellite data with rigorous geospatial methodologies for
+          environmental monitoring and sustainable development.
         </p>
       </div>
 
-      <section className="satellite-systems">
-        <h3>Satellite Systems</h3>
-        <div className="systems-grid">
-          <div className="system-card">
-            <h4>Optical Satellites</h4>
-            <ul>
-              <li>Landsat Series (30m resolution)</li>
-              <li>Sentinel-2 (10m resolution)</li>
-              <li>PlanetScope (3m resolution)</li>
-              <li>RapidEye (5m resolution)</li>
-            </ul>
-          </div>
-
-          <div className="system-card">
-            <h4>Radar Satellites</h4>
-            <ul>
-              <li>Sentinel-1 (SAR)</li>
-              <li>RADARSAT-2</li>
-              <li>TerraSAR-X</li>
-              <li>ALOS PALSAR</li>
-            </ul>
-          </div>
-
-          <div className="system-card">
-            <h4>Thermal Satellites</h4>
-            <ul>
-              <li>Landsat 8/9 TIRS</li>
-              <li>ASTER</li>
-              <li>MODIS</li>
-              <li>VIIRS</li>
-            </ul>
-          </div>
+      <section>
+        <h3>Satellite Data Sources</h3>
+        <div className="dm-grid">
+          {sections.map((g) => (
+            <div key={g.id} className="dm-card">
+              <div className="dm-card-header">
+                <span>{g.icon}</span>
+                <h4>{g.title}</h4>
+              </div>
+              <ul>
+                {g.items.map((item, i) => <li key={i}>{item}</li>)}
+              </ul>
+            </div>
+          ))}
         </div>
       </section>
 
-      <section className="air-quality">
-        <h3>Air Quality & Aerosol Data</h3>
-        <div className="air-quality-grid">
-          <div className="air-quality-card">
-            <h4>MODIS Aerosol Products</h4>
-            <ul>
-              <li>MOD04 / MYD04 Aerosol Optical Depth (AOD)</li>
-              <li>Deep Blue AOD over land</li>
-              <li>Dark Target AOD over ocean</li>
-              <li>Angstrom Exponent & Fine Mode Fraction</li>
-              <li>10 km & 3 km spatial resolution</li>
-            </ul>
-          </div>
-          <div className="air-quality-card">
-            <h4>MAIAC Algorithm</h4>
-            <ul>
-              <li>Multi-Angle Implementation of Atmospheric Correction</li>
-              <li>1 km high-resolution AOD retrieval</li>
-              <li>Surface reflectance estimation</li>
-              <li>Combined MODIS Terra & Aqua</li>
-              <li>Improved accuracy over bright surfaces</li>
-            </ul>
-          </div>
-          <div className="air-quality-card">
-            <h4>MISR</h4>
-            <ul>
-              <li>Multi-angle Imaging SpectroRadiometer (Terra)</li>
-              <li>Nine viewing angles for aerosol retrieval</li>
-              <li>Aerosol particle size and shape classification</li>
-              <li>17.6 km & 4.4 km resolution products</li>
-              <li>Climate modeling and air quality research</li>
-            </ul>
-          </div>
-          <div className="air-quality-card">
-            <h4>CALIPSO</h4>
-            <ul>
-              <li>Cloud-Aerosol Lidar with Orthogonal Polarization</li>
-              <li>Vertical profiles of aerosols and clouds</li>
-              <li>532 nm and 1064 nm lidar channels</li>
-              <li>Aerosol subtype classification (dust, smoke, sea salt)</li>
-              <li>Day and night observations</li>
-            </ul>
-          </div>
-          <div className="air-quality-card">
-            <h4>TROPOMI & OMI</h4>
-            <ul>
-              <li>TROPOMI on Sentinel-5P (7 km resolution)</li>
-              <li>OMI on Aura (13 x 24 km resolution)</li>
-              <li>NO₂, SO₂, O₃, HCHO, CH₄ columns</li>
-              <li>UV aerosol index</li>
-              <li>Tropospheric and stratospheric profiles</li>
-            </ul>
-          </div>
-          <div className="air-quality-card">
-            <h4>Air Quality Modeling</h4>
-            <ul>
-              <li>MERRA-2 reanalysis aerosol fields</li>
-              <li>CAMS global atmospheric composition forecasts</li>
-              <li>PM₂.₅ and PM₁₀ estimation from AOD</li>
-              <li>Ground-level air quality mapping</li>
-              <li>Health exposure assessment</li>
-            </ul>
-          </div>
+      <section>
+        <h3>Analytical Methodologies</h3>
+        <div className="dm-grid">
+          {methodologyData.map((m) => (
+            <div key={m.title} className="dm-card">
+              <div className="dm-card-header">
+                <span>{m.icon}</span>
+                <h4>{m.title}</h4>
+              </div>
+              <ul>
+                {m.items.map((item, i) => <li key={i}>{item}</li>)}
+              </ul>
+            </div>
+          ))}
         </div>
       </section>
 
-      <section className="methodologies">
-        <h3>Methodologies</h3>
-        <div className="methodology-grid">
-          <div className="methodology-card">
-            <h4>Image Processing</h4>
-            <ul>
-              <li>Atmospheric correction</li>
-              <li>Radiometric calibration</li>
-              <li>Geometric correction</li>
-              <li>Image enhancement</li>
-            </ul>
-          </div>
-
-          <div className="methodology-card">
-            <h4>Classification</h4>
-            <ul>
-              <li>Supervised classification</li>
-              <li>Unsupervised classification</li>
-              <li>Object-based image analysis</li>
-              <li>Machine learning algorithms</li>
-            </ul>
-          </div>
-
-          <div className="methodology-card">
-            <h4>Analysis</h4>
-            <ul>
-              <li>Change detection</li>
-              <li>Time series analysis</li>
-              <li>Spectral analysis</li>
-              <li>Statistical analysis</li>
-            </ul>
-          </div>
+      <section>
+        <h3>Analysis Workflow</h3>
+        <div className="dm-timeline">
+          {workflowSteps.map((w) => (
+            <div key={w.step} className="dm-step">
+              <div className="dm-step-num">{w.step}</div>
+              <div className="dm-step-body">
+                <h4>{w.title}</h4>
+                <p>{w.desc}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      <section className="indices">
-        <h3>Vegetation & Spectral Indices</h3>
-        <div className="indices-grid">
-          <div className="indices-card">
-            <h4>Vegetation Indices</h4>
-            <ul>
-              <li>NDVI (Normalized Difference Vegetation Index)</li>
-              <li>EVI (Enhanced Vegetation Index)</li>
-              <li>SAVI (Soil-Adjusted Vegetation Index)</li>
-              <li>NDMI (Normalized Difference Moisture Index)</li>
-              <li>LAI (Leaf Area Index)</li>
-            </ul>
-          </div>
-          <div className="indices-card">
-            <h4>Water & Urban Indices</h4>
-            <ul>
-              <li>NDWI (Normalized Difference Water Index)</li>
-              <li>MNDWI (Modified NDWI)</li>
-              <li>NDBI (Normalized Difference Built-up Index)</li>
-              <li>IBI (Index-Based Built-up Index)</li>
-              <li>UI (Urban Index)</li>
-            </ul>
-          </div>
-          <div className="indices-card">
-            <h4>Thermal & Burn Indices</h4>
-            <ul>
-              <li>LST (Land Surface Temperature)</li>
-              <li>NBR (Normalized Burn Ratio)</li>
-              <li>BAI (Burn Area Index)</li>
-              <li>MNDSI (Normalized Difference Snow Index)</li>
-              <li>TCT (Tasseled Cap Transformation)</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="validation">
-        <h3>Accuracy Assessment & Validation</h3>
-        <div className="validation-grid">
-          <div className="validation-card">
-            <h4>Error Matrix</h4>
-            <ul>
-              <li>Overall accuracy</li>
-              <li>Producer's accuracy</li>
-              <li>User's accuracy</li>
-              <li>Kappa coefficient</li>
-            </ul>
-          </div>
-          <div className="validation-card">
-            <h4>Statistical Metrics</h4>
-            <ul>
-              <li>RMSE (Root Mean Square Error)</li>
-              <li>MAE (Mean Absolute Error)</li>
-              <li>R-squared correlation</li>
-              <li>Bias and precision</li>
-            </ul>
-          </div>
-          <div className="validation-card">
-            <h4>Validation Methods</h4>
-            <ul>
-              <li>Cross-validation</li>
-              <li>Ground truth sampling</li>
-              <li>Stratified random sampling</li>
-              <li>Confidence interval estimation</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="workflow">
-        <h3>Data Processing Workflow</h3>
-        <div className="workflow-steps">
-          <div className="workflow-step">
-            <div className="step-number">1</div>
-            <h4>Data Acquisition</h4>
-            <p>Download satellite imagery from USGS, ESA, NASA, and other open data portals.</p>
-          </div>
-          <div className="workflow-step">
-            <div className="step-number">2</div>
-            <h4>Preprocessing</h4>
-            <p>Atmospheric, radiometric, and geometric correction of raw satellite data.</p>
-          </div>
-          <div className="workflow-step">
-            <div className="step-number">3</div>
-            <h4>Index Calculation</h4>
-            <p>Compute spectral indices (NDVI, NDWI, NDBI, LST, etc.) for feature extraction.</p>
-          </div>
-          <div className="workflow-step">
-            <div className="step-number">4</div>
-            <h4>Classification</h4>
-            <p>Apply supervised, unsupervised, or ML-based classification algorithms.</p>
-          </div>
-          <div className="workflow-step">
-            <div className="step-number">5</div>
-            <h4>Validation</h4>
-            <p>Assess accuracy with ground truth data and statistical error metrics.</p>
-          </div>
-          <div className="workflow-step">
-            <div className="step-number">6</div>
-            <h4>Analysis & Reporting</h4>
-            <p>Generate maps, charts, and reports with actionable insights.</p>
-          </div>
+      <section>
+        <h3>Platforms & Tools</h3>
+        <div className="dm-tools">
+          {tools.map((t) => <span key={t}>{t}</span>)}
         </div>
       </section>
     </div>

@@ -20,6 +20,8 @@ Visit the live website: [https://birhanuasmerom.vercel.app](https://birhanuasmer
 
 - React.js
 - React Router for navigation
+- Vite for development and production builds
+- Vitest + React Testing Library for tests
 - CSS3 with modern features
 - Progressive Web App (PWA)
 - Vercel for deployment
@@ -29,7 +31,7 @@ Visit the live website: [https://birhanuasmerom.vercel.app](https://birhanuasmer
 1. Clone the repository:
 ```bash
 git clone https://github.com/birhekobo/GEE_BIRHANU.git
-cd GEE_BIRHANU/photo-gallery-react
+cd GEE_BIRHANU
 ```
 
 2. Install dependencies:
@@ -42,17 +44,34 @@ npm install
 npm start
 ```
 
+4. Run the test suite:
+```bash
+npm test
+```
+
+5. Create a production build:
+```bash
+npm run build
+```
+
 ## 🏗️ Project Structure
 
 ```
-photo-gallery-react/
-├── public/                 # Static files
+.
+├── public/                 # Static files and images
 ├── src/
-│   ├── components/        # React components
-│   ├── App.js            # Main application component
-│   └── index.js          # Application entry point
-├── .github/              # GitHub templates and workflows
-└── package.json          # Project dependencies
+│   ├── components/         # React components
+│   ├── data/               # Course data
+│   ├── App.js              # Main application component
+│   ├── App.test.jsx        # Route and enrollment tests
+│   ├── index.js            # Application entry point
+│   └── setupTests.js       # Test environment setup
+├── index.html              # Vite HTML entry point
+├── vite.config.js          # Vite and Vitest configuration
+├── gee_figures/            # Scripts used to generate figures
+├── .github/workflows/      # CI workflow
+├── package.json            # Project dependencies
+└── vercel.json             # Deployment configuration
 ```
 
 ## 📚 Available Courses
@@ -68,11 +87,11 @@ photo-gallery-react/
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](.github/CONTRIBUTING.md) for details.
+Contributions are welcome. Please open an issue or pull request in this repository.
 
 ## 📝 Code of Conduct
 
-Please read our [Code of Conduct](.github/CODE_OF_CONDUCT.md) to keep our community approachable and respectable.
+Please be respectful and constructive in all interactions.
 
 ## 📄 License
 

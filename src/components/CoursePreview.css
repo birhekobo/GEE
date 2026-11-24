@@ -6,7 +6,7 @@
 
 .course-hero {
   position: relative;
-  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  background: linear-gradient(135deg, #12321c 0%, #25984d 100%);
   color: white;
   padding: 4rem 2rem;
   border-radius: 15px;
@@ -67,7 +67,7 @@
 }
 
 .course-details h2 {
-  color: #2c3e50;
+  color: #12321c;
   font-size: 1.8rem;
   margin: 2rem 0 1rem;
 }
@@ -102,7 +102,7 @@
 }
 
 .course-details li strong {
-  color: #2c3e50;
+  color: #12321c;
 }
 
 .course-sidebar {
@@ -114,7 +114,7 @@
 }
 
 .course-sidebar h3 {
-  color: #2c3e50;
+  color: #12321c;
   font-size: 1.4rem;
   margin: 0 0 1rem;
 }
@@ -163,7 +163,7 @@
 .back-link {
   display: inline-block;
   margin-top: 1rem;
-  color: #3498db;
+  color: #25984d;
   text-decoration: none;
   font-size: 1rem;
 }
@@ -181,7 +181,7 @@
 }
 
 .testimonials h2 {
-  color: #2c3e50;
+  color: #12321c;
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
 }
@@ -190,7 +190,7 @@
   padding: 1.5rem;
   margin-bottom: 1rem;
   background: #f8f9fa;
-  border-left: 4px solid #3498db;
+  border-left: 4px solid #25984d;
   border-radius: 5px;
   font-style: italic;
   color: #34495e;
@@ -210,7 +210,7 @@
 }
 
 .faq-section h2 {
-  color: #2c3e50;
+  color: #12321c;
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
 }
@@ -228,7 +228,7 @@
 }
 
 .faq-question {
-  color: #2c3e50;
+  color: #12321c;
   font-weight: 600;
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
@@ -330,7 +330,7 @@
   color: #555;
 }
 
-.course-content .course-details {
+.course-details {
   display: flex;
   flex-direction: column;
   gap: 8px;

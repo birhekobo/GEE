@@ -74,9 +74,12 @@ function GeeCoursePreview() {
             <br />
             Wollo University
           </p>
-          <a href="/enroll" className="enroll-btn">
+          <Link
+            to={"/enroll?course=" + encodeURIComponent("Google Earth Engine for Environmental Monitoring")}
+            className="enroll-btn"
+          >
             Enroll Now
-          </a>
+          </Link>
         </div>
       </div>
 

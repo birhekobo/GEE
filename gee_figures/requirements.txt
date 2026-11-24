@@ -1,0 +1,6 @@
+earthengine-api
+requests
+matplotlib
+numpy
+Pillow
+# optional: geemap  # -> interactive preview while developing (pip install geemap)

@@ -3,11 +3,11 @@ import "./Home.css";
 
 function Home() {
   return (
-    <main>
+    <div className="home-page">
       <section className="hero-section">
         <div className="hero-overlay">
           <div className="hero-content">
-            <h1>Satellite Remote Sensing Consultancy</h1>
+            <h1>GeoSat Intelligence</h1>
             <p>
               Welcome to our comprehensive platform dedicated to satellite
               remote sensing technology and its applications. We provide expert
@@ -55,7 +55,7 @@ function Home() {
           View Gallery
         </a>
       </section>
-    </main>
+    </div>
   );
 }
 

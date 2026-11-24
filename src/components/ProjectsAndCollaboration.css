@@ -5,7 +5,7 @@
 }
 
 .projects-hero {
-  background: linear-gradient(90deg, #3366CC 60%, #f8fbff 100%);
+  background: linear-gradient(90deg, #008a39 60%, #f4fbf6 100%);
   color: #fff;
   padding: 2.5em 1em 2em 1em;
   text-align: center;
@@ -21,7 +21,7 @@
 
 .projects-hero p {
   font-size: 1.2rem;
-  color: #eaf1ff;
+  color: #e8f7ec;
   margin: 0 auto;
   max-width: 800px;
 }
@@ -31,7 +31,7 @@
 }
 
 .projects-section h3 {
-  color: #3366CC;
+  color: #008a39;
   font-size: 1.8rem;
   margin-bottom: 2rem;
 }
@@ -48,7 +48,7 @@
 .project-card {
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(51, 102, 204, 0.07);
+  box-shadow: 0 2px 12px rgba(0, 138, 57, 0.07);
   overflow: hidden;
   transition: transform 0.2s ease;
 }
@@ -59,8 +59,9 @@
 
 .project-card img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 230px;
+  object-fit: contain;
+  background: #f6fcf7;
   border-radius: 8px 8px 0 0;
 }
 
@@ -69,7 +70,7 @@
 }
 
 .project-content h4 {
-  color: #3366CC;
+  color: #008a39;
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 1.4rem;
@@ -96,14 +97,14 @@
 
 .project-content li:before {
   content: "•";
-  color: #3366CC;
+  color: #008a39;
   position: absolute;
   left: 0;
   font-weight: bold;
 }
 
 .collaboration-section {
-  background: #f8fbff;
+  background: #f4fbf6;
   padding: 3em 2em;
   margin: 2em 0;
 }
@@ -114,7 +115,7 @@
 }
 
 .collaboration-title {
-  color: #3366CC;
+  color: #008a39;
   text-align: center;
   margin-bottom: 1.5em;
 }
@@ -130,11 +131,11 @@
   background: #fff;
   padding: 1.5em;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(51,102,204,0.05);
+  box-shadow: 0 2px 8px rgba(0, 138, 57,0.05);
 }
 
 .benefit-title {
-  color: #3366CC;
+  color: #008a39;
   margin-top: 0;
 }
 
@@ -153,7 +154,7 @@
 
 .benefit-card li:before {
   content: "•";
-  color: #3366CC;
+  color: #008a39;
   position: absolute;
   left: 0;
   font-weight: bold;
@@ -162,18 +163,18 @@
 .cta-section {
   text-align: center;
   padding: 3em 2em;
-  background: #eaf1ff;
+  background: #e8f7ec;
   margin: 2em 0;
 }
 
 .cta-title {
-  color: #3366CC;
+  color: #008a39;
   margin-bottom: 1em;
 }
 
 .cta-button {
   display: inline-block;
-  background: #005fa3;
+  background: #067a35;
   color: #fff;
   padding: 1em 2em;
   border-radius: 4px;
@@ -184,14 +185,14 @@
 }
 
 .cta-button:hover {
-  background: #003d6b;
+  background: #036b2d;
 }
 
 .copyright-footer {
   text-align: center;
   padding: 1.5em;
-  background: #f8fbff;
-  border-top: 1px solid #e0e7ff;
+  background: #f4fbf6;
+  border-top: 1px solid #d1e4d4;
   color: #666;
   font-size: 0.9rem;
   margin-top: 2em;
@@ -216,7 +217,7 @@
   }
 
   .project-card img {
-    height: 180px;
+    height: 210px;
   }
 
   .benefits-grid {

@@ -6,7 +6,7 @@ function MlCoursePreview() {
   return (
     <div className="course-preview">
       <section className="course-hero">
-        <img src="/images/FIG4.png" alt="Machine Learning in Remote Sensing" />
+        <img src="/images/Gallery/FIG4.png" alt="Machine Learning in Remote Sensing" />
         <h1>Machine Learning in Remote Sensing</h1>
         <p>
           Unlock the power of machine learning for satellite and aerial imagery

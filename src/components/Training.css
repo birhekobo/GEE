@@ -8,7 +8,7 @@
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 1rem;
-  color: #2c3e50;
+  color: #12321c;
 }
 
 .training-intro {
@@ -29,7 +29,7 @@
 }
 
 .subsection-title {
-  color: #005fa3;
+  color: #067a35;
   font-size: 1.6rem;
   margin: 2rem 0 0.5rem;
   text-align: center;
@@ -91,7 +91,7 @@
 .training-card {
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.07);
+  box-shadow: 0 2px 12px rgba(18, 50, 28, 0.07);
   padding: 2rem 1.5rem 1.5rem 1.5rem;
   display: flex;
   flex-direction: column;
@@ -100,11 +100,11 @@
 }
 .training-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.12);
+  box-shadow: 0 4px 24px rgba(18, 50, 28, 0.12);
 }
 .training-card h3 {
   margin-top: 0;
-  color: #005fa3;
+  color: #067a35;
   font-size: 1.3rem;
 }
 .training-card p {
@@ -112,7 +112,7 @@
   margin-bottom: 1rem;
 }
 .toggle-contents-btn {
-  background: #005fa3;
+  background: #067a35;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -133,7 +133,7 @@
 }
 .btn-secondary {
   display: inline-block;
-  background: #3366cc;
+  background: #008a39;
   color: #fff;
   padding: 0.5rem 1.2rem;
   border-radius: 4px;
@@ -143,17 +143,17 @@
   transition: background 0.2s;
 }
 .btn-secondary:hover {
-  background: #005fa3;
+  background: #067a35;
 }
 .training-benefits {
-  background: #f8fbff;
+  background: #f4fbf6;
   border-radius: 10px;
   padding: 2rem 1.5rem;
   margin-top: 2rem;
   text-align: center;
 }
 .training-benefits h2 {
-  color: #005fa3;
+  color: #067a35;
   margin-bottom: 1rem;
 }
 .training-benefits ul {
@@ -219,16 +219,16 @@
 .preview-link {
   display: inline-block;
   margin-top: 10px;
-  color: #3366CC;
+  color: #008a39;
   text-decoration: none;
   font-weight: 500;
   padding: 5px 10px;
-  border: 1px solid #3366CC;
+  border: 1px solid #008a39;
   border-radius: 4px;
   transition: all 0.3s ease;
 }
 
 .preview-link:hover {
-  background-color: #3366CC;
+  background-color: #008a39;
   color: white;
 } 

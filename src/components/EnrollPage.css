@@ -1,0 +1,51 @@
+.enroll-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.enroll-page-title {
+  color: #008a39;
+  margin-bottom: 0.5em;
+}
+
+.enroll-page-intro {
+  color: #555;
+  margin-bottom: 1.5em;
+}
+
+.enroll-page-label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.4em;
+}
+
+.enroll-course-select {
+  width: 100%;
+  padding: 0.7em;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  margin-bottom: 1.5em;
+  color: #333;
+}
+
+.enroll-course-select:focus {
+  outline: none;
+  border-color: #008a39;
+  box-shadow: 0 0 0 3px rgba(0, 138, 57, 0.15);
+}
+
+.enroll-page-empty {
+  background: #f5f7fa;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  padding: 1.5em;
+  color: #555;
+}
+
+.enroll-page-empty a {
+  color: #008a39;
+}

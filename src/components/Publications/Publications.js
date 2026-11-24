@@ -113,6 +113,14 @@ const Publications = () => {
         >
           Review Articles
         </button>
+        <button
+          className={`filter-button ${
+            activeCategory === "ebook" ? "active" : ""
+          }`}
+          onClick={() => setActiveCategory("ebook")}
+        >
+          Ebooks
+        </button>
       </div>
 
       {isLoading ? (

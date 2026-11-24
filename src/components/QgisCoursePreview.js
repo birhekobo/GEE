@@ -6,7 +6,7 @@ function QgisCoursePreview() {
   return (
     <div className="course-preview">
       <section className="course-hero">
-        <img src="/images/qgis-course.jpg" alt="QGIS for Remote Sensing" />
+        <img src="/images/qgis-course.png" alt="QGIS for Remote Sensing" />
         <h1>QGIS for Remote Sensing</h1>
         <p>
           Master QGIS for satellite and aerial imagery analysis. Learn essential
@@ -90,7 +90,10 @@ function QgisCoursePreview() {
             Wollo University
           </p>
 
-          <Link to="/enroll" className="enroll-btn">
+          <Link
+            to={"/enroll?course=" + encodeURIComponent("Geospatial Analysis using QGIS")}
+            className="enroll-btn"
+          >
             Enroll Now
           </Link>
           <Link to="/training" className="back-link">
@@ -119,9 +122,9 @@ function QgisCoursePreview() {
           <li>AI for geospatial data</li>
           <li>Hands-on coding exercises</li>
         </ul>
-        <a href="/gee-course" className="enroll-btn">
+        <Link to="/courses/gee" className="enroll-btn">
           Preview Course
-        </a>
+        </Link>
       </div>
 
       <section className="testimonials">

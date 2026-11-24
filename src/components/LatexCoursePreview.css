@@ -5,7 +5,7 @@
 }
 
 .course-hero {
-  background: linear-gradient(90deg, #008080 60%, #f8fbff 100%);
+  background: linear-gradient(90deg, #008080 60%, #f4fbf6 100%);
   color: #fff;
   padding: 2.5em 1em 2em 1em;
   text-align: center;
@@ -32,7 +32,7 @@
 
 .course-hero p {
   font-size: 1.2rem;
-  color: #eaf1ff;
+  color: #e8f7ec;
   margin: 0 auto;
   max-width: 600px;
 }
@@ -122,7 +122,7 @@
 }
 
 .testimonials {
-  background: #f8fbff;
+  background: #f4fbf6;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,128,128,0.05);
   max-width: 900px;
@@ -148,7 +148,7 @@
 }
 
 .faq-section {
-  background: #eaf1ff;
+  background: #e8f7ec;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,128,128,0.05);
   max-width: 900px;

@@ -105,7 +105,10 @@ function PythonCoursePreview() {
             Wollo University
           </p>
 
-          <Link to="/enroll" className="enroll-btn">
+          <Link
+            to={"/enroll?course=" + encodeURIComponent("Satellite Data Analysis with Python")}
+            className="enroll-btn"
+          >
             Enroll Now
           </Link>
           <Link to="/training" className="back-link">
@@ -134,7 +137,7 @@ function PythonCoursePreview() {
           <li>AI for geospatial data</li>
           <li>Hands-on coding exercises</li>
         </ul>
-        <a href="/gee-course" className="enroll-btn">
+        <a href="/courses/gee" className="enroll-btn">
           Preview Course
         </a>
       </div>

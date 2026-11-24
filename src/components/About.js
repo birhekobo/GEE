@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./About.css";
 
 function About() {
@@ -8,10 +9,9 @@ function About() {
         <div className="hero-content">
           <h1>About Us</h1>
           <p>
-            Welcome to the Satellite Remote Sensing Consultancy at Wollo
-            University. We are dedicated to advancing the field of remote
-            sensing and geospatial analysis through research, education, and
-            practical applications.
+            Welcome to GeoSat Intelligence. We are
+            dedicated to advancing the field of remote sensing and geospatial
+            analysis through research, education, and practical applications.
           </p>
         </div>
       </section>
@@ -185,7 +185,11 @@ function About() {
             <div className="collaboration-feature">
               <span className="feature-icon">🎓</span>
               <h3>Academic Programs</h3>
-              <p>Student exchange and training programs</p>
+              <p>
+                <Link to="/student-exchange">
+                  Student exchange and training programs
+                </Link>
+              </p>
             </div>
             <div className="collaboration-feature">
               <span className="feature-icon">💡</span>

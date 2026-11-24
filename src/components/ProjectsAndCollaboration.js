@@ -17,7 +17,7 @@ const ProjectsAndCollaboration = () => {
         <h3>Land Use Monitoring Project</h3>
         <div className="projects-grid">
           <div className="project-card">
-            <img src="/images/FIG1.png" alt="Land Use Change Monitoring" />
+            <img src="/images/Projects_Image/Land Use Change Monitoring.jpeg" alt="Land Use Change Monitoring" />
             <div className="project-content">
               <h4>Land Use Change Monitoring</h4>
               <p>
@@ -33,7 +33,7 @@ const ProjectsAndCollaboration = () => {
           </div>
 
           <div className="project-card">
-            <img src="/images/FIG2.png" alt="Climate Impact Assessment" />
+            <img src="/images/Projects_Image/Climate Impact Assessment.jpeg" alt="Climate Impact Assessment" />
             <div className="project-content">
               <h4>Climate Impact Assessment</h4>
               <p>
@@ -49,7 +49,7 @@ const ProjectsAndCollaboration = () => {
           </div>
 
           <div className="project-card">
-            <img src="/images/FIG3.png" alt="Urban Growth Analysis" />
+            <img src="/images/Projects_Image/Urban Growth Analysis.jpeg" alt="Urban Growth Analysis" />
             <div className="project-content">
               <h4>Urban Growth Analysis</h4>
               <p>
@@ -65,7 +65,7 @@ const ProjectsAndCollaboration = () => {
           </div>
 
           <div className="project-card">
-            <img src="/images/FIG4.png" alt="Air Quality Monitoring" />
+            <img src="/images/Projects_Image/Comprehensive Air Quality Monitoring.jpeg" alt="Air Quality Monitoring" />
             <div className="project-content">
               <h4>Comprehensive Air Quality Monitoring</h4>
               <p>
@@ -82,7 +82,7 @@ const ProjectsAndCollaboration = () => {
           </div>
 
           <div className="project-card">
-            <img src="/images/FIG8.png" alt="Urban Air Quality" />
+            <img src="/images/Projects_Image/Urban Air Quality Management.jpeg" alt="Urban Air Quality Management" />
             <div className="project-content">
               <h4>Urban Air Quality Management</h4>
               <p>
@@ -99,7 +99,7 @@ const ProjectsAndCollaboration = () => {
           </div>
 
           <div className="project-card">
-            <img src="/images/FIG9.png" alt="Industrial Emissions" />
+            <img src="/images/Projects_Image/Pollution Source Analysis.jpeg" alt="Pollution Source Analysis" />
             <div className="project-content">
               <h4>Industrial Air Quality Control</h4>
               <p>
@@ -115,7 +115,7 @@ const ProjectsAndCollaboration = () => {
           </div>
 
           <div className="project-card">
-            <img src="/images/FIG10.png" alt="Air Quality Modeling" />
+            <img src="/images/Projects_Image/Air Quality Prediction.jpeg" alt="Air Quality Prediction" />
             <div className="project-content">
               <h4>Air Quality Prediction</h4>
               <p>
@@ -131,7 +131,7 @@ const ProjectsAndCollaboration = () => {
           </div>
 
           <div className="project-card">
-            <img src="/images/FIG14.png" alt="Health Impact Analysis" />
+            <img src="/images/Projects_Image/Health Impact Analysis.jpeg" alt="Health Impact Analysis" />
             <div className="project-content">
               <h4>Health Impact Analysis</h4>
               <p>
@@ -147,7 +147,7 @@ const ProjectsAndCollaboration = () => {
           </div>
 
           <div className="project-card">
-            <img src="/images/FIG15.png" alt="Policy Support" />
+            <img src="/images/Projects_Image/Policy Support.jpeg" alt="Policy Support" />
             <div className="project-content">
               <h4>Policy Support & Planning</h4>
               <p>
@@ -168,7 +168,7 @@ const ProjectsAndCollaboration = () => {
         <h3>Air Quality Projection</h3>
         <div className="projects-grid">
           <div className="project-card">
-            <img src="/images/FIG5.png" alt="Air Quality Forecasting" />
+            <img src="/images/Projects_Image/Air Quality Forecasting.jpeg" alt="Air Quality Forecasting" />
             <div className="project-content">
               <h4>Air Quality Forecasting</h4>
               <p>
@@ -184,7 +184,7 @@ const ProjectsAndCollaboration = () => {
           </div>
 
           <div className="project-card">
-            <img src="/images/FIG6.png" alt="Pollution Source Analysis" />
+            <img src="/images/Projects_Image/Pollution Source Analysis.jpeg" alt="Pollution Source Analysis" />
             <div className="project-content">
               <h4>Pollution Source Analysis</h4>
               <p>
@@ -200,7 +200,7 @@ const ProjectsAndCollaboration = () => {
           </div>
 
           <div className="project-card">
-            <img src="/images/FIG7.png" alt="Health Impact Assessment" />
+            <img src="/images/Projects_Image/Health Impact Assessment.jpeg" alt="Health Impact Assessment" />
             <div className="project-content">
               <h4>Health Impact Assessment</h4>
               <p>
@@ -221,7 +221,7 @@ const ProjectsAndCollaboration = () => {
         <h3>Water Resource Monitoring Project</h3>
         <div className="projects-grid">
           <div className="project-card">
-            <img src="/images/FIG11.png" alt="Surface Water Monitoring" />
+            <img src="/images/Projects_Image/Surface Water Monitoring.jpeg" alt="Surface Water Monitoring" />
             <div className="project-content">
               <h4>Surface Water Monitoring</h4>
               <p>
@@ -237,7 +237,7 @@ const ProjectsAndCollaboration = () => {
           </div>
 
           <div className="project-card">
-            <img src="/images/FIG12.png" alt="Groundwater Assessment" />
+            <img src="/images/Projects_Image/Groundwater Assessment.jpeg" alt="Groundwater Assessment" />
             <div className="project-content">
               <h4>Groundwater Assessment</h4>
               <p>
@@ -253,7 +253,7 @@ const ProjectsAndCollaboration = () => {
           </div>
 
           <div className="project-card">
-            <img src="/images/FIG13.png" alt="Water Resource Management" />
+            <img src="/images/Projects_Image/Water Resource Management.jpeg" alt="Water Resource Management" />
             <div className="project-content">
               <h4>Water Resource Management</h4>
               <p>
@@ -274,7 +274,7 @@ const ProjectsAndCollaboration = () => {
         <h3>Drought Monitoring Project</h3>
         <div className="projects-grid">
           <div className="project-card">
-            <img src="/images/FIG16.png" alt="Drought Early Warning" />
+            <img src="/images/Projects_Image/Drought Early Warning System.jpeg" alt="Drought Early Warning System" />
             <div className="project-content">
               <h4>Drought Early Warning System</h4>
               <p>
@@ -290,7 +290,7 @@ const ProjectsAndCollaboration = () => {
           </div>
 
           <div className="project-card">
-            <img src="/images/Population_count.png" alt="Agricultural Impact" />
+            <img src="/images/Projects_Image/Agricultural Impact Assessment.jpeg" alt="Agricultural Impact Assessment" />
             <div className="project-content">
               <h4>Agricultural Impact Assessment</h4>
               <p>
@@ -306,7 +306,7 @@ const ProjectsAndCollaboration = () => {
           </div>
 
           <div className="project-card">
-            <img src="/images/FIG1.png" alt="Water Resource Impact" />
+            <img src="/images/Projects_Image/Water Resource Impact.jpeg" alt="Water Resource Impact" />
             <div className="project-content">
               <h4>Water Resource Impact</h4>
               <p>
@@ -327,7 +327,7 @@ const ProjectsAndCollaboration = () => {
         <h3>Mineral Exploration Project</h3>
         <div className="projects-grid">
           <div className="project-card">
-            <img src="/images/FIG2.png" alt="Mineral Mapping" />
+            <img src="/images/Projects_Image/Agricultural Impact Assessment.jpeg" alt="Mineral Mapping" />
             <div className="project-content">
               <h4>Mineral Mapping & Identification</h4>
               <p>
@@ -343,7 +343,7 @@ const ProjectsAndCollaboration = () => {
           </div>
 
           <div className="project-card">
-            <img src="/images/FIG3.png" alt="Geological Structure Analysis" />
+            <img src="/images/Projects_Image/Geological Structure Analysis.jpeg" alt="Geological Structure Analysis" />
             <div className="project-content">
               <h4>Geological Structure Analysis</h4>
               <p>
@@ -359,7 +359,7 @@ const ProjectsAndCollaboration = () => {
           </div>
 
           <div className="project-card">
-            <img src="/images/FIG4.png" alt="Exploration Site Assessment" />
+            <img src="/images/Projects_Image/Exploration Site Assessment.jpeg" alt="Exploration Site Assessment" />
             <div className="project-content">
               <h4>Exploration Site Assessment</h4>
               <p>
@@ -392,7 +392,9 @@ const ProjectsAndCollaboration = () => {
                 <li>Joint research projects</li>
                 <li>Data sharing agreements</li>
                 <li>Publication opportunities</li>
-                <li>Student exchange programs</li>
+                <li>
+                  <Link to="/student-exchange">Student exchange programs</Link>
+                </li>
               </ul>
             </div>
             <div className="benefit-card">

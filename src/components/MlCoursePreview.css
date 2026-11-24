@@ -5,7 +5,7 @@
 }
 
 .course-hero {
-  background: linear-gradient(90deg, #3366CC 60%, #f8fbff 100%);
+  background: linear-gradient(90deg, #008a39 60%, #f4fbf6 100%);
   color: #fff;
   padding: 2.5em 1em 2em 1em;
   text-align: center;
@@ -21,7 +21,7 @@
   border-radius: 50%;
   border: 4px solid #fff;
   margin-bottom: 1em;
-  box-shadow: 0 2px 8px rgba(51,102,204,0.13);
+  box-shadow: 0 2px 8px rgba(0, 138, 57,0.13);
 }
 
 .course-hero h1 {
@@ -32,7 +32,7 @@
 
 .course-hero p {
   font-size: 1.2rem;
-  color: #eaf1ff;
+  color: #e8f7ec;
   margin: 0 auto;
   max-width: 600px;
 }
@@ -49,12 +49,12 @@
   flex: 2 1 350px;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(51,102,204,0.07);
+  box-shadow: 0 2px 12px rgba(0, 138, 57,0.07);
   padding: 2em 1.5em;
 }
 
 .course-details h2 {
-  color: #3366CC;
+  color: #008a39;
   margin-top: 0;
 }
 
@@ -68,14 +68,14 @@
 }
 
 .course-details li strong {
-  color: #005fa3;
+  color: #067a35;
 }
 
 .course-sidebar {
   flex: 1 1 260px;
   background: #f5f7fa;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(51,102,204,0.05);
+  box-shadow: 0 2px 8px rgba(0, 138, 57,0.05);
   padding: 1.5em 1em;
   min-width: 220px;
   max-width: 320px;
@@ -83,7 +83,7 @@
 }
 
 .course-sidebar h3 {
-  color: #3366CC;
+  color: #008a39;
   margin-top: 0;
 }
 
@@ -94,7 +94,7 @@
 
 .enroll-btn {
   display: inline-block;
-  background: #005fa3;
+  background: #067a35;
   color: #fff;
   padding: 0.9em 2em;
   border-radius: 4px;
@@ -102,7 +102,7 @@
   font-weight: bold;
   margin-top: 2em;
   font-size: 1.15em;
-  box-shadow: 0 2px 8px rgba(51,102,204,0.08);
+  box-shadow: 0 2px 8px rgba(0, 138, 57,0.08);
   transition: background 0.2s;
   border: none;
   cursor: pointer;
@@ -116,29 +116,29 @@
 .back-link {
   display: inline-block;
   margin: 2em 0 0 0;
-  color: #3366CC;
+  color: #008a39;
   text-decoration: underline;
   font-size: 1em;
 }
 
 .testimonials {
-  background: #f8fbff;
+  background: #f4fbf6;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(51,102,204,0.05);
+  box-shadow: 0 2px 8px rgba(0, 138, 57,0.05);
   max-width: 900px;
   margin: 2em auto;
   padding: 2em 1.5em;
 }
 
 .testimonials h2 {
-  color: #3366CC;
+  color: #008a39;
   margin-top: 0;
 }
 
 .testimonial {
   margin-bottom: 1.5em;
   padding-left: 1.5em;
-  border-left: 4px solid #3366CC;
+  border-left: 4px solid #008a39;
   font-style: italic;
   color: #444;
 }
@@ -148,16 +148,16 @@
 }
 
 .faq-section {
-  background: #eaf1ff;
+  background: #e8f7ec;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(51,102,204,0.05);
+  box-shadow: 0 2px 8px rgba(0, 138, 57,0.05);
   max-width: 900px;
   margin: 2em auto;
   padding: 2em 1.5em;
 }
 
 .faq-section h2 {
-  color: #3366CC;
+  color: #008a39;
   margin-top: 0;
 }
 
@@ -167,7 +167,7 @@
 
 .faq-question {
   font-weight: bold;
-  color: #005fa3;
+  color: #067a35;
 }
 
 .faq-answer {

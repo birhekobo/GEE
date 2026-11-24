@@ -1,7 +1,29 @@
-# Ignore build folder (build artifacts) so that the build folder is not pushed to GitHub
-build/
-
-# Ignore node_modules, dist, and .vscode directories
+# Dependencies
 node_modules/
+
+# Build output
+build/
 dist/
-.vscode/ 
+
+# Python (figure generation scripts)
+__pycache__/
+*.py[cod]
+gee_figures/logs/
+
+# Environment and local overrides
+.env
+.env.*
+*.local
+
+# Editors and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs, coverage, and CI artifacts
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+coverage/
+.vercel/

@@ -95,7 +95,10 @@ function MatlabCoursePreview() {
             Wollo University
           </p>
 
-          <Link to="/enroll" className="enroll-btn">
+          <Link
+            to={"/enroll?course=" + encodeURIComponent("Introduction to Geospatial (Mapping) Analysis using MATLAB")}
+            className="enroll-btn"
+          >
             Enroll Now
           </Link>
           <Link to="/training" className="back-link">

@@ -1,21 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
-import "../App.css"; // Assuming App.css contains general layout styles like .App
+import "../App.css";
 
 const Layout = () => {
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setShowBackToTop(window.scrollY > 400);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className="App">
-      {" "}
-      {/* You can keep the App className here or move specific layout styles to a Layout.css */}
       <Header />
       <main className="main-content">
-        {" "}
-        {/* Added a class for better styling of the content area */}
-        <Outlet /> {/* Routed components will render here */}
+        <Outlet />
       </main>
       <Footer />
+      <button
+        type="button"
+        className={`back-to-top${showBackToTop ? " back-to-top--visible" : ""}`}
+        onClick={scrollToTop}
+        aria-label="Back to top"
+        tabIndex={showBackToTop ? 0 : -1}
+      >
+        ↑
+      </button>
     </div>
   );
 };

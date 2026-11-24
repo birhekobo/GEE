@@ -1,16 +1,5 @@
 export const publications = [
   {
-    id: 1,
-    title: "Remote Sensing Applications in Environmental Monitoring",
-    authors: "Smith, J., Johnson, A., & Williams, B.",
-    year: 2023,
-    journal: "Journal of Environmental Science",
-    doi: "10.1234/jes.2023.001",
-    category: "research",
-    abstract:
-      "A comprehensive study on the application of remote sensing techniques in environmental monitoring, focusing on vegetation analysis and land use changes.",
-  },
-  {
     id: 2,
     title: "Machine Learning Approaches in Geospatial Analysis",
     authors: "Brown, C., Davis, E., & Wilson, F.",
@@ -20,17 +9,6 @@ export const publications = [
     category: "research",
     abstract:
       "Exploring the integration of machine learning methods in geospatial data analysis, with applications in urban planning and environmental assessment.",
-  },
-  {
-    id: 3,
-    title: "Advances in Satellite Image Processing",
-    authors: "Taylor, M., Anderson, R., & Martinez, S.",
-    year: 2023,
-    journal: "Remote Sensing Reviews",
-    doi: "10.9012/rsr.2023.003",
-    category: "review",
-    abstract:
-      "A comprehensive review of recent advances in satellite image processing techniques and their applications in various fields.",
   },
   {
     id: 4,
@@ -232,5 +210,764 @@ export const publications = [
     category: "research",
     abstract:
       "This study investigates the spatiotemporal patterns of air pollution in Bangladesh during the COVID-19 lockdown period using multi-sensor data. The research analyzes changes in air quality parameters and their spatial distribution across different regions of Bangladesh, providing insights into the impact of reduced human activities on air pollution levels during the pandemic.",
+  },
+  {
+    id: 20,
+    title:
+      "Monitoring and Assessment of Agricultural Drought Using Multi-Index Satellite Remote Sensing: A 25-Year Case Study of Dessie Zuria Zone, South Wollo, Ethiopia",
+    authors: "Birhanu Asmerom",
+    year: 2026,
+    journal: "Manuscript under preparation",
+    doi: "Not yet assigned",
+    category: "research",
+    status: "Under Preparation",
+    abstract:
+      "A 25-year assessment of agricultural drought in Dessie Zuria Zone, South Wollo, Ethiopia, using multiple satellite-derived drought and vegetation indices to characterize drought patterns and support local monitoring and adaptation planning.",
+  },
+  {
+    id: 21,
+    title:
+      "Spatiotemporal Analysis and Modeling of Soil Moisture Dynamics from Reanalysis Datasets: A Case Study of Mekedela, Tenta, and Legamboworedas, South Wollo Zone, Amhara Region, Ethiopia",
+    authors: "Ahmed Yimer Siraji",
+    advisor: "Abera Debebe",
+    coAdvisor: "Birhanu Asmerom",
+    year: 2026,
+    journal: "Manuscript under preparation",
+    doi: "Not yet assigned",
+    category: "research",
+    status: "Under Preparation",
+    abstract:
+      "A case study of soil moisture dynamics in Mekedela, Tenta, and Legamboworedas, South Wollo Zone, using reanalysis datasets to analyze and model spatiotemporal patterns for improved agricultural water management.",
+  },
+  {
+    id: 22,
+    title:
+      "Spatial Distribution and Predictive Modeling of Atmospheric Aerosols Using Remote Sensing: Amhara Region and Oromiya Liyu Zone",
+    authors: "Mohammed Awol Yimer",
+    advisor: "Abera Debebe",
+    coAdvisor: "Birhanu Asmerom",
+    year: 2026,
+    journal: "Manuscript under preparation",
+    doi: "Not yet assigned",
+    category: "research",
+    status: "Under Preparation",
+    abstract:
+      "A remote sensing study of atmospheric aerosol distribution and predictive modeling across the Amhara Region and Oromiya Liyu Zone, supporting air quality assessment and environmental monitoring.",
+  },
+  {
+    id: 23,
+    title: "Remote Sensing Applications in Environmental Monitoring",
+    authors: "Birhanu Asmerom",
+    year: 2026,
+    journal: "Ebook",
+    doi: "Not applicable",
+    category: "ebook",
+    status: "Ebook",
+    abstract:
+      "An ebook covering practical applications of satellite remote sensing in environmental monitoring, including vegetation analysis, land use change, water resources, and climate-related assessment.",
+    contents: [
+      {
+        heading: "Getting Started",
+        items: [
+          "Home",
+          "About the e-book",
+          "Dataset catalogue",
+          "Resources & scripts",
+          "References",
+        ],
+      },
+      {
+        heading: "Part I — Foundations of Remote Sensing",
+        items: [
+          "1. Introduction to Satellite Remote Sensing",
+          "2. Satellite Platforms and Sensors",
+          "3. Image Preprocessing and Radiometry",
+        ],
+      },
+      {
+        heading: "Part II — Vegetation Analysis",
+        items: [
+          "4. Vegetation Indices (NDVI, EVI, SAVI)",
+          "5. Vegetation Health and Stress Monitoring",
+          "6. Land Degradation and Desertification",
+        ],
+      },
+      {
+        heading: "Part III — Land Use and Land Cover Change",
+        items: [
+          "7. LULC Classification Methods",
+          "8. Urban Expansion Mapping",
+          "9. Agricultural Land Monitoring",
+          "10. Change Detection Workflows",
+        ],
+      },
+      {
+        heading: "Part IV — Water Resources Monitoring",
+        items: [
+          "11. Surface Water Mapping",
+          "12. Wetland and Reservoir Monitoring",
+          "13. Soil Moisture Estimation",
+          "14. Flood Mapping and Assessment",
+        ],
+      },
+      {
+        heading: "Part V — Climate and Environmental Assessment",
+        items: [
+          "15. Climate Data from Satellites",
+          "16. Drought Monitoring and Early Warning",
+          "17. Air Quality and Aerosol Monitoring",
+          "18. Thermal and Heat Island Analysis",
+        ],
+      },
+      {
+        heading: "Part VI — Practical Workflows",
+        items: [
+          "19. Google Earth Engine Workflows",
+          "20. GIS Integration and Map Production",
+          "21. Field Validation and Accuracy Assessment",
+          "22. Environmental Monitoring Case Studies",
+        ],
+      },
+      {
+        heading: "Part VII — Training and Resources",
+        items: [
+          "23. Practical Exercises",
+          "24. Data Sources and Tools",
+          "25. Glossary and Further Reading",
+        ],
+      },
+    ],
+  },
+  {
+    id: 24,
+    title: "Geospatial Raster Data Analysis",
+    authors: "Birhanu Asmerom",
+    year: 2026,
+    journal: "Ebook",
+    doi: "Not applicable",
+    category: "ebook",
+    status: "Ebook",
+    abstract:
+      "An ebook on geospatial raster data analysis covering satellite imagery processing, raster workflows, zonal statistics, and practical applications in environmental monitoring.",
+    contents: [
+      {
+        heading: "I — Foundations",
+        items: [
+          "01 Introduction to Geospatial Raster Data",
+          "02 Python Geospatial Environment Setup",
+        ],
+      },
+      {
+        heading: "II — Boundaries & Vector Data",
+        items: [
+          "03 Ethiopia Administrative Boundary Data",
+          "04 GeoPandas for Ethiopia Administrative Data",
+        ],
+      },
+      {
+        heading: "III — Raster Fundamentals",
+        items: [
+          "05 Rasterio Fundamentals",
+          "06 Accessing Raster Datasets for Ethiopia",
+        ],
+      },
+      {
+        heading: "IV — Raster Operations",
+        items: [
+          "07 Clipping Raster Data to Ethiopia",
+          "08 Regional and Zonal Raster Extraction",
+          "09 Zonal Statistics and Raster Analysis",
+          "10 Advanced Raster Processing",
+        ],
+      },
+      {
+        heading: "V — Mapping, Automation & Practice",
+        items: [
+          "11 Climate and Environmental Applications",
+          "12 Interactive Mapping and Visualization",
+          "13 Automation and Reusable Tools",
+          "14 Real-World Projects",
+          "15 Troubleshooting and Best Practices",
+        ],
+      },
+      {
+        heading: "VI — Climate & Environmental Applications",
+        items: [
+          "16 Drought Early Warning with CHIRPS and NDVI",
+          "17 Land Cover and Vegetation Change",
+          "18 Water Resources and Irrigation Planning",
+          "19 Flood Exposure Mapping",
+          "20 Rainfall Onset Monitoring",
+          "21 Agro-Ecological Zoning",
+          "22 Temperature & Heat Analysis",
+          "23 Woreda Water Balance",
+        ],
+      },
+      {
+        heading: "VII — Reference",
+        items: ["24 References and Resources"],
+      },
+    ],
+  },
+  {
+    id: 25,
+    title: "Geospatial Analysis with Google Earth Engine",
+    authors: "Birhanu Asmerom",
+    year: 2026,
+    journal: "Ebook",
+    doi: "Not applicable",
+    category: "ebook",
+    status: "Ebook",
+    abstract:
+      "An ebook on geospatial analysis with Google Earth Engine, covering satellite data access, image processing, classification, and environmental monitoring workflows.",
+    contents: [
+      {
+        heading: "Part I — Foundations of Geospatial Analysis",
+        items: [
+          "1. Introduction to Geospatial Science",
+          "2. Introduction to Google Earth Engine",
+          "3. Geospatial Data and Earth Observation",
+        ],
+      },
+      {
+        heading: "Part II — Google Earth Engine Programming",
+        items: [
+          "4. JavaScript Programming for GEE",
+          "5. Python Programming for GEE",
+          "6. Earth Engine Data Catalog",
+        ],
+      },
+      {
+        heading: "Part III — Spatial Data Management",
+        items: [
+          "7. Administrative Boundaries and AOI Management",
+          "8. Raster and Vector Processing",
+          "9. ImageCollection Processing",
+        ],
+      },
+      {
+        heading: "Part IV — Satellite Remote Sensing Applications",
+        items: [
+          "10. Vegetation Analysis",
+          "11. Land Use and Land Cover",
+          "12. Digital Elevation and Terrain Analysis",
+          "13. Water Resources and Hydrological Analysis",
+          "14. Climate Data Analysis",
+          "15. Drought Monitoring",
+          "16. Soil Moisture and Agricultural Monitoring",
+          "17. Environmental Monitoring",
+        ],
+      },
+      {
+        heading: "Part V — Advanced Geospatial Analysis",
+        items: [
+          "18. Time-Series Analysis",
+          "19. Spatial Statistics",
+          "20. Machine Learning in GEE",
+          "21. Cloud Computing and Big Geospatial Data",
+        ],
+      },
+      {
+        heading: "Part VI — Ethiopia Practical Workshops",
+        items: [
+          "W1. Mapping Ethiopia with GEE",
+          "W2. Mapping Administrative Regions",
+          "W3. Extracting Regional & Zonal Boundaries",
+          "W4. Rainfall Distribution across Ethiopia",
+          "W5. Rainfall Trends in East Amhara",
+          "W6. NDVI Monitoring in South Wollo",
+          "W7. Vegetation Drought in Habru Woreda",
+          "W8. Climate Variability in Kebribeyah Woreda",
+          "W9. Land Cover Classification of Ethiopia",
+          "W10. Surface Water in Ethiopian Watersheds",
+          "W11. Soil Moisture Monitoring (SMAP)",
+          "W12. Mapping Fire Events in Ethiopia",
+          "W13. Regional Climate Analysis (CHIRPS + ERA5-Land)",
+          "W14. Climate-Induced Risk Mapping",
+          "W15. Geospatial Analysis for Climate Services",
+        ],
+      },
+      {
+        heading: "Part VII — Python and Geospatial Integration",
+        items: [
+          "22. Integrating GEE with Python GIS",
+          "23. Exporting and Processing Geospatial Data",
+          "24. Scientific Visualization",
+          "25. Reproducible Geospatial Research",
+        ],
+      },
+      {
+        heading: "Part VIII — Research Projects",
+        items: [
+          "P1. Rainfall Variability & Trends in Ethiopia (1981–2025)",
+          "P2. Vegetation Dynamics in East Africa (2001–2025)",
+          "P3. Agricultural Drought Monitoring in Ethiopia",
+          "P4. LULC Change in East Africa",
+          "P5. Soil Moisture in Ethiopian Agricultural Regions",
+          "P6. Climate Variability & Vegetation Response",
+          "P7. Satellite-Based Environmental Monitoring",
+          "P8. Climate Risk & Resilience Assessment",
+        ],
+      },
+      {
+        heading: "Part IX — Training and Assessment",
+        items: [
+          "26. Training Curriculum",
+          "27. Exercises and Practical Assignments",
+          "28. Assessment and Certification",
+          "29. Troubleshooting",
+          "30. Glossary, References, and Further Learning",
+        ],
+      },
+      {
+        heading: "Appendix",
+        items: ["Appendix — Data, Figures & Code"],
+      },
+    ],
+  },
+  {
+    id: 26,
+    title: "Geospatial Analysis with Google Earth Engine Using R",
+    authors: "Birhanu Asmerom",
+    year: 2026,
+    journal: "Ebook",
+    doi: "Not applicable",
+    category: "ebook",
+    status: "Ebook",
+    abstract:
+      "An ebook on geospatial analysis with Google Earth Engine using R, covering Earth Engine data access, raster processing, and environmental monitoring workflows.",
+    contents: [
+      {
+        heading: "Front Matter",
+        items: [
+          "Home",
+          "About the e-book",
+          "Curriculum & outcomes",
+          "Installation & setup",
+          "Dataset catalogue",
+          "Resources & scripts",
+          "References (APA 7)",
+        ],
+      },
+      {
+        heading: "Part I — Foundations",
+        items: [
+          "01 Introduction to Geospatial Science and Remote Sensing",
+          "02 Introduction to R Programming for Geospatial Analysis",
+          "03 Introduction to Google Earth Engine",
+        ],
+      },
+      {
+        heading: "Part II — R and Google Earth Engine",
+        items: [
+          "04 Working with rgee",
+          "05 Accessing Satellite and Climate Datasets",
+          "06 Working with Vector and Raster Data",
+        ],
+      },
+      {
+        heading: "Part III — Practical Remote Sensing",
+        items: [],
+      },
+      {
+        heading: "Part IV — Advanced Geospatial Analysis",
+        items: [
+          "15 Time-Series Analysis",
+          "16 Spatial Statistics and Geostatistics",
+          "17 Google Earth Engine and R Integration",
+          "18 Geospatial Data Visualization",
+        ],
+      },
+      {
+        heading: "Part V — Ethiopia and Africa Case Studies",
+        items: [
+          "19 Geospatial Applications in Ethiopia",
+          "20 Geospatial Applications Across Africa",
+        ],
+      },
+      {
+        heading: "Part VI — Research and Professional Applications",
+        items: [],
+      },
+      {
+        heading: "Training & Assessment",
+        items: [
+          "Practicum and lab manual",
+          "Instructor's guide",
+          "Student training manual",
+          "10-day intensive programme",
+          "Assessment and rubrics",
+          "Final practical project",
+          "Troubleshooting guide",
+        ],
+      },
+    ],
+  },
+  {
+    id: 27,
+    title:
+      "Practical Training in Air Quality, Atmospheric Research, Climate & Environmental Health",
+    authors: "Birhanu Asmerom",
+    year: 2026,
+    journal: "Ebook",
+    doi: "Not applicable",
+    category: "ebook",
+    status: "Ebook",
+    abstract:
+      "A practical training ebook covering air quality, atmospheric research, climate, and environmental health applications of remote sensing and geospatial analysis.",
+    contents: [
+      {
+        heading: "Training Program",
+        items: ["Dashboard", "Modules"],
+      },
+      {
+        heading: "Modules",
+        items: [
+          "1 · Atmospheric Science & Air Quality",
+          "2 · Python Fundamentals",
+          "3 · Scientific Computing",
+          "4 · Air Quality Data & Visualization",
+          "5 · ERA5 Climate Analysis",
+          "6 · Satellite Remote Sensing",
+          "7 · Google Earth Engine",
+          "8 · Sentinel-5P & MODIS",
+          "9 · Spatial Analysis & Mapping",
+          "10 · Statistics & Trend Analysis",
+          "11 · Climate & Environmental Health",
+          "12 · Climate-Health Exposure",
+          "13 · Machine Learning",
+          "14 · Research Project & Publication",
+        ],
+      },
+      {
+        heading: "Resources",
+        items: [
+          "Notebooks",
+          "Datasets",
+          "Assessments",
+          "Research Projects",
+        ],
+      },
+    ],
+  },
+  {
+    id: 28,
+    title:
+      "Air Quality, Atmospheric Research, Climate Change & Environmental Health",
+    authors: "Birhanu Asmerom",
+    year: 2026,
+    journal: "Ebook",
+    doi: "Not applicable",
+    category: "ebook",
+    status: "Ebook",
+    abstract:
+      "An ebook on air quality, atmospheric research, climate change, and environmental health, presenting remote sensing approaches for analysis and monitoring.",
+    contents: [
+      {
+        heading: "Getting Started",
+        items: [
+          "Home & Contents",
+          "Glossary",
+          "Data Sources",
+          "Reference Library",
+        ],
+      },
+      {
+        heading: "Part I · Fundamentals",
+        items: [
+          "1 · Intro to Air Quality & Atmospheric Research",
+          "2 · Atmospheric Physics & Meteorology",
+          "3 · Air Pollutants & Their Sources",
+          "4 · Atmospheric Chemistry & Aerosols",
+        ],
+      },
+      {
+        heading: "Part II · Climate & Health",
+        items: [
+          "5 · Air Pollution & Human Health",
+          "6 · Climate Change & Human Health",
+          "7 · Climate-Health Research Methods",
+        ],
+      },
+      {
+        heading: "Part III · Remote Sensing",
+        items: [
+          "8 · Introduction to Remote Sensing",
+          "9 · Satellite Air Quality Monitoring",
+          "10 · Aerosol Optical Depth & Air Quality",
+          "11 · Satellite–Ground Integration",
+        ],
+      },
+      {
+        heading: "Part IV · Python",
+        items: [
+          "12 · Python Fundamentals",
+          "13 · Python Scientific Computing",
+          "14 · Atmospheric Data Analysis",
+          "15 · Air Quality Visualization",
+          "16 · Statistics & Atmospheric Trends",
+        ],
+      },
+      {
+        heading: "Part V · Google Earth Engine",
+        items: [
+          "17 · Introduction to GEE",
+          "18 · Air Quality Analysis in GEE",
+          "19 · Climate Data Analysis in GEE",
+          "20 · Atmospheric Mapping & Geospatial Analysis",
+        ],
+      },
+      {
+        heading: "Part VI · Advanced Research",
+        items: [
+          "21 · Air Pollution–Climate Interactions",
+          "22 · Atmospheric Transport & Dispersion",
+          "23 · Machine Learning for Air Quality",
+          "24 · Climate-Health Geospatial Applications",
+        ],
+      },
+      {
+        heading: "Part VII · Africa & Ethiopia",
+        items: [
+          "25 · Air Quality Research in Africa",
+          "26 · Atmospheric Research in Ethiopia",
+          "27 · Research Case Studies",
+        ],
+      },
+    ],
+  },
+  {
+    id: 29,
+    title: "Climate Data Analytics with Xarray & Python",
+    authors: "Birhanu Asmerom",
+    year: 2026,
+    journal: "Ebook",
+    doi: "Not applicable",
+    category: "ebook",
+    status: "Ebook",
+    abstract:
+      "A practical ebook on climate data analytics using Xarray and Python, covering ERA5 and CMIP6 data, climate statistics, extremes, visualization, and reproducible research workflows.",
+    contents: [
+      {
+        heading: "Getting Started",
+        items: [
+          "Preface",
+          "How to read this book",
+          "Book contents",
+        ],
+      },
+      {
+        heading: "Part I — Foundations of Climate Data Analytics",
+        items: [
+          "Chapter 1 — Introduction to Climate Data Analytics",
+          "Chapter 2 — Python Environment and Scientific Computing",
+        ],
+      },
+      {
+        heading: "Part II — Xarray Fundamentals",
+        items: [
+          "Chapter 3 — Understanding NetCDF Climate Data",
+          "Chapter 4 — Introduction to Xarray",
+          "Chapter 5 — Climate Data Processing with Xarray",
+          "Chapter 6 — Large Climate Datasets with Dask",
+        ],
+      },
+      {
+        heading: "Part III — ERA5 Climate Analytics",
+        items: [
+          "Chapter 7 — Accessing ERA5 Reanalysis",
+          "Chapter 8 — ERA5 Temperature Analytics",
+          "Chapter 9 — ERA5 Precipitation Analytics",
+        ],
+      },
+      {
+        heading: "Part IV — Climate Statistics and Extremes",
+        items: [
+          "Chapter 10 — Climate Trend Analysis",
+          "Chapter 11 — Climate Extremes and Indices",
+          "Chapter 12 — Drought Analytics",
+        ],
+      },
+      {
+        heading: "Part V — Advanced Climate Analytics",
+        items: [
+          "Chapter 13 — EOF and PCA Analysis",
+          "Chapter 14 — Climate Teleconnections",
+        ],
+      },
+      {
+        heading: "Part VI — CMIP6 Climate Projections",
+        items: [
+          "Chapter 15 — Introduction to CMIP6",
+          "Chapter 16 — CMIP6 Data Processing",
+          "Chapter 17 — Bias Correction and Climate Model Evaluation",
+        ],
+      },
+      {
+        heading: "Part VII — Climate Mapping and Visualization",
+        items: [
+          "Chapter 18 — Scientific Climate Visualization",
+          "Chapter 19 — Climate Research Figures and Tables",
+        ],
+      },
+      {
+        heading: "Part VIII — Research Projects",
+        items: [
+          "Chapter 20 — Project 1: Spatiotemporal Variability and Trends of Precipitation and Temperature in Ethiopia, 1981–2025",
+          "Chapter 21 — Project 2: Meteorological Drought Characterization Using CHIRPS and ERA5",
+          "Chapter 22 — Project 3: Future Climate Projections Using CMIP6",
+        ],
+      },
+      {
+        heading: "Part IX — Research Workflow and Best Practices",
+        items: [
+          "Chapter 23 — Reproducible Climate Research",
+          "Chapter 24 — Troubleshooting and Common Errors",
+        ],
+      },
+      {
+        heading: "Part X — Practice and Independent Work",
+        items: [
+          "Chapter 25 — Guided Practice",
+          "Chapter 26 — A Capstone Research Project",
+          "Chapter 27 — Self-Assessment",
+        ],
+      },
+      {
+        heading: "Appendices",
+        items: [
+          "Appendix A — Python Climate Analytics Cheat Sheet",
+          "Appendix B — Xarray Cheat Sheet",
+          "Appendix C — Dask Cheat Sheet",
+          "Appendix D — ERA5 Variables and Units",
+          "Appendix E — CHIRPS Variables and Units",
+          "Appendix F — CMIP6 Variables and Units",
+          "Appendix G — Climate Indices Reference",
+          "Appendix H — Statistical Methods Reference",
+          "Appendix I — Python Package Installation",
+          "Appendix J — Climate Dataset Resources",
+          "Appendix K — Complete Reusable Python Functions",
+          "Appendix L — Glossary",
+          "Appendix M — Instructor's Guide",
+          "Appendix N — Regional Case Studies: Ethiopia's ADM1 Regions",
+        ],
+      },
+      {
+        heading: "Back Matter",
+        items: ["References", "Index", "First Edition · 2026"],
+      },
+    ],
+  },
+  {
+    id: 30,
+    title: "Introduction to Climate Data Operators",
+    authors: "Birhanu Asmerom",
+    year: 2026,
+    journal: "Ebook",
+    doi: "Not applicable",
+    category: "ebook",
+    status: "Ebook",
+    abstract:
+      "Climate Data Operators (CDO): complete training for climate data processing, analysis, and visualization, with modules, exercises, notebooks, projects, quizzes, and solutions.",
+    contents: [
+      {
+        heading: "Course Overview",
+        items: [
+          "Climate Data Operators (CDO): Complete Training for Climate Data Processing, Analysis, and Visualization",
+        ],
+      },
+      {
+        heading: "Module 1 — Introduction to Climate Data Operators",
+        items: ["Introduction to Climate Data Operators"],
+      },
+      {
+        heading: "Getting Started",
+        items: [
+          "Module 2: Installation and Setup",
+          "Module 3: Linux Basics for Climate Data Processing",
+        ],
+      },
+      {
+        heading: "Core CDO Skills",
+        items: [
+          "Module 4: CDO Operators and File Operations",
+          "Module 5: Working with NetCDF Data",
+          "Module 6: Working with GRIB Data",
+        ],
+      },
+      {
+        heading: "Analysis Techniques",
+        items: [
+          "Module 7: Temporal Operators",
+          "Module 8: Spatial Operators",
+          "Module 9: Statistical Operators",
+          "Module 10: Climate Indices and Extremes",
+        ],
+      },
+      {
+        heading: "Advanced Topics",
+        items: [
+          "Module 11: Advanced Workflows and Automation",
+          "Module 12: Capstone Projects",
+        ],
+      },
+      {
+        heading: "Reference",
+        items: ["References and Further Resources"],
+      },
+      {
+        heading: "Exercises",
+        items: [
+          "Exercise 1: CDO Basics",
+          "Exercise 2: File Operations",
+          "Exercise 3: Temporal Analysis",
+          "Exercise 4: Spatial Analysis",
+          "Exercise 5: Statistics and Climate Indices",
+        ],
+      },
+      {
+        heading: "Notebooks",
+        items: [
+          "Getting Started with CDO",
+          "Temporal Analysis with CDO",
+          "Spatial Analysis with CDO",
+          "Climate Statistics and Indices",
+          "Python + CDO Workflow",
+          "Climate Data Visualization",
+        ],
+      },
+      {
+        heading: "Projects",
+        items: [
+          "Project 1: Rainfall Trend Analysis",
+          "Project 2: Temperature Trend Mapping",
+          "Project 3: Drought Index Computation",
+          "Project 4: Climate Extremes Detection",
+          "Project 5: ERA5 Data Processing Pipeline",
+          "Project 6: CMIP6 Multi-Model Analysis",
+          "Project 7: Climate Dashboard",
+        ],
+      },
+      {
+        heading: "Quizzes",
+        items: [
+          "Quiz 1: CDO Basics",
+          "Quiz 2: File Operations",
+          "Quiz 3: Temporal Analysis",
+          "Quiz 4: Spatial Analysis",
+          "Quiz 5: Statistics and Climate Indices",
+        ],
+      },
+      {
+        heading: "Solutions",
+        items: [
+          "Solution 1: CDO Basics",
+          "Solution 2: File Operations",
+          "Solution 3: Temporal Analysis",
+          "Solution 4: Spatial Analysis",
+          "Solution 5: Statistics and Climate Indices",
+        ],
+      },
+    ],
   },
 ];

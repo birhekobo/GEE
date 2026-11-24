@@ -112,7 +112,7 @@ function IntroRemoteSensingPreview() {
           <li>AI for geospatial data</li>
           <li>Hands-on coding exercises</li>
         </ul>
-        <a href="/gee-course" className="enroll-btn">
+        <a href="/courses/gee" className="enroll-btn">
           Preview Course
         </a>
       </div>

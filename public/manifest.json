@@ -1,6 +1,6 @@
 {
-  "short_name": "Remote Sensing",
-  "name": "Satellite Remote Sensing Consultancy",
+  "short_name": "GeoSat Intelligence",
+  "name": "GeoSat Intelligence",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#3366CC",
+  "theme_color": "#008a39",
   "background_color": "#ffffff"
 } 

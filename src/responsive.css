@@ -1,0 +1,394 @@
+/* Final responsive layer. Loaded after all component styles so it can
+   normalize spacing, grids and touch targets across every page. */
+
+[id] {
+  scroll-margin-top: 5rem;
+}
+
+/* The horizontal nav becomes a second row on small screens. */
+@media (max-width: 900px) {
+  [id] {
+    scroll-margin-top: 7rem;
+  }
+}
+
+/* Comfortable tap targets and readable controls everywhere. */
+button,
+.nav-link,
+.filter-button,
+.preview-link,
+.back-link {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #25984d;
+  outline-offset: 2px;
+}
+
+/* Floating helper for the very long homepage. */
+.back-to-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 900;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #008a39, #036b2d);
+  color: #fff;
+  font-size: 1.35rem;
+  line-height: 1;
+  box-shadow: 0 8px 20px rgba(4, 55, 26, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
+
+.back-to-top--visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  /* Sections: keep the full-bleed hero look, but trim generous desktop padding. */
+  .hero-section,
+  .home-hero,
+  .about-hero,
+  .services-hero,
+  .projects-hero,
+  .course-hero,
+  .dm-hero,
+  .gallery-intro {
+    padding: 2rem 1rem 1.5rem;
+    border-radius: 0 0 18px 18px;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-mission,
+  .expertise-section,
+  .about-team,
+  .about-collaboration,
+  .collaboration-section,
+  .testimonials-section,
+  .cta-section,
+  .research-highlights,
+  .training-benefits,
+  .featured-course-card {
+    padding: 1.5rem 1rem;
+    margin: 1.5rem 0;
+    border-radius: 12px;
+  }
+
+  .about-expertise,
+  .about-facilities,
+  .services-section,
+  .latest-projects,
+  .research-grid,
+  .projects-section,
+  .acs-footer {
+    margin: 1.5rem 0;
+  }
+
+  .ai-research-container,
+  .ai-gis-container {
+    padding: 1.75rem 1rem;
+  }
+
+  .contact-container,
+  .enrollment-container,
+  .course-preview,
+  .projects-collaboration,
+  .applications-casestudies,
+  .publications-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .applications-content,
+  .contact-info,
+  .contact-form,
+  .course-details,
+  .course-sidebar,
+  .testimonials,
+  .faq-section,
+  .dm-card,
+  .project-card,
+  .service-card,
+  .research-card,
+  .publication-card,
+  .training-card,
+  .application-card {
+    padding: 1.25rem 1rem;
+  }
+
+  /* Fluid headings instead of desktop-sized text on small screens. */
+  .hero-content h1,
+  .home-hero h1,
+  .about-hero h1,
+  .services-hero h1,
+  .course-hero h1,
+  .projects-hero h2,
+  .ai-research-header h2,
+  .ai-gis-header h2,
+  .contact-header h2,
+  .training-title,
+  .applications h1,
+  .acs-header h1,
+  .publications-title,
+  .cta-content h2,
+  .collaboration-content h2,
+  .about-facilities h2,
+  .about-expertise h2 {
+    font-size: clamp(1.6rem, 6vw, 2rem);
+    line-height: 1.2;
+  }
+
+  .hero-content p,
+  .home-hero p,
+  .about-hero p,
+  .services-hero p,
+  .projects-hero p,
+  .course-hero p,
+  .ai-research-header p,
+  .ai-gis-header p,
+  .training-intro,
+  .publications-intro,
+  .contact-header p,
+  .cta-content p {
+    font-size: 1rem;
+  }
+
+  /* Cards use fluid widths so they never push the page sideways. */
+  .featured-training li,
+  .value-item,
+  .expertise-card,
+  .team-member,
+  .facility-item,
+  .collaboration-feature,
+  .research-card,
+  .ai-gis-card,
+  .highlight-item,
+  .application-card,
+  .service-card,
+  .project-card,
+  .gallery-item,
+  .training-card,
+  .publication-card,
+  .benefit-card,
+  .course-card,
+  .testimonial-card,
+  .dm-card {
+    min-width: 0;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  /* Images adapt to the available width instead of keeping a fixed height. */
+  .team-image,
+  .expertise-image,
+  .research-image-container {
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+
+  .project-card img,
+  .gallery-item img,
+  .course-hero img,
+  .featured-course-img {
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+  }
+
+  .course-hero img,
+  .featured-course-img {
+    aspect-ratio: 1;
+    width: clamp(88px, 24vw, 120px);
+    height: auto;
+  }
+
+  /* Actions are easy to tap. */
+  .btn-primary,
+  .btn-secondary,
+  .cta-button,
+  .enroll-btn,
+  .submit-button,
+  .toggle-contents-btn,
+  .preview-link,
+  .back-link,
+  .filter-button,
+  .learn-more-btn,
+  .explore-btn,
+  .ai-gis-learn-more,
+  .retry-button,
+  .gallery-link a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0.7rem 1.2rem;
+    text-align: center;
+  }
+
+  .enroll-btn,
+  .submit-button,
+  .learn-more-btn,
+  .ai-gis-learn-more {
+    width: 100%;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .search-input,
+  .sort-select {
+    min-height: 48px;
+    font-size: 1rem;
+  }
+
+  .form-group textarea {
+    min-height: 130px;
+    resize: vertical;
+  }
+
+  .course-details ul,
+  .course-details ol,
+  .application-card ul,
+  .course-contents {
+    padding-left: 1.25rem;
+  }
+
+  /* Lightbox and enrollment dialog stay inside the viewport. */
+  .lightbox-content {
+    max-width: calc(100% - 1.5rem);
+    max-height: 70dvh;
+  }
+
+  .enrollment-modal {
+    padding: 1rem;
+  }
+
+  .enrollment-modal-content {
+    width: 100%;
+    max-width: 560px;
+    max-height: calc(100dvh - 2rem);
+    padding: 1.5rem 1rem;
+  }
+
+  .nav-button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .close-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .footer-attribution {
+    width: 100%;
+  }
+}
+
+/* Two-column gallery on tablets, single column on phones. */
+@media (min-width: 520px) and (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Narrow phones: force every multi-column grid into a single column and
+   replace the widest minmax() tracks so nothing overflows the viewport. */
+@media (max-width: 480px) {
+  .mission-values,
+  .expertise-grid,
+  .team-grid,
+  .facilities-grid,
+  .collaboration-features,
+  .research-grid,
+  .highlights-grid,
+  .applications-grid,
+  .courses-grid,
+  .projects-grid,
+  .gallery-grid,
+  .dm-grid,
+  .services-grid,
+  .training-grid,
+  .benefits-grid,
+  .publications-container,
+  .testimonials-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .publications-controls {
+    padding: 0 1rem;
+  }
+
+  .filter-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .filter-button {
+    width: auto;
+    max-width: none;
+    flex: 1 1 auto;
+  }
+
+  .contact-content {
+    gap: 1.25rem;
+  }
+
+  .course-card-header {
+    flex-wrap: wrap;
+  }
+
+  .course-price-badge {
+    margin-left: auto;
+  }
+
+  .footer-attribution-text {
+    font-size: 0.8rem;
+  }
+}
+
+/* Touch devices do not have hover; keep cards calm and information visible. */
+@media (hover: none) {
+  .gallery-item-info {
+    position: static;
+    opacity: 1;
+    transform: none;
+  }
+
+  .ai-gis-card:hover,
+  .research-card:hover,
+  .project-card:hover,
+  .service-card:hover,
+  .expertise-card:hover,
+  .team-member:hover,
+  .facility-item:hover,
+  .course-card:hover,
+  .testimonial-card:hover,
+  .publication-card:hover,
+  .training-card:hover,
+  .gallery-item:hover {
+    transform: none;
+  }
+
+  .team-member:hover .team-image img,
+  .expertise-card:hover .expertise-image img,
+  .gallery-item:hover img {
+    transform: none;
+  }
+}

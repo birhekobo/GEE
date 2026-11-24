@@ -1,93 +1,177 @@
-.data-methodology-main {
+.dm {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1rem;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #f8fbff;
-  min-height: 100vh;
+  padding: 1.5rem;
 }
 
-.data-methodology-main h2 {
-  color: #1565c0;
-  margin-bottom: 1.5rem;
-  font-size: 2.5rem;
-  text-align: left;
+.dm-hero {
+  background: linear-gradient(135deg, #073a1e, #0b7a3c, #075f2f);
+  color: #fff;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border-radius: 16px;
+  margin-bottom: 2rem;
 }
 
-.methodology-intro {
-  text-align: left;
-  max-width: 800px;
-  margin: 0 0 3rem 0;
+.dm-hero h2 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.dm-hero p {
+  margin: 0 auto;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.85);
+  max-width: 700px;
   line-height: 1.6;
-  color: #333;
-  font-size: 1.1rem;
 }
 
-.data-grid,
-.methodology-grid {
+.dm h3 {
+  font-size: 1.4rem;
+  color: #073a1e;
+  margin: 0 0 1rem;
+}
+
+.dm section {
+  margin-bottom: 2.5rem;
+}
+
+.dm-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2.5em;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
 }
 
-.data-method-card {
+.dm-card {
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(21,101,192,0.07);
-  padding: 1.5em 1.2em;
-  transition: box-shadow 0.2s;
-  border-left: 5px solid #1565c0;
+  border-radius: 10px;
+  border: 1px solid #d1e4d4;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
 }
 
-.data-method-card h4,
-.data-method-card h3 {
-  color: #1565c0;
-  margin-top: 0;
-  margin-bottom: 0.7em;
+.dm-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.dm-card-header span {
   font-size: 1.2rem;
 }
 
-.data-method-card p {
-  color: #222;
-  font-size: 1.05em;
-  margin-bottom: 1rem;
+.dm-card-header h4 {
+  margin: 0;
+  color: #073a1e;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
-.card-links {
+.dm-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dm-card li {
+  color: #465c4a;
+  font-size: 0.85rem;
+  padding: 0.3rem 0;
+  line-height: 1.4;
+}
+
+.dm-card li::before {
+  content: "\25B8";
+  color: #25984d;
+  margin-right: 0.4rem;
+}
+
+.dm-timeline {
   display: flex;
   flex-direction: column;
+  gap: 0.6rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.dm-timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.75rem;
+  top: 0.6rem;
+  bottom: 0.6rem;
+  width: 2px;
+  background: linear-gradient(#25984d, #63b3ed);
+}
+
+.dm-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.dm-step-num {
+  width: 1.6rem;
+  height: 1.6rem;
+  background: linear-gradient(135deg, #25984d, #0b7a3c);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  margin-top: 0.1rem;
+}
+
+.dm-step-body {
+  background: #fff;
+  border: 1px solid #d1e4d4;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  flex: 1;
+}
+
+.dm-step-body h4 {
+  margin: 0 0 0.2rem;
+  color: #073a1e;
+  font-size: 0.95rem;
+}
+
+.dm-step-body p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.dm-tools {
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-.card-links a {
-  color: #1565c0;
-  text-decoration: underline;
-  font-size: 0.9rem;
+.dm-tools span {
+  background: #ebf8ff;
+  color: #0b7a3c;
+  border: 1px solid #bee3f8;
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
-  transition: color 0.3s ease;
 }
 
-.card-links a:hover {
-  color: #0d47a1;
+@media (max-width: 768px) {
+  .dm { padding: 0.75rem; }
+  .dm-hero h2 { font-size: 1.5rem; }
+  .dm-grid { grid-template-columns: 1fr; }
+  .dm-card li { font-size: 0.8rem; }
+  .dm-tools span { font-size: 0.75rem; padding: 0.25rem 0.7rem; }
 }
-
-.methodology-note {
-  text-align: center;
-  color: #7f8c8d;
-  font-style: italic;
-  margin-top: 2rem;
-}
-
-@media (max-width: 700px) {
-  .data-methodology-main {
-    padding: 1rem;
-  }
-  .data-methodology-main h2 {
-    font-size: 2rem;
-  }
-  .data-grid,
-  .methodology-grid {
-    grid-template-columns: 1fr;
-  }
-} 
