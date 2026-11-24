@@ -227,7 +227,7 @@ export const webApplicationCategories = [
         description:
           "Institutional performance tracking, indicators, reports and evaluation.",
         features: ["KPIs", "Reports", "Evaluation"],
-        status: "Completed - not deployed",
+        status: "Completed - locally deployed",
       },
       {
         id: 23,
