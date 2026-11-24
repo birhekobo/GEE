@@ -194,7 +194,7 @@ export const webApplicationCategories = [
         description:
           "University learning resources, exit exam preparation and mock exams.",
         features: ["Exit exams", "Mock exams", "Resources"],
-        status: "Completed - not deployed",
+        status: "Completed - locally deployed",
         flagship: true,
       },
       {
