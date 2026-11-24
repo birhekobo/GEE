@@ -43,7 +43,7 @@ const Publications = () => {
     filtered.sort((a, b) => {
       switch (sortBy) {
         case "year":
-          return b.year - a.year;
+          return (b.year ?? 0) - (a.year ?? 0);
         case "title":
           return a.title.localeCompare(b.title);
         case "authors":

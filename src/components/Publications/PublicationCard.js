@@ -24,7 +24,7 @@ const PublicationCard = ({ publication }) => {
       {coAdvisor && (
         <p className="publication-authors">Co-Advisor: {coAdvisor}</p>
       )}
-      <p className="publication-year">{year}</p>
+      {year && <p className="publication-year">{year}</p>}
       <p className="publication-journal">{journal}</p>
       <p className="publication-doi">DOI: {doi}</p>
       <div className="publication-abstract">
@@ -54,7 +54,7 @@ PublicationCard.propTypes = {
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     authors: PropTypes.string.isRequired,
-    year: PropTypes.number.isRequired,
+    year: PropTypes.number,
     journal: PropTypes.string.isRequired,
     doi: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,

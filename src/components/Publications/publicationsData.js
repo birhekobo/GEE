@@ -26,8 +26,7 @@ export const publications = [
     id: 5,
     title:
       "Assessment of Land Use/Land Cover Changes and Urban Expansion in Dessie City, Ethiopia",
-    authors: "Asmerom, B., & Teklu, K.",
-    year: 2024,
+    authors: "Birhanu Asmerom",
     journal: "International Journal of Remote Sensing",
     doi: "Not yet assigned",
     category: "research",
