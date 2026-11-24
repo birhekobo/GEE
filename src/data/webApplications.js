@@ -261,6 +261,14 @@ export const webApplicationCategories = [
         features: ["Course load", "Workload tracking", "Scheduling"],
         status: "Completed - locally deployed",
       },
+      {
+        id: 43,
+        name: "Wollo University Transcript Portal",
+        description:
+          "Student transcript generation, verification and academic record management.",
+        features: ["Transcripts", "Verification", "Academic records"],
+        status: "Completed - locally deployed",
+      },
     ],
   },
   {

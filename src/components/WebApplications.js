@@ -58,7 +58,7 @@ const WebApplications = () => {
             A connected ecosystem of {allWebApplications.length} web application
             platforms spanning geospatial science, climate research, AI,
             education, university systems and digital knowledge. One platform
-            is live and three are deployed locally; the rest are completed and
+            is live and four are deployed locally; the rest are completed and
             ready for deployment.
           </p>
         </header>
