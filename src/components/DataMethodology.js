@@ -129,7 +129,7 @@ const workflowSteps = [
 
 const tools = [
   "Google Earth Engine", "Python (GDAL, Rasterio)",
-  "TensorFlow / PyTorch", "ArcGIS Pro", "QGIS", "MATLAB", "PostGIS",
+  "TensorFlow / PyTorch", "MATLAB", "ArcGIS Pro", "QGIS", "PostGIS",
   "Dask / Spark", "Leaflet / Mapbox", "Django / FastAPI / Flask",
 ];
 
