@@ -205,6 +205,14 @@ export const webApplicationCategories = [
         features: ["Space science", "Atmospheric science", "Exhibits"],
         status: "Completed - not deployed",
       },
+      {
+        id: 41,
+        name: "Wollo University Physics Department E-learning Platform",
+        description:
+          "Departmental e-learning portal with course materials, lectures, assignments and progress tracking for physics students.",
+        features: ["E-learning", "Course materials", "Assignments"],
+        status: "Completed - locally deployed",
+      },
     ],
   },
   {

@@ -58,7 +58,7 @@ const WebApplications = () => {
             A connected ecosystem of {allWebApplications.length} web application
             platforms spanning geospatial science, climate research, AI,
             education, university systems and digital knowledge. One platform
-            is live and another is deployed locally; the rest are completed and
+            is live and two are deployed locally; the rest are completed and
             ready for deployment.
           </p>
         </header>
@@ -91,6 +91,16 @@ const WebApplications = () => {
               {allWebApplications.filter((p) => p.status === "Live").length}
             </strong>
             <span>Live now</span>
+          </div>
+          <div className="webapps-stat">
+            <strong>
+              {
+                allWebApplications.filter(
+                  (p) => p.status === "Completed - locally deployed"
+                ).length
+              }
+            </strong>
+            <span>Locally deployed</span>
           </div>
         </div>
 
