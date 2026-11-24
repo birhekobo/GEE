@@ -1,0 +1,172 @@
+\documentclass[a5paper,11pt]{article}
+
+% -------------------- PACKAGES --------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[table]{xcolor}
+\usepackage[margin=0cm]{geometry}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{hyperref}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+% -------------------- COLORS --------------------
+\definecolor{accent}{HTML}{0F9D8A}
+\definecolor{brandgreen}{HTML}{168447}
+\definecolor{branddark}{HTML}{102D24}
+\definecolor{brandpale}{HTML}{EAF5EF}
+\definecolor{brandmuted}{HTML}{60746A}
+\definecolor{lightbg}{HTML}{F6F9F7}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent
+}
+
+\begin{document}
+
+% -------------------- BACKGROUND DESIGN --------------------
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[branddark]
+    (current page.north west)
+    rectangle
+    ([yshift=-4.1cm]current page.north east);
+
+  \fill[brandpale]
+    (current page.south west)
+    rectangle
+    ([yshift=2.5cm]current page.south east);
+
+  % Decorative circles
+  \fill[accent,opacity=0.16]
+    ([xshift=-1.0cm,yshift=-1.0cm]current page.north east)
+    circle (2.1cm);
+
+  \fill[white,opacity=0.08]
+    ([xshift=-2.2cm,yshift=-2.8cm]current page.north east)
+    circle (1.3cm);
+
+  \node[
+    fill=white,
+    rounded corners=5pt,
+    minimum width=1.1cm,
+    minimum height=0.8cm
+  ]
+  at ([xshift=-1.35cm,yshift=-1.3cm]current page.north east)
+  {\bfseries\color{branddark} GI};
+\end{tikzpicture}
+
+% -------------------- HEADER --------------------
+\begin{center}
+  \vspace*{0.7cm}
+
+  {\Huge\bfseries\color{white} GeoSat Intelligence}\\[3mm]
+
+  {\Large\color{white} Now Officially Launched!}\\[2mm]
+
+  {\small\color{white}
+  GEOSPATIAL TECHNOLOGY \quad | \quad RESEARCH \quad | \quad INNOVATION}
+
+  \vspace{1.5cm}
+\end{center}
+
+% -------------------- MAIN CONTENT --------------------
+\hspace{0.85cm}
+\begin{minipage}{\dimexpr\paperwidth-1.7cm\relax}
+
+{\LARGE\bfseries\color{branddark}
+Hello everyone!}\par\vspace{2mm}
+
+{\large\bfseries\color{accent}
+I'm excited to introduce GeoSat Intelligence!}\par\vspace{3mm}
+
+GeoSat Intelligence is a platform dedicated to geospatial
+technology, satellite remote sensing, scientific research,
+professional training, and data-driven consultancy.
+
+\vspace{4mm}
+
+% -------------------- SERVICES --------------------
+\usetikzlibrary{matrix}
+\noindent\begin{tikzpicture}
+\matrix (services) [
+  matrix of nodes,
+  nodes={
+    minimum width=5.7cm,
+    minimum height=0.75cm,
+    align=center,
+    text width=5.3cm,
+    inner sep=4pt,
+    font=\small
+  },
+  column sep=2mm,
+  row sep=2mm
+]
+{
+|[fill=brandgreen, text=white, font=\bfseries]| TRAINING &
+|[fill=accent, text=white, font=\bfseries]| RESEARCH \\
+|[fill=brandpale, text=branddark]| GEE, QGIS, Python, MATLAB, GIS and Remote Sensing &
+|[fill=brandpale, text=branddark]| Scientific analysis, collaboration and publications \\
+|[fill=branddark, text=white, font=\bfseries]| PROJECTS &
+|[fill=brandgreen, text=white, font=\bfseries]| CONSULTANCY \\
+|[fill=brandpale, text=branddark]| Climate, environment, satellite monitoring and mapping &
+|[fill=brandpale, text=branddark]| Geospatial analysis and practical data solutions \\
+};
+\end{tikzpicture}
+
+\vspace{5mm}
+
+{\large\bfseries\color{branddark}
+Explore, connect, and collaborate!}
+
+\vspace{2mm}
+
+Discover our services, projects, training opportunities,
+and geospatial solutions online.
+
+\vspace{4mm}
+
+% -------------------- WEBSITE BUTTON --------------------
+\begin{center}
+\colorbox{accent}{
+  \parbox{0.88\linewidth}{
+    \centering
+    \vspace{3mm}
+    {\large\bfseries\color{white} VISIT OUR WEBSITE}\\[2mm]
+    {\normalsize\color{white}
+    \url{https://birhanuasmerom.vercel.app}}\\
+    \vspace{3mm}
+  }
+}
+\end{center}
+
+\vspace{2mm}
+
+{\small\color{brandmuted}
+I welcome your feedback, suggestions, ideas, and opportunities
+for collaboration. Thank you for your support!
+}
+
+\end{minipage}
+
+\vfill
+
+% -------------------- FOOTER --------------------
+\begin{center}
+  {\Large\bfseries\color{branddark} GeoSat Intelligence}\\[2mm]
+
+  {\small\color{brandmuted}
+  Geospatial Insights. Scientific Innovation. Real-world Solutions.}\\[2mm]
+
+  {\small\color{accent}
+  birhanu.asmerom@gmail.com}
+\end{center}
+
+\vspace{0.45cm}
+
+\end{document}

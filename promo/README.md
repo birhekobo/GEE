@@ -22,14 +22,17 @@ training courses, and a short introduction to the service.
 
 ## LaTeX flyer (`latex/`)
 
-`latex/geosat-flyer.tex` is a one-page A4 flyer about the website. A compiled
-`geosat-flyer.pdf` is included.
+`latex/geosat-flyer.tex` is a one-page A4 flyer about the website, and
+`latex/geosat-launch.tex` is an A5 "Now Officially Launched" announcement card
+with a Training / Research / Projects / Consultancy grid. Compiled PDFs are
+included for both.
 
 To rebuild the PDFs with MiKTeX / TeX Live:
 
 ```bash
 cd promo/latex
 pdflatex -interaction=nonstopmode geosat-flyer.tex
+pdflatex -interaction=nonstopmode geosat-launch.tex
 cd social
 pdflatex -interaction=nonstopmode linkedin-post.tex
 pdflatex -interaction=nonstopmode telegram-post.tex
