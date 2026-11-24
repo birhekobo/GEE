@@ -253,6 +253,14 @@ export const webApplicationCategories = [
         features: ["Courses", "Staff", "Schedules"],
         status: "Completed - not deployed",
       },
+      {
+        id: 42,
+        name: "Academic Course Load Management System (WU-ACLS)",
+        description:
+          "Course load planning and workload management for academic staff, teaching assignments and schedules.",
+        features: ["Course load", "Workload tracking", "Scheduling"],
+        status: "Completed - locally deployed",
+      },
     ],
   },
   {
