@@ -29,8 +29,9 @@ export const publications = [
     authors: "Asmerom, B., & Teklu, K.",
     year: 2024,
     journal: "International Journal of Remote Sensing",
-    doi: "10.1080/01431161.2024.1234567",
+    doi: "Not yet assigned",
     category: "research",
+    status: "Manuscript under preparation",
     abstract:
       "This study examines the rapid urban expansion and land use/land cover changes in Dessie City over the past three decades using Landsat satellite imagery and GIS techniques. The research quantifies the rate of urban growth, identifies patterns of land use change, and assesses the environmental impacts of urbanization. The findings provide valuable insights for urban planning and sustainable development in rapidly growing cities.",
   },
