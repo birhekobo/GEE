@@ -420,6 +420,15 @@ export const webApplicationCategories = [
         features: ["Environmental data", "Satellite datasets", "Ethiopia"],
         status: "Completed - not deployed",
       },
+      {
+        id: 44,
+        name: "Malaria Early Warning Platform",
+        description:
+          "Climate-driven malaria risk forecasting, surveillance and early warning for vulnerable regions.",
+        features: ["Risk forecasting", "Surveillance", "Early warning"],
+        status: "Completed - not deployed",
+        flagship: true,
+      },
     ],
   },
 ];
