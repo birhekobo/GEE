@@ -1,0 +1,14 @@
+🌍 Excited to announce that GeoSat Intelligence is live!
+
+A dedicated hub for satellite remote sensing consultancy, hands-on training, and research support — built for students, researchers, and professionals who want to turn Earth observation data into real-world impact.
+
+What you'll find:
+• Practical courses in Google Earth Engine, QGIS, Python, MATLAB and Machine Learning
+• Consultancy in geospatial analysis and environmental monitoring
+• A growing library of research figures, projects and resources
+
+👉 https://birhanuasmerom.vercel.app
+
+I'd love your feedback and connections with fellow geospatial enthusiasts.
+
+#RemoteSensing #GIS #GoogleEarthEngine #Geospatial #Training #EarthObservation

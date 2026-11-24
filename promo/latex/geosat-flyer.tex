@@ -1,0 +1,114 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[table]{xcolor}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{hyperref}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\extrarowheight}{4pt}
+
+\definecolor{brandgreen}{HTML}{008A39}
+\definecolor{branddark}{HTML}{123326}
+\definecolor{brandpale}{HTML}{E9F5ED}
+\definecolor{brandsky}{HTML}{DCEEF7}
+\definecolor{brandsand}{HTML}{FBF3E2}
+\definecolor{brandmuted}{HTML}{5B6B62}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=white,
+  linkcolor=brandgreen,
+  pdftitle={GeoSat Intelligence},
+  pdfauthor={Birhanu Asmerom},
+  pdfsubject={Satellite remote sensing consultancy, training and research}
+}
+
+\begin{document}
+
+% ---------- decorative header and footer bands ----------
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[brandgreen] (current page.north west) rectangle ([yshift=-4.3cm] current page.north east);
+  \fill[branddark] (current page.south west) rectangle ([yshift=2.5cm] current page.south east);
+  \fill[white, opacity=0.10] ([xshift=3.2cm,yshift=-1.0cm] current page.north east) circle (2.6cm);
+  \fill[white, opacity=0.08] ([xshift=-1.6cm,yshift=-2.7cm] current page.north west) circle (1.5cm);
+  \fill[brandgreen] ([xshift=6.0cm,yshift=1.25cm] current page.south west) circle (0.09cm);
+\end{tikzpicture}
+
+% ---------- header ----------
+\begin{center}
+  \vspace*{-0.5cm}
+  {\Huge\bfseries\color{white} GeoSat Intelligence}\\[2mm]
+  {\large\color{white} Satellite Remote Sensing \textbullet{} Consultancy \textbullet{} Training}\\[4mm]
+  {\color{white}\itshape Turning satellite data into decisions.}
+\end{center}
+
+\vspace{0.9cm}
+
+% ---------- what we do ----------
+{\Large\bfseries\color{brandgreen} What we do}
+\vspace{2mm}
+
+\noindent
+\begin{tabularx}{\textwidth}{@{}XXX@{}}
+\cellcolor{brandpale}\color{branddark}\textbf{Consultancy}\par\vspace{1mm}
+{\small\color{brandmuted} Expert guidance in geospatial analysis, environmental monitoring and satellite data workflows.} &
+\cellcolor{brandsky}\color{branddark}\textbf{Training}\par\vspace{1mm}
+{\small\color{brandmuted} Hands-on, practical courses built around real datasets and industry-standard tools.} &
+\cellcolor{brandsand}\color{branddark}\textbf{Research}\par\vspace{1mm}
+{\small\color{brandmuted} Publication-ready figures, methods and collaboration on Earth observation studies.} \\
+\end{tabularx}
+
+\vspace{0.8cm}
+
+% ---------- courses ----------
+{\Large\bfseries\color{brandgreen} Learn with us}
+\vspace{2mm}
+
+\noindent
+\begin{tabularx}{\textwidth}{@{}X@{\hspace{8mm}}X@{}}
+\begin{itemize}[leftmargin=4mm,itemsep=1mm,topsep=0pt]
+  \item Google Earth Engine
+  \item QGIS \& GIS Analysis
+  \item Python for Satellite Data
+  \item Machine Learning in Remote Sensing
+\end{itemize}
+&
+\begin{itemize}[leftmargin=4mm,itemsep=1mm,topsep=0pt]
+  \item MATLAB \& Numerical Methods
+  \item Web Mapping \& Data Visualization
+  \item Introduction to Remote Sensing
+  \item LaTeX for Researchers
+\end{itemize}
+\end{tabularx}
+
+\vspace{0.7cm}
+
+% ---------- why us ----------
+{\Large\bfseries\color{brandgreen} Why GeoSat Intelligence?}
+\vspace{1mm}
+
+\begin{itemize}[leftmargin=5mm,itemsep=0.5mm,topsep=0pt]
+  \item Practical, example-driven learning you can apply immediately.
+  \item Guidance from an experienced remote sensing practitioner.
+  \item A growing library of resources, figures and project showcases.
+\end{itemize}
+
+\vfill
+
+% ---------- footer ----------
+\begin{center}
+  {\Large\bfseries\color{white} Explore the website}\\[2mm]
+  {\large\color{white}\url{https://birhanuasmerom.vercel.app}}\\[1mm]
+  {\small\color{white} birhanu.asmerom@gmail.com \quad \textbullet \quad Birhanu Asmerom}
+\end{center}
+\vspace{0.55cm}
+
+\end{document}

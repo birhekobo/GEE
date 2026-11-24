@@ -27,3 +27,11 @@ yarn-debug.log*
 yarn-error.log*
 coverage/
 .vercel/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+

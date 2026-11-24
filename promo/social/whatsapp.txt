@@ -1,0 +1,5 @@
+Hi! 👋 I've launched GeoSat Intelligence — a website for remote sensing training, consultancy and research. Courses in GEE, QGIS, Python, MATLAB and more.
+
+Have a look: https://birhanuasmerom.vercel.app
+
+Feedback is welcome! 🌍🛰️
