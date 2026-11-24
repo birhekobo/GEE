@@ -7,12 +7,14 @@
 \usepackage[table]{xcolor}
 \usepackage[margin=0cm]{geometry}
 \usepackage{enumitem}
+\usepackage{tabularx}
 \usepackage{tikz}
 \usepackage{hyperref}
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \definecolor{accent}{HTML}{229ED9}
+\definecolor{brandgreen}{HTML}{008A39}
 \definecolor{branddark}{HTML}{123326}
 \definecolor{brandpale}{HTML}{E9F5ED}
 \definecolor{brandmuted}{HTML}{5B6B62}
@@ -41,8 +43,16 @@
 
 {\Large\bfseries\color{branddark} GeoSat Intelligence is live!}\par\vspace{4mm}
 
-Remote sensing consultancy, practical training (GEE, QGIS, Python, MATLAB, ML)
-and research resources --- all in one place.\par\vspace{4mm}
+\noindent\begin{tabularx}{\linewidth}{@{}X@{\hspace{1mm}}X@{\hspace{1mm}}X@{\hspace{1mm}}X@{}}
+\cellcolor{brandgreen}\centering\small\bfseries\color{white} Training &
+\cellcolor{accent}\centering\small\bfseries\color{white} Research &
+\cellcolor{branddark}\centering\small\bfseries\color{white} Projects &
+\cellcolor{brandpale}\centering\small\bfseries\color{branddark} Consultancy
+\end{tabularx}
+\vspace{4mm}
+
+Courses in GEE, QGIS, Python, MATLAB, ML \& more --- plus publications,
+project galleries and research figures, all in one place.\par\vspace{4mm}
 
 {\color{accent}\url{https://birhanuasmerom.vercel.app}}\par\vspace{4mm}
 

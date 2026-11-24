@@ -1,7 +1,9 @@
-🚀 GeoSat Intelligence is now live!
+🚀 GeoSat Intelligence is live!
 
-Remote sensing consultancy, practical training (GEE, QGIS, Python, MATLAB, ML) and research resources — all in one place.
+Training | Research | Projects | Consultancy
+
+Courses in GEE, QGIS, Python, MATLAB, ML & more — plus publications, project galleries and research figures, all in one place.
 
 🔗 https://birhanuasmerom.vercel.app
 
-Take a look and share it with anyone working with satellite data! 🛰️
+Feedback welcome! — GeoSat

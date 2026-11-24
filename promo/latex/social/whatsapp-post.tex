@@ -7,12 +7,14 @@
 \usepackage[table]{xcolor}
 \usepackage[margin=0cm]{geometry}
 \usepackage{enumitem}
+\usepackage{tabularx}
 \usepackage{tikz}
 \usepackage{hyperref}
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \definecolor{accent}{HTML}{128C7E}
+\definecolor{brandgreen}{HTML}{008A39}
 \definecolor{branddark}{HTML}{123326}
 \definecolor{brandpale}{HTML}{E9F5ED}
 \definecolor{brandmuted}{HTML}{5B6B62}
@@ -32,7 +34,7 @@
 \begin{center}
   \vspace*{-0.35cm}
   {\Huge\bfseries\color{white} WhatsApp}\\[1mm]
-  {\small\color{white} Short & casual}
+  {\small\color{white} Short \& casual}
 \end{center}
 
 \vspace{0.65cm}
@@ -41,12 +43,20 @@
 
 {\Large\bfseries\color{branddark} Hi! I've launched GeoSat Intelligence.}\par\vspace{4mm}
 
-A website for remote sensing training, consultancy and research. Courses in
-GEE, QGIS, Python, MATLAB and more.\par\vspace{4mm}
+\noindent\begin{tabularx}{\linewidth}{@{}X@{\hspace{1mm}}X@{\hspace{1mm}}X@{\hspace{1mm}}X@{}}
+\cellcolor{brandgreen}\centering\small\bfseries\color{white} Training &
+\cellcolor{accent}\centering\small\bfseries\color{white} Research &
+\cellcolor{branddark}\centering\small\bfseries\color{white} Projects &
+\cellcolor{brandpale}\centering\small\bfseries\color{branddark} Consultancy
+\end{tabularx}
+\vspace{4mm}
+
+Remote sensing training (GEE, QGIS, Python, MATLAB \& more), research
+publications, real-world projects and consultancy --- all in one place.\par\vspace{4mm}
 
 {\color{accent}\url{https://birhanuasmerom.vercel.app}}\par\vspace{4mm}
 
-{\small\color{brandmuted} Feedback is welcome!}
+{\small\color{brandmuted} Feedback is welcome! \quad --- GeoSat}
 
 \end{minipage}
 
