@@ -64,6 +64,14 @@ const Enrollment = ({ course, courseTitle, isContactForm = false }) => {
       return;
     }
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setErrorDetails("Please enter a valid email address");
+      setSubmitStatus("error");
+      setIsSubmitting(false);
+      return;
+    }
+
     // Check if EmailJS is initialized
     if (!isEmailJSInitialized) {
       setErrorDetails(

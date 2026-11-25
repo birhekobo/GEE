@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./FeaturedCourse.css";
 
 function FeaturedCourse() {
@@ -18,9 +19,9 @@ function FeaturedCourse() {
             Leverage the power of Google Earth Engine for large-scale
             environmental monitoring, land cover change detection, and climate
             analysis.{" "}
-            <a href="/gee-course-preview" className="btn-secondary">
+            <Link to="/gee-course-preview" className="btn-secondary">
               View Course Details
-            </a>
+            </Link>
           </p>
         </div>
       </div>

@@ -18,6 +18,8 @@ import WebMappingCoursePreview from "./components/WebMappingCoursePreview";
 import DataVizCoursePreview from "./components/DataVizCoursePreview";
 import AiGeospatialCoursePreview from "./components/AiGeospatialCoursePreview";
 import GeospatialPythonRPreview from "./components/GeospatialPythonRPreview";
+import DeepLearningCoursePreview from "./components/DeepLearningCoursePreview";
+import UrbanGisCoursePreview from "./components/UrbanGisCoursePreview";
 import EnrollPage from "./components/EnrollPage";
 import NotFoundPage from "./components/NotFoundPage";
 import ProjectsAndCollaboration from "./components/ProjectsAndCollaboration";
@@ -78,6 +80,14 @@ function App() {
           <Route
             path="/courses/geospatial-python-r"
             element={<GeospatialPythonRPreview />}
+          />
+          <Route
+            path="/courses/deep-learning-seg"
+            element={<DeepLearningCoursePreview />}
+          />
+          <Route
+            path="/courses/urban-gis"
+            element={<UrbanGisCoursePreview />}
           />
           <Route path="/gee-course-preview" element={<GeeCoursePreview />} />
           <Route path="/enroll" element={<EnrollPage />} />

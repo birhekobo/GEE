@@ -103,42 +103,43 @@ function About() {
         <div className="team-grid">
           <div className="team-member">
             <div className="team-image">
-              <img src="/images/birhanu-asmerom.jpg" alt="Birhanu Asmerom" />
+              <img src="/images/birhanu-asmerom.png" alt="Birhanu Asmerom" />
             </div>
             <div className="team-content">
               <h3>Birhanu Asmerom</h3>
               <p className="team-role">Lead Consultant</p>
               <p className="team-expertise">
-                Atmospheric Physics/Meteorology and Air Quality, Remote Sensing
-                Expert
+                Atmospheric Physics, Meteorology &amp; Air Quality Expert
               </p>
               <p className="team-qualification">
-                Expert in Remote Sensing and GIS
+                Remote Sensing, GIS &amp; Python Data Science
               </p>
             </div>
           </div>
           <div className="team-member">
             <div className="team-image">
-              <img src="/images/birhanu-asmerom.jpg" alt="Birhanu Asmerom" />
+              <img src="/images/X%20name.png" alt="" />
             </div>
             <div className="team-content">
-              <h3>Birhanu Asmerom</h3>
-              <p className="team-role">Research Director</p>
+              <h3 aria-hidden="true"></h3>
+              <p className="team-role">Atmospheric Research Expert</p>
               <p className="team-expertise">
-                Specialist in Environmental Monitoring
+                Specialist in Atmospheric Physics &amp; Meteorology
               </p>
-              <p className="team-qualification">15+ years of experience</p>
+              <p className="team-qualification">10+ Years of Research Experience</p>
             </div>
           </div>
           <div className="team-member">
             <div className="team-image">
-              <img src="/images/birhanu-asmerom.jpg" alt="Birhanu Asmerom" />
+              <img src="/images/Technical%20Lead.png" alt="" />
             </div>
             <div className="team-content">
-              <h3>Birhanu Asmerom</h3>
+              <h3 aria-hidden="true"></h3>
               <p className="team-role">Technical Lead</p>
-              <p className="team-expertise">GIS and Data Analysis Expert</p>
-              <p className="team-qualification">Certified GIS Professional</p>
+              <p className="team-expertise">Python Data Analysis Expert</p>
+              <p className="team-qualification">
+                Certified Python Data Science Professional
+              </p>
             </div>
           </div>
         </div>

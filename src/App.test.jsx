@@ -80,3 +80,18 @@ test("enrollment page reads the selected course from the query string", () => {
     getByDisplayValue(/Satellite Data Analysis with Python/)
   ).toBeInTheDocument();
 });
+
+test("publications page preselects a category from the query string", async () => {
+  window.history.pushState({}, "", "/publications?category=ebook");
+  const { findByRole } = render(<App />);
+
+  const filter = await findByRole("button", { name: "Ebooks" });
+  expect(filter).toHaveClass("active");
+
+  expect(
+    await findByRole("heading", {
+      level: 3,
+      name: /Air Quality, Atmospheric Research, Climate Change & Environmental Health/,
+    })
+  ).toBeInTheDocument();
+});

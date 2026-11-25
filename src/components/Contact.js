@@ -99,6 +99,13 @@ Wollo University Physics Department
     setSubmitStatus(null);
     setErrorDetails("");
 
+    if (!formData.name || !formData.email) {
+      setErrorDetails("Name and email are required fields");
+      setSubmitStatus("error");
+      setIsSubmitting(false);
+      return;
+    }
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       setErrorDetails("Please enter a valid email address");
@@ -107,8 +114,8 @@ Wollo University Physics Department
       return;
     }
 
-    if (!formData.name || !formData.email) {
-      setErrorDetails("Name and email are required fields");
+    if (!formData.message.trim()) {
+      setErrorDetails("Message is a required field");
       setSubmitStatus("error");
       setIsSubmitting(false);
       return;

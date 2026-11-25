@@ -90,7 +90,12 @@ function MlCoursePreview() {
             <li>Birhanu Asmerom, Lead Consultant</li>
           </ul>
 
-          <button className="enroll-btn">Enroll Now</button>
+          <Link
+            to={"/enroll?course=" + encodeURIComponent("Machine Learning in Remote Sensing")}
+            className="enroll-btn"
+          >
+            Enroll Now
+          </Link>
         </div>
       </div>
 

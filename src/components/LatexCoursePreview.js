@@ -90,7 +90,12 @@ function LatexCoursePreview() {
             Wollo University
           </p>
 
-          <button className="enroll-btn">Enroll Now</button>
+          <Link
+            to={"/enroll?course=" + encodeURIComponent("Introduction to LaTeX")}
+            className="enroll-btn"
+          >
+            Enroll Now
+          </Link>
         </div>
       </div>
 

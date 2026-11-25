@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import Enrollment from "./Enrollment";
 import { trainingCourses, formatCourseFee } from "../data/courses";
@@ -6,8 +6,14 @@ import "./EnrollPage.css";
 
 const EnrollPage = () => {
   const [searchParams] = useSearchParams();
-  const initialCourse = searchParams.get("course") || "";
-  const [selectedCourse, setSelectedCourse] = useState(initialCourse);
+  const courseFromUrl = searchParams.get("course") || "";
+  const [selectedCourse, setSelectedCourse] = useState(courseFromUrl);
+
+  // Keep the selection in sync if the query string changes while this page is open.
+  useEffect(() => {
+    setSelectedCourse(courseFromUrl);
+  }, [courseFromUrl]);
+
   const resolvedCourse = trainingCourses.find(
     (c) => c.title === selectedCourse
   );
@@ -40,7 +46,7 @@ const EnrollPage = () => {
       </select>
 
       {resolvedCourse ? (
-        <Enrollment course={resolvedCourse} />
+        <Enrollment key={resolvedCourse.title} course={resolvedCourse} />
       ) : (
         <p className="enroll-page-empty">
           Please select a course above to view pricing and enroll. You can also

@@ -1,3 +1,10 @@
+export const publicationCategories = [
+  { id: "all", label: "All Publications" },
+  { id: "research", label: "Research Papers" },
+  { id: "review", label: "Review Articles" },
+  { id: "ebook", label: "Ebooks" },
+];
+
 export const publications = [
   {
     id: 2,
@@ -215,7 +222,9 @@ export const publications = [
     id: 20,
     title:
       "Monitoring and Assessment of Agricultural Drought Using Multi-Index Satellite Remote Sensing: A 25-Year Case Study of Dessie Zuria Zone, South Wollo, Ethiopia",
-    authors: "Birhanu Asmerom",
+    authors: "Zeyneb Mohammed Hussen",
+    advisor: "Abera Debebe",
+    coAdvisor: "Birhanu Asmerom",
     year: 2026,
     journal: "Manuscript under preparation",
     doi: "Not yet assigned",
@@ -228,7 +237,7 @@ export const publications = [
     id: 21,
     title:
       "Spatiotemporal Analysis and Modeling of Soil Moisture Dynamics from Reanalysis Datasets: A Case Study of Mekedela, Tenta, and Legamboworedas, South Wollo Zone, Amhara Region, Ethiopia",
-    authors: "Ahmed Yimer Siraji",
+    authors: "Ahmed Yimer Siraji(Student)",
     advisor: "Abera Debebe",
     coAdvisor: "Birhanu Asmerom",
     year: 2026,
@@ -243,7 +252,7 @@ export const publications = [
     id: 22,
     title:
       "Spatial Distribution and Predictive Modeling of Atmospheric Aerosols Using Remote Sensing: Amhara Region and Oromiya Liyu Zone",
-    authors: "Mohammed Awol Yimer",
+    authors: "Mohammed Awol Yimer(Student)",
     advisor: "Abera Debebe",
     coAdvisor: "Birhanu Asmerom",
     year: 2026,
@@ -347,6 +356,7 @@ export const publications = [
     doi: "Not applicable",
     category: "ebook",
     status: "Ebook",
+    screenshot: "/images/screenshot_image/Geospatial%20Raster%20Data%20Analysis.png",
     abstract:
       "An ebook on geospatial raster data analysis covering satellite imagery processing, raster workflows, zonal statistics, and practical applications in environmental monitoring.",
     contents: [
@@ -418,6 +428,8 @@ export const publications = [
     doi: "Not applicable",
     category: "ebook",
     status: "Ebook",
+    screenshot:
+      "/images/screenshot_image/Geospatial%20Analysis%20with%20Google%20Earth%20Engine.png",
     abstract:
       "An ebook on geospatial analysis with Google Earth Engine, covering satellite data access, image processing, classification, and environmental monitoring workflows.",
     contents: [
@@ -534,6 +546,8 @@ export const publications = [
     doi: "Not applicable",
     category: "ebook",
     status: "Ebook",
+    screenshot:
+      "/images/screenshot_image/Geospatial%20Analysis%20with%20Google%20Earth%20Engine%20Using%20R.png",
     abstract:
       "An ebook on geospatial analysis with Google Earth Engine using R, covering Earth Engine data access, raster processing, and environmental monitoring workflows.",
     contents: [
@@ -660,6 +674,8 @@ export const publications = [
     doi: "Not applicable",
     category: "ebook",
     status: "Ebook",
+    screenshot:
+      "/images/screenshot_image/Air%20Quality,%20Atmospheric%20Research,%20Climate%20Change%20&%20Environmental%20Health.png",
     abstract:
       "An ebook on air quality, atmospheric research, climate change, and environmental health, presenting remote sensing approaches for analysis and monitoring.",
     contents: [
@@ -745,6 +761,8 @@ export const publications = [
     doi: "Not applicable",
     category: "ebook",
     status: "Ebook",
+    screenshot:
+      "/images/screenshot_image/Climate%20Data%20Analytics%20with%20Xarray%20&%20Python.png",
     abstract:
       "A practical ebook on climate data analytics using Xarray and Python, covering ERA5 and CMIP6 data, climate statistics, extremes, visualization, and reproducible research workflows.",
     contents: [
@@ -867,6 +885,7 @@ export const publications = [
     doi: "Not applicable",
     category: "ebook",
     status: "Ebook",
+    screenshot: "/images/screenshot_image/climate%20Data%20Operator.png",
     abstract:
       "Climate Data Operators (CDO): complete training for climate data processing, analysis, and visualization, with modules, exercises, notebooks, projects, quizzes, and solutions.",
     contents: [

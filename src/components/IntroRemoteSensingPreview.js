@@ -88,7 +88,15 @@ function IntroRemoteSensingPreview() {
             <li>Birhanu Asmerom, Lead Consultant</li>
           </ul>
 
-          <button className="enroll-btn">Enroll Now</button>
+          <Link
+            to={
+              "/enroll?course=" +
+              encodeURIComponent("Introduction to Remote Sensing")
+            }
+            className="enroll-btn"
+          >
+            Enroll Now
+          </Link>
         </div>
       </div>
 
@@ -112,9 +120,9 @@ function IntroRemoteSensingPreview() {
           <li>AI for geospatial data</li>
           <li>Hands-on coding exercises</li>
         </ul>
-        <a href="/courses/gee" className="enroll-btn">
+        <Link to="/courses/gee" className="enroll-btn">
           Preview Course
-        </a>
+        </Link>
       </div>
 
       <section className="testimonials">

@@ -13,10 +13,17 @@ const PublicationCard = ({ publication }) => {
     advisor,
     coAdvisor,
     contents,
+    screenshot,
   } = publication;
 
   return (
     <div className="publication-card">
+      {screenshot && (
+        <figure className="publication-screenshot">
+          <img src={screenshot} alt={`${title} screenshot`} loading="lazy" />
+          <figcaption>Publication screenshot</figcaption>
+        </figure>
+      )}
       <h3 className="publication-title">{title}</h3>
       {status && <p className="publication-status">{status}</p>}
       <p className="publication-authors">{authors}</p>
@@ -62,6 +69,7 @@ PublicationCard.propTypes = {
     status: PropTypes.string,
     advisor: PropTypes.string,
     coAdvisor: PropTypes.string,
+    screenshot: PropTypes.string,
     contents: PropTypes.arrayOf(
       PropTypes.shape({
         heading: PropTypes.string.isRequired,

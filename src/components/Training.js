@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Enrollment from "./Enrollment";
 import {
@@ -28,6 +28,15 @@ const Training = () => {
     setSelectedCourse(course);
   };
 
+  useEffect(() => {
+    if (!selectedCourse) return undefined;
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") setSelectedCourse(null);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedCourse]);
+
   const renderCourseCard = (course) => (
     <div className="training-card" key={course.title}>
       <div className="course-card-header">
@@ -39,6 +48,15 @@ const Training = () => {
         </span>
       </div>
       <p>{course.description}</p>
+      {(course.durationHours || course.schedule) && (
+        <p className="course-schedule">
+          {course.durationHours && (
+            <span>Duration: {course.durationHours} hours</span>
+          )}
+          {course.durationHours && course.schedule && " | "}
+          {course.schedule && <span>Schedule: {course.schedule}</span>}
+        </p>
+      )}
       {!course.isFree && (
         <p className="course-fee-detail">
           Course fee: {course.fee.toLocaleString()} ETB + payment processing
@@ -71,6 +89,9 @@ const Training = () => {
           <li key={i}>{item}</li>
         ))}
       </ul>
+      <Link to={course.preview} className="preview-link">
+        Course Preview
+      </Link>
       <button
         type="button"
         onClick={() => handleEnroll(course)}
@@ -78,9 +99,6 @@ const Training = () => {
       >
         {course.isFree ? "Register Free" : "Enroll Now"}
       </button>
-      <Link to={course.preview} className="preview-link">
-        Course Preview
-      </Link>
     </div>
   );
 
@@ -92,6 +110,17 @@ const Training = () => {
         analysis. Our hands-on, expert-led courses are designed for all levels
         and delivered in a modern, interactive format.
       </p>
+
+      <div className="training-materials-link">
+        <a
+          href="/training/site/index.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cta-button"
+        >
+          Training Outline
+        </a>
+      </div>
 
       <div className="pricing-notice">
         <p>
@@ -132,7 +161,15 @@ const Training = () => {
       </section>
 
       {selectedCourse && (
-        <div className="enrollment-modal">
+        <div
+          className="enrollment-modal"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`Enroll in ${selectedCourse.title}`}
+          onClick={(event) => {
+            if (event.target === event.currentTarget) setSelectedCourse(null);
+          }}
+        >
           <div className="enrollment-modal-content">
             <button
               type="button"

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./FeaturedTraining.css";
 
 function FeaturedTraining() {
@@ -26,14 +27,14 @@ function FeaturedTraining() {
         </li>
         <li>
           <strong>Google Earth Engine for Environmental Monitoring</strong> –{" "}
-          <a href="/gee-course-preview" className="featured-link">
+          <Link to="/gee-course-preview" className="featured-link">
             See Course Preview
-          </a>
+          </Link>
         </li>
       </ul>
-      <a href="/training" className="btn-secondary">
+      <Link to="/training" className="btn-secondary">
         See All Training
-      </a>
+      </Link>
     </section>
   );
 }

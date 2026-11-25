@@ -8,3 +8,9 @@ if (typeof globalThis.TextEncoder === "undefined") {
 if (typeof globalThis.TextDecoder === "undefined") {
   globalThis.TextDecoder = TextDecoder;
 }
+
+// jsdom implements window.scrollTo only as a "not implemented" stub that logs
+// a console error. The app's back-to-top button uses it, so provide a no-op.
+if (typeof window !== "undefined") {
+  window.scrollTo = () => {};
+}

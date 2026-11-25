@@ -49,6 +49,11 @@ const WebApplications = () => {
     0
   );
 
+  const liveCount = allWebApplications.filter((p) => p.status === "Live").length;
+  const locallyDeployedCount = allWebApplications.filter(
+    (p) => p.status === "Completed - locally deployed"
+  ).length;
+
   return (
     <div className="webapps">
       <div className="webapps-content">
@@ -57,9 +62,11 @@ const WebApplications = () => {
           <p className="webapps-lead">
             A connected ecosystem of {allWebApplications.length} web application
             platforms spanning geospatial science, climate research, AI,
-            education, university systems and digital knowledge. One platform
-            is live and five are deployed locally; the rest are completed and
-            ready for deployment.
+            education, university systems and digital knowledge.{" "}
+            {liveCount} {liveCount === 1 ? "platform is" : "platforms are"} live
+            and {locallyDeployedCount}{" "}
+            {locallyDeployedCount === 1 ? "is" : "are"} deployed locally; the
+            rest are completed and ready for deployment.
           </p>
         </header>
 
@@ -175,6 +182,16 @@ const WebApplications = () => {
                         {project.status}
                       </span>
                     </div>
+                    {project.screenshot && (
+                      <figure className="webapp-screenshot">
+                        <img
+                          src={project.screenshot}
+                          alt={`${project.name} screenshot`}
+                          loading="lazy"
+                        />
+                        <figcaption>Platform screenshot</figcaption>
+                      </figure>
+                    )}
                     <h3>{project.name}</h3>
                     <p>{project.description}</p>
                     <ul className="webapp-features">

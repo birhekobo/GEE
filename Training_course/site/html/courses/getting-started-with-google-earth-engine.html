@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Free introductory module: explore the GEE platform, browse satellite catalogs, and run your first environmental analysis scripts. Full training document with lessons, exercises, quizzes, and capstone project.">
+  <title>Getting Started with Google Earth Engine: Full Training Document</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body style="--accent: #d9480f;">
+  <header class="site-header">
+    <a class="brand" href="../index.html"><span class="brand-mark">G</span><span>GeoSat Training Library</span></a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="../index.html">All Courses</a>
+      <a href="../../courses/getting-started-with-google-earth-engine.html">MkDocs Source</a>
+      <a href="http://localhost:3000/training">Live Training Page</a>
+    </nav>
+  </header>
+  <section class="hero course-hero">
+    <div class="hero-inner">
+      <a class="back-link" href="../index.html">← Back to course library</a>
+      <span class="eyebrow">Full training document · Free Course · 04</span>
+      <h1>Getting Started with Google Earth Engine</h1>
+      <p>Free introductory module: explore the GEE platform, browse satellite catalogs, and run your first environmental analysis scripts.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#modules">Jump to modules</a>
+        <button class="button button-ghost" type="button" onclick="window.print()">Print / Save PDF</button>
+        <a class="button button-ghost" href="http://localhost:3000/courses/gee">React course preview</a>
+      </div>
+    </div>
+  </section>
+  <main class="container">
+    <div class="course-layout">
+      <div>
+        <nav class="document-toc" aria-label="Training document contents">
+          <h2>Document contents</h2>
+          <ol>
+            <li><a href="#module-1">GEE account setup and Code Editor tour</a></li><li><a href="#module-2">Browsing satellite image collections</a></li><li><a href="#module-3">Basic map visualization and exports</a></li><li><a href="#module-4">Simple land-cover and NDVI examples</a></li><li><a href="#module-5">Next steps toward the full GEE certificate course</a></li>
+          </ol>
+        </nav>
+
+        <section class="panel" id="course-guide">
+          <h2>Course guide</h2>
+          <p class="doc-lead">Getting Started with Google Earth Engine is an introductory programme built around 5 practical modules. Work through the modules in order; each one includes objectives, notes, a hands-on exercise, a knowledge check, and a deliverable.</p>
+          <h4>Learning outcomes</h4>
+          <div class="outcomes-grid">
+            <div class="outcome"><strong>Outcome 1</strong>Use Earth Engine data catalog and ImageCollection filtering to work with gee account setup and code editor tour and explain the result.</div><div class="outcome"><strong>Outcome 2</strong>Use electromagnetic spectrum and platform and sensor characteristics to work with browsing satellite image collections and explain the result.</div><div class="outcome"><strong>Outcome 3</strong>Use Earth Engine data catalog and ImageCollection filtering to work with basic map visualization and exports and explain the result.</div><div class="outcome"><strong>Outcome 4</strong>Use Earth Engine data catalog and ImageCollection filtering to work with simple land-cover and ndvi examples and explain the result.</div><div class="outcome"><strong>Outcome 5</strong>Use Earth Engine data catalog and ImageCollection filtering to work with next steps toward the full gee certificate course and explain the result.</div>
+          </div>
+          <h4>Prerequisites</h4>
+          <ul class="checklist">
+            <li>Basic computer literacy and a modern web browser.</li><li>No prior programming experience is required for the introductory lessons.</li>
+          </ul>
+        </section>
+
+        <section class="panel doc-section" id="modules">
+          <h2>Full module documents</h2>
+          <p class="doc-lead">Each module is a self-contained lesson that can be taught independently or sequenced into the full certificate programme.</p>
+          <article class="module" id="module-1">
+  <div class="module-head">
+    <span class="module-number">01</span>
+    <h3>GEE account setup and Code Editor tour</h3>
+  </div>
+  <h4>Learning objectives</h4>
+  <ul class="checklist">
+    <li>Explain gee account setup and code editor tour and where it fits within Getting Started with Google Earth Engine.</li><li>Use Google Earth Engine Code Editor or rgee and ImageCollection filters to complete a small, documented workflow.</li><li>Validate the result, record assumptions, and communicate the main finding clearly.</li>
+  </ul>
+  <h4>Key concepts</h4>
+  <div class="concept-chips">
+    <span class="concept-chip">Earth Engine data catalog</span><span class="concept-chip">ImageCollection filtering</span><span class="concept-chip">cloud masking and compositing</span><span class="concept-chip">classification and change detection</span>
+  </div>
+  <h4>Lesson notes</h4>
+  <p>GEE account setup and Code Editor tour is best learned as a repeatable workflow: state the question, prepare the inputs, apply the method, check the output, and communicate the result. Keep the original data untouched and save each processing step so the work can be repeated.</p>
+  <p>The central ideas in this lesson are Earth Engine data catalog, ImageCollection filtering, cloud masking and compositing. Use Google Earth Engine Code Editor or rgee to demonstrate the idea, and use ImageCollection filters to confirm that the output behaves as expected.</p>
+  <p>Unfiltered ImageCollections can be very large; always limit date, region, and bands before running expensive operations.</p>
+  <h4>Hands-on exercise</h4>
+  <ol class="exercise-steps">
+    <li>Write a one-sentence question and define the study area or sample extent for gee account setup and code editor tour.</li><li>Prepare the input data and record its source, date, resolution or scale, and coordinate system where relevant.</li><li>Apply the main technique with Google Earth Engine Code Editor or rgee: filter an ImageCollection by date and region, apply a cloud mask, calculate an index, and export a small result for validation.</li><li>Validate the result visually and numerically; note any unexpected patterns, missing values, or outliers.</li><li>Export the final map, table, or figure and write a short interpretation with limitations and next steps.</li>
+  </ol>
+  <details class="quiz">
+    <summary>Knowledge check: 3 questions with answers</summary>
+    <ol>
+      <li>How do you reduce an ImageCollection to one image?<br><span class="answer">Answer: Use a reducer such as median, mean, or qualityMosaic over the collection.</span></li><li>Why is cloud masking important?<br><span class="answer">Answer: Clouds and shadows distort spectral values and can lead to false change or index results.</span></li><li>What should be specified when exporting an Earth Engine result?<br><span class="answer">Answer: Region, resolution or scale, projection/CRS, file format, and asset or drive destination.</span></li>
+    </ol>
+  </details>
+  <div class="deliverable"><strong>Deliverable</strong>A one-page practical note containing the question, data description, method steps, one output, and three bullet points of interpretation.</div>
+</article>
+<article class="module" id="module-2">
+  <div class="module-head">
+    <span class="module-number">02</span>
+    <h3>Browsing satellite image collections</h3>
+  </div>
+  <h4>Learning objectives</h4>
+  <ul class="checklist">
+    <li>Explain browsing satellite image collections and where it fits within Getting Started with Google Earth Engine.</li><li>Use a satellite scene viewer and band combinations and spectral indices to complete a small, documented workflow.</li><li>Validate the result, record assumptions, and communicate the main finding clearly.</li>
+  </ul>
+  <h4>Key concepts</h4>
+  <div class="concept-chips">
+    <span class="concept-chip">electromagnetic spectrum</span><span class="concept-chip">platform and sensor characteristics</span><span class="concept-chip">spatial/spectral/temporal resolution</span><span class="concept-chip">image interpretation</span>
+  </div>
+  <h4>Lesson notes</h4>
+  <p>Browsing satellite image collections is best learned as a repeatable workflow: state the question, prepare the inputs, apply the method, check the output, and communicate the result. Keep the original data untouched and save each processing step so the work can be repeated.</p>
+  <p>The central ideas in this lesson are electromagnetic spectrum, platform and sensor characteristics, spatial/spectral/temporal resolution. Use a satellite scene viewer to demonstrate the idea, and use band combinations and spectral indices to confirm that the output behaves as expected.</p>
+  <p>Do not compare images from different dates or sensors without checking calibration, cloud cover, and spatial resolution.</p>
+  <h4>Hands-on exercise</h4>
+  <ol class="exercise-steps">
+    <li>Write a one-sentence question and define the study area or sample extent for browsing satellite image collections.</li><li>Prepare the input data and record its source, date, resolution or scale, and coordinate system where relevant.</li><li>Apply the main technique with a satellite scene viewer: compare at least two band combinations, label three land-cover features, and explain how resolution affects interpretation.</li><li>Validate the result visually and numerically; note any unexpected patterns, missing values, or outliers.</li><li>Export the final map, table, or figure and write a short interpretation with limitations and next steps.</li>
+  </ol>
+  <details class="quiz">
+    <summary>Knowledge check: 3 questions with answers</summary>
+    <ol>
+      <li>What does spatial resolution describe?<br><span class="answer">Answer: The ground size of one pixel; smaller pixels mean finer spatial detail.</span></li><li>Why are near-infrared and red bands useful for vegetation?<br><span class="answer">Answer: Vegetation strongly reflects near-infrared and absorbs red, making their contrast useful for vegetation indices such as NDVI.</span></li><li>What should be checked before comparing two satellite images?<br><span class="answer">Answer: Date, sensor, calibration, cloud cover, projection, and spatial resolution.</span></li>
+    </ol>
+  </details>
+  <div class="deliverable"><strong>Deliverable</strong>A one-page practical note containing the question, data description, method steps, one output, and three bullet points of interpretation.</div>
+</article>
+<article class="module" id="module-3">
+  <div class="module-head">
+    <span class="module-number">03</span>
+    <h3>Basic map visualization and exports</h3>
+  </div>
+  <h4>Learning objectives</h4>
+  <ul class="checklist">
+    <li>Explain basic map visualization and exports and where it fits within Getting Started with Google Earth Engine.</li><li>Use Google Earth Engine Code Editor or rgee and ImageCollection filters to complete a small, documented workflow.</li><li>Validate the result, record assumptions, and communicate the main finding clearly.</li>
+  </ul>
+  <h4>Key concepts</h4>
+  <div class="concept-chips">
+    <span class="concept-chip">Earth Engine data catalog</span><span class="concept-chip">ImageCollection filtering</span><span class="concept-chip">cloud masking and compositing</span><span class="concept-chip">classification and change detection</span>
+  </div>
+  <h4>Lesson notes</h4>
+  <p>Basic map visualization and exports is best learned as a repeatable workflow: state the question, prepare the inputs, apply the method, check the output, and communicate the result. Keep the original data untouched and save each processing step so the work can be repeated.</p>
+  <p>The central ideas in this lesson are Earth Engine data catalog, ImageCollection filtering, cloud masking and compositing. Use Google Earth Engine Code Editor or rgee to demonstrate the idea, and use ImageCollection filters to confirm that the output behaves as expected.</p>
+  <p>Unfiltered ImageCollections can be very large; always limit date, region, and bands before running expensive operations.</p>
+  <h4>Hands-on exercise</h4>
+  <ol class="exercise-steps">
+    <li>Write a one-sentence question and define the study area or sample extent for basic map visualization and exports.</li><li>Prepare the input data and record its source, date, resolution or scale, and coordinate system where relevant.</li><li>Apply the main technique with Google Earth Engine Code Editor or rgee: filter an ImageCollection by date and region, apply a cloud mask, calculate an index, and export a small result for validation.</li><li>Validate the result visually and numerically; note any unexpected patterns, missing values, or outliers.</li><li>Export the final map, table, or figure and write a short interpretation with limitations and next steps.</li>
+  </ol>
+  <details class="quiz">
+    <summary>Knowledge check: 3 questions with answers</summary>
+    <ol>
+      <li>How do you reduce an ImageCollection to one image?<br><span class="answer">Answer: Use a reducer such as median, mean, or qualityMosaic over the collection.</span></li><li>Why is cloud masking important?<br><span class="answer">Answer: Clouds and shadows distort spectral values and can lead to false change or index results.</span></li><li>What should be specified when exporting an Earth Engine result?<br><span class="answer">Answer: Region, resolution or scale, projection/CRS, file format, and asset or drive destination.</span></li>
+    </ol>
+  </details>
+  <div class="deliverable"><strong>Deliverable</strong>A one-page practical note containing the question, data description, method steps, one output, and three bullet points of interpretation.</div>
+</article>
+<article class="module" id="module-4">
+  <div class="module-head">
+    <span class="module-number">04</span>
+    <h3>Simple land-cover and NDVI examples</h3>
+  </div>
+  <h4>Learning objectives</h4>
+  <ul class="checklist">
+    <li>Explain simple land-cover and ndvi examples and where it fits within Getting Started with Google Earth Engine.</li><li>Use Google Earth Engine Code Editor or rgee and ImageCollection filters to complete a small, documented workflow.</li><li>Validate the result, record assumptions, and communicate the main finding clearly.</li>
+  </ul>
+  <h4>Key concepts</h4>
+  <div class="concept-chips">
+    <span class="concept-chip">Earth Engine data catalog</span><span class="concept-chip">ImageCollection filtering</span><span class="concept-chip">cloud masking and compositing</span><span class="concept-chip">classification and change detection</span>
+  </div>
+  <h4>Lesson notes</h4>
+  <p>Simple land-cover and NDVI examples is best learned as a repeatable workflow: state the question, prepare the inputs, apply the method, check the output, and communicate the result. Keep the original data untouched and save each processing step so the work can be repeated.</p>
+  <p>The central ideas in this lesson are Earth Engine data catalog, ImageCollection filtering, cloud masking and compositing. Use Google Earth Engine Code Editor or rgee to demonstrate the idea, and use ImageCollection filters to confirm that the output behaves as expected.</p>
+  <p>Unfiltered ImageCollections can be very large; always limit date, region, and bands before running expensive operations.</p>
+  <h4>Hands-on exercise</h4>
+  <ol class="exercise-steps">
+    <li>Write a one-sentence question and define the study area or sample extent for simple land-cover and ndvi examples.</li><li>Prepare the input data and record its source, date, resolution or scale, and coordinate system where relevant.</li><li>Apply the main technique with Google Earth Engine Code Editor or rgee: filter an ImageCollection by date and region, apply a cloud mask, calculate an index, and export a small result for validation.</li><li>Validate the result visually and numerically; note any unexpected patterns, missing values, or outliers.</li><li>Export the final map, table, or figure and write a short interpretation with limitations and next steps.</li>
+  </ol>
+  <details class="quiz">
+    <summary>Knowledge check: 3 questions with answers</summary>
+    <ol>
+      <li>How do you reduce an ImageCollection to one image?<br><span class="answer">Answer: Use a reducer such as median, mean, or qualityMosaic over the collection.</span></li><li>Why is cloud masking important?<br><span class="answer">Answer: Clouds and shadows distort spectral values and can lead to false change or index results.</span></li><li>What should be specified when exporting an Earth Engine result?<br><span class="answer">Answer: Region, resolution or scale, projection/CRS, file format, and asset or drive destination.</span></li>
+    </ol>
+  </details>
+  <div class="deliverable"><strong>Deliverable</strong>A one-page practical note containing the question, data description, method steps, one output, and three bullet points of interpretation.</div>
+</article>
+<article class="module" id="module-5">
+  <div class="module-head">
+    <span class="module-number">05</span>
+    <h3>Next steps toward the full GEE certificate course</h3>
+  </div>
+  <h4>Learning objectives</h4>
+  <ul class="checklist">
+    <li>Explain next steps toward the full gee certificate course and where it fits within Getting Started with Google Earth Engine.</li><li>Use Google Earth Engine Code Editor or rgee and ImageCollection filters to complete a small, documented workflow.</li><li>Validate the result, record assumptions, and communicate the main finding clearly.</li>
+  </ul>
+  <h4>Key concepts</h4>
+  <div class="concept-chips">
+    <span class="concept-chip">Earth Engine data catalog</span><span class="concept-chip">ImageCollection filtering</span><span class="concept-chip">cloud masking and compositing</span><span class="concept-chip">classification and change detection</span>
+  </div>
+  <h4>Lesson notes</h4>
+  <p>Next steps toward the full GEE certificate course is best learned as a repeatable workflow: state the question, prepare the inputs, apply the method, check the output, and communicate the result. Keep the original data untouched and save each processing step so the work can be repeated.</p>
+  <p>The central ideas in this lesson are Earth Engine data catalog, ImageCollection filtering, cloud masking and compositing. Use Google Earth Engine Code Editor or rgee to demonstrate the idea, and use ImageCollection filters to confirm that the output behaves as expected.</p>
+  <p>Unfiltered ImageCollections can be very large; always limit date, region, and bands before running expensive operations.</p>
+  <h4>Hands-on exercise</h4>
+  <ol class="exercise-steps">
+    <li>Write a one-sentence question and define the study area or sample extent for next steps toward the full gee certificate course.</li><li>Prepare the input data and record its source, date, resolution or scale, and coordinate system where relevant.</li><li>Apply the main technique with Google Earth Engine Code Editor or rgee: filter an ImageCollection by date and region, apply a cloud mask, calculate an index, and export a small result for validation.</li><li>Validate the result visually and numerically; note any unexpected patterns, missing values, or outliers.</li><li>Export the final map, table, or figure and write a short interpretation with limitations and next steps.</li>
+  </ol>
+  <details class="quiz">
+    <summary>Knowledge check: 3 questions with answers</summary>
+    <ol>
+      <li>How do you reduce an ImageCollection to one image?<br><span class="answer">Answer: Use a reducer such as median, mean, or qualityMosaic over the collection.</span></li><li>Why is cloud masking important?<br><span class="answer">Answer: Clouds and shadows distort spectral values and can lead to false change or index results.</span></li><li>What should be specified when exporting an Earth Engine result?<br><span class="answer">Answer: Region, resolution or scale, projection/CRS, file format, and asset or drive destination.</span></li>
+    </ol>
+  </details>
+  <div class="deliverable"><strong>Deliverable</strong>A one-page practical note containing the question, data description, method steps, one output, and three bullet points of interpretation.</div>
+</article>
+        </section>
+
+        <section class="panel doc-section" id="capstone">
+          <h2>Getting Started with Google Earth Engine: Final Applied Project</h2>
+          <p class="doc-lead">The capstone consolidates the course into one applied, portfolio-ready piece of work.</p>
+          <ol class="exercise-steps">
+            <li>Choose a focused question related to the course theme and define the study area or sample dataset.</li><li>Write a short project brief with data sources, intended method, and expected deliverables.</li><li>Complete the processing workflow using at least three methods learned in this course.</li><li>Validate the outputs and document every assumption, parameter, and limitation.</li><li>Submit a final report with maps or figures, a reproducible workflow, and a concise recommendation.</li>
+          </ol>
+          <div class="deliverable"><strong>Final submission</strong>A report, reproducible workflow, maps or figures, and a five-minute presentation.</div>
+        </section>
+
+        <section class="panel doc-section" id="assessment">
+          <h2>Assessment rubric</h2>
+          <table class="rubric-table">
+            <thead><tr><th>Area</th><th>Weight</th><th>Evidence</th></tr></thead>
+            <tbody>
+              <tr><td>Participation and preparation</td><td>20%</td><td>Short reflections and completed setup checks.</td></tr><tr><td>Module exercises</td><td>40%</td><td>Practical notes, maps, tables, and annotated outputs.</td></tr><tr><td>Knowledge checks</td><td>20%</td><td>Quiz responses and corrections.</td></tr><tr><td>Capstone project</td><td>20%</td><td>Final report, reproducible workflow, and presentation.</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="panel doc-section" id="resources">
+          <h2>Resources and next steps</h2>
+          <ul class="checklist">
+            <li>Course dataset catalogue and local sample files.</li><li>Tool documentation and official user guides for the software used in the lessons.</li><li>A personal processing log that records commands, parameters, and output file names.</li><li>Peer review checklist: question, data, method, validation, interpretation, and limitations.</li>
+          </ul>
+          <p class="doc-lead">The matching MkDocs page is available at <code>docs/courses/getting-started-with-google-earth-engine.md</code> for teams that prefer a documentation-site workflow.</p>
+        </section>
+      </div>
+
+      <aside class="sidebar">
+        <div class="sidebar-head"><h2>Document snapshot</h2></div>
+        <div class="sidebar-body">
+          <div class="fact-list">
+            <div class="fact"><span>Category</span><span>Free Course</span></div>
+            <div class="fact"><span>Level</span><span>Introductory</span></div>
+            <div class="fact"><span>Modules</span><span>5</span></div>
+            <div class="fact"><span>Lessons</span><span>5</span></div>
+            <div class="fact"><span>Knowledge checks</span><span>15</span></div>
+            <div class="fact"><span>Course fee</span><span>Free</span></div>
+            
+          </div>
+          <button class="button button-light" type="button" onclick="window.print()">Print / Save PDF</button>
+          <a class="button button-outline" href="../../courses/getting-started-with-google-earth-engine.html">Open MkDocs page</a>
+          <a class="button button-outline" href="http://localhost:3000/training">Enroll through the site</a>
+          <div class="tip">A one-time 200 ETB payment processing fee applies to paid certificate courses.</div>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+  <p>Standalone HTML and MkDocs training materials generated from the site course catalog.</p>
+</footer>
+</body>
+</html>

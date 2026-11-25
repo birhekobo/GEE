@@ -137,9 +137,9 @@ function PythonCoursePreview() {
           <li>AI for geospatial data</li>
           <li>Hands-on coding exercises</li>
         </ul>
-        <a href="/courses/gee" className="enroll-btn">
+        <Link to="/courses/gee" className="enroll-btn">
           Preview Course
-        </a>
+        </Link>
       </div>
 
       <section className="testimonials">

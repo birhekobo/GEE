@@ -5,10 +5,138 @@
   scroll-margin-top: 5rem;
 }
 
-/* The horizontal nav becomes a second row on small screens. */
+/* Mobile navigation toggle. The desktop nav stays untouched. */
+.mobile-nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--brand);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-nav-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.mobile-nav-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.mobile-nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-nav-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Compact header with a slide-down navigation panel on tablets and phones. */
 @media (max-width: 900px) {
   [id] {
-    scroll-margin-top: 7rem;
+    scroll-margin-top: 5rem;
+  }
+
+  .header-content {
+    position: relative;
+    flex-wrap: nowrap;
+    gap: 0.75rem;
+    min-height: 64px;
+    padding: 0.5rem 1rem;
+  }
+
+  .logo {
+    width: auto;
+    min-height: 44px;
+  }
+
+  .logo h1 {
+    font-size: 0.95rem;
+    line-height: 1.2;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .mobile-nav-toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .primary-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: none;
+    width: auto;
+    max-height: calc(100dvh - 64px);
+    overflow-y: auto;
+    padding: 0.75rem 1rem 1rem;
+    background: rgba(246, 252, 247, 0.98);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 16px 30px rgba(4, 55, 26, 0.16);
+  }
+
+  .primary-nav--open {
+    display: block;
+  }
+
+  .primary-nav > ul {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0.2rem;
+  }
+
+  .primary-nav > ul > li {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .nav-link {
+    width: 100%;
+    min-height: 44px;
+    padding: 0.6rem 0.75rem;
+    border-radius: 10px;
+  }
+
+  .primary-nav .nav-group-menu {
+    position: static;
+    display: none;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    margin: 0.2rem 0 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: none;
+    background: #f2f8f4;
+  }
+
+  .primary-nav .nav-group-menu--open {
+    display: block;
+  }
+
+  .nav-group-button {
+    justify-content: space-between;
   }
 }
 
@@ -204,19 +332,18 @@ textarea:focus-visible {
   }
 
   .project-card img,
-  .gallery-item img,
-  .course-hero img,
-  .featured-course-img {
+  .gallery-item img {
     height: auto;
     aspect-ratio: 16 / 10;
     object-fit: cover;
   }
 
-  .course-hero img,
+  /* Rounded featured-course thumbnails only; full-bleed hero images keep
+     their original absolute positioning and dimensions. */
   .featured-course-img {
-    aspect-ratio: 1;
-    width: clamp(88px, 24vw, 120px);
+    width: clamp(80px, 24vw, 120px);
     height: auto;
+    aspect-ratio: 1;
   }
 
   /* Actions are easy to tap. */
@@ -299,6 +426,111 @@ textarea:focus-visible {
   .footer-attribution {
     width: 100%;
   }
+
+  /* Collapse the remaining wide layouts before they can crowd a phone. */
+  .footer-top {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .site-footer .footer-logo {
+    width: auto;
+    height: 46px;
+    max-width: 180px;
+    border-radius: 8px;
+    object-fit: contain;
+  }
+
+  .footer-profiles {
+    grid-column: 1 / -1;
+  }
+
+  .training-grid,
+  .applications-grid,
+  .se-programs,
+  .se-steps-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .webapps-search {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .webapps-toggle {
+    white-space: normal;
+  }
+
+  .webapp-screenshot img {
+    height: auto;
+    max-height: none;
+    aspect-ratio: 16 / 10;
+  }
+
+  /* Shared course-preview classes collide across pages, so normalize them
+     once at the final layer for every course route. */
+  .course-main-content,
+  .course-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+
+  .course-main-content > *,
+  .course-layout > *,
+  .course-details,
+  .courses-details,
+  .course-sidebar {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .course-details {
+    padding: 1.25rem 1rem;
+  }
+
+  .course-actions,
+  .course-preview-actions {
+    flex-wrap: wrap;
+  }
+
+  .course-card-header,
+  .course-card-header h3 {
+    min-width: 0;
+  }
+
+  .course-card-header {
+    flex-wrap: wrap;
+  }
+
+  .course-price-badge {
+    margin-left: auto;
+  }
+
+  .ai-gis-card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .ai-gis-card-image {
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+
+  .ai-gis-badge {
+    position: static;
+    align-self: flex-start;
+    margin-bottom: 0.5rem;
+  }
+
+  .lightbox-content {
+    max-width: calc(100% - 1rem);
+  }
+
+  .caption {
+    padding: 0.75rem 1rem;
+  }
 }
 
 /* Two-column gallery on tablets, single column on phones. */
@@ -327,7 +559,13 @@ textarea:focus-visible {
   .training-grid,
   .benefits-grid,
   .publications-container,
-  .testimonials-grid {
+  .testimonials-grid,
+  .webapps-grid,
+  .webapps-stats,
+  .webapps-stack-grid,
+  .se-programs,
+  .se-steps-grid,
+  .footer-top {
     grid-template-columns: minmax(0, 1fr);
   }
 

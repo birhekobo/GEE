@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Services.css";
 
 function Services() {
@@ -142,7 +143,9 @@ function Services() {
             Contact us today to discuss your remote sensing and geospatial
             needs.
           </p>
-          <button className="cta-button">Contact Us</button>
+          <Link to="/contact" className="cta-button">
+            Contact Us
+          </Link>
         </div>
       </section>
     </div>

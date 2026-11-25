@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Standalone HTML training course materials for remote sensing, GIS, Google Earth Engine, Python, MATLAB, and geospatial analysis.">
+  <title>Training Course Library</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+  <a class="brand" href="index.html"><span class="brand-mark">G</span><span>GeoSat Training Library</span></a>
+  <button class="nav-toggle" type="button" aria-label="Open navigation" aria-controls="primary-nav" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="site-nav" id="primary-nav" aria-label="Primary">
+    <a href="index.html">Course Library</a>
+    <a href="docs/index.md">MkDocs Source</a>
+    <a href="http://localhost:3000/training">Live Training Page</a>
+  </nav>
+  <script>
+    (function () {
+      var toggle = document.querySelector(".nav-toggle");
+      var nav = document.getElementById("primary-nav");
+      if (!toggle || !nav) return;
+
+      function setOpen(open) {
+        nav.classList.toggle("is-open", open);
+        toggle.setAttribute("aria-expanded", String(open));
+        toggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+      }
+
+      toggle.addEventListener("click", function () {
+        setOpen(!nav.classList.contains("is-open"));
+      });
+      nav.addEventListener("click", function (event) {
+        if (event.target.closest("a")) setOpen(false);
+      });
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") setOpen(false);
+      });
+    })();
+  </script>
+</header>
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="eyebrow">Standalone course library</span>
+      <h1>Full training documents, organized for focused learning.</h1>
+      <p>Browse the complete course catalog in a clean offline-friendly HTML library. Every course includes detailed lessons, practical exercises, knowledge checks, a capstone project, and a matching MkDocs document.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#courses">Browse courses</a>
+        <a class="button button-ghost" href="docs/index.md">Open MkDocs source</a>
+      </div>
+    </div>
+  </section>
+  <section class="stats" aria-label="Library statistics">
+    <div class="stat"><strong>19</strong><span>Total courses</span></div>
+    <div class="stat"><strong>5</strong><span>Free courses</span></div>
+    <div class="stat"><strong>14</strong><span>Certificate courses</span></div>
+    <div class="stat"><strong>147</strong><span>Curriculum modules</span></div>
+  </section>
+  <main class="container" id="courses">
+    <div class="section-heading">
+      <div>
+        <h2>Course catalog</h2>
+        <p>Open a course to view its full curriculum. Filter by category or search by title, topic, and module.</p>
+      </div>
+    </div>
+    <div class="toolbar">
+      <input class="search" id="courseSearch" type="search" placeholder="Search courses, topics, modules..." aria-label="Search courses">
+      <div class="filters" role="group" aria-label="Filter courses">
+        <button class="filter active" type="button" data-filter="all">All</button>
+        <button class="filter" type="button" data-filter="free">Free</button>
+        <button class="filter" type="button" data-filter="certificate">Certificate</button>
+      </div>
+    </div>
+    <div class="course-grid" id="courseGrid">
+      <article class="course-card" data-category="free" data-search="Introduction to Remote Sensing Basics of remote sensing: principles, technologies, and applications. Perfect for beginners. Free Course What is remote sensing? History and evolution of remote sensing Types of sensors and platforms Electromagnetic spectrum and image acquisition Image interpretation and analysis basics Applications in environment, agriculture, urban studies Future trends in remote sensing" style="--accent: #0b7a3b">
+  <a class="card-cover" href="courses/introduction-to-remote-sensing.html" aria-label="Open Introduction to Remote Sensing"><img src="assets/covers/remote-sensing.jpg" alt="Introduction to Remote Sensing cover" loading="lazy"></a>
+  <div class="card-body">
+    <div class="badges">
+      <span class="badge ">Free</span>
+      <span class="badge soft">7 modules</span>
+    </div>
+    <h3><a href="courses/introduction-to-remote-sensing.html">Introduction to Remote Sensing</a></h3>
+    <p>Basics of remote sensing: principles, technologies, and applications. Perfect for beginners.</p>
+    <div class="card-meta">
+      <span>Free</span>
+      <span>No processing fee</span>
+    </div>
+    <div class="card-actions">
+      <a class="button button-outline" href="courses/introduction-to-remote-sensing.html">Open Course</a>
+      <a class="button button-ghost" style="color: var(--green); border-color: var(--green); background: white;" href="docs/courses/introduction-to-remote-sensing.md">MkDocs</a>
+    </div>
+  </div>
+</article>
+<article class="course-card" data-category="free" data-search="Introduction to MATLAB Get started with MATLAB programming for scientific computing. Learn the fundamentals of the MATLAB environment, scripting, and data analysis in this free introductory course. Free Course Getting to know the MATLAB interface Basic commands, variables, and data types Working with vectors and matrices Basic plotting and visualization Writing your first MATLAB scripts Introduction to functions and control flow Next steps toward the full MATLAB certificate course" style="--accent: #0d6efd">
+  <a class="card-cover" href="courses/introduction-to-matlab.html" aria-label="Open Introduction to MATLAB"><img src="assets/covers/matlab-course.jpg" alt="Introduction to MATLAB cover" loading="lazy"></a>
+  <div class="card-body">
+    <div class="badges">
+      <span class="badge ">Free</span>
+      <span class="badge soft">7 modules</span>
+    </div>
+    <h3><a href="courses/introduction-to-matlab.html">Introduction to MATLAB</a></h3>
+    <p>Get started with MATLAB programming for scientific computing. Learn the fundamentals of the MATLAB environment, scripting, and data analysis in this free introductory course.</p>
+    <div class="card-meta">
+      <span>Free</span>
+      <span>No processing fee</span>
+    </div>
+    <div class="card-actions">
+      <a class="button button-outline" href="courses/introduction-to-matlab.html">Open Course</a>
+      <a class="button button-ghost" style="color: var(--green); border-color: var(--green); background: white;" href="docs/courses/introduction-to-matlab.md">MkDocs</a>
+    </div>
+  </div>
+</article>
+<article class="course-card" data-category="free" data-search="Introduction to LaTeX Master document preparation with LaTeX for academic and professional writing. Learn to create beautiful, structured documents with mathematical equations and scientific notation. Free Course Introduction to LaTeX and its advantages Basic document structure and commands Mathematical equations and formulas Tables, figures, and references Bibliography management with BibTeX Customizing document styles and templates Advanced features: presentations, posters, and reports Best practices for academic writing" style="--accent: #7048e8">
+  <a class="card-cover" href="courses/introduction-to-latex.html" aria-label="Open Introduction to LaTeX"><img src="assets/covers/latex-logo.svg" alt="Introduction to LaTeX cover" loading="lazy"></a>
+  <div class="card-body">
+    <div class="badges">
+      <span class="badge ">Free</span>
+      <span class="badge soft">8 modules</span>
+    </div>
+    <h3><a href="courses/introduction-to-latex.html">Introduction to LaTeX</a></h3>
+    <p>Master document preparation with LaTeX for academic and professional writing. Learn to create beautiful, structured documents with mathematical equations and scientific notation.</p>
+    <div class="card-meta">
+      <span>Free</span>
+      <span>No processing fee</span>
+    </div>
+    <div class="card-actions">
+      <a class="button button-outline" href="courses/introduction-to-latex.html">Open Course</a>
+      <a class="button button-ghost" style="color: var(--green); border-color: var(--green); background: white;" href="docs/courses/introduction-to-latex.md">MkDocs</a>
+    </div>
+  </div>
+</article>
+<article class="course-card" data-category="free" data-search="Getting Started with Google Earth Engine Free introductory module: explore the GEE platform, browse satellite catalogs, and run your first environmental analysis scripts. Free Course GEE account setup and Code Editor tour Browsing satellite image collections Basic map visualization and exports Simple land-cover and NDVI examples Next steps toward the full GEE certificate course" style="--accent: #d9480f">
+  <a class="card-cover" href="courses/getting-started-with-google-earth-engine.html" aria-label="Open Getting Started with Google Earth Engine"><img src="assets/covers/gee-course.png" alt="Getting Started with Google Earth Engine cover" loading="lazy"></a>
+  <div class="card-body">
+    <div class="badges">
+      <span class="badge ">Free</span>
+      <span class="badge soft">5 modules</span>
+    </div>
+    <h3><a href="courses/getting-started-with-google-earth-engine.html">Getting Started with Google Earth Engine</a></h3>
+    <p>Free introductory module: explore the GEE platform, browse satellite catalogs, and run your first environmental analysis scripts.</p>
+    <div class="card-meta">
+      <span>Free</span>
+      <span>No processing fee</span>
+    </div>
+    <div class="card-actions">
+      <a class="button button-outline" href="courses/getting-started-with-google-earth-engine.html">Open Course</a>
+      <a class="button button-ghost" style="color: var(--green); border-color: var(--green); background: white;" href="docs/courses/getting-started-with-google-earth-engine.md">MkDocs</a>
+    </div>
+  </div>
+</article>
+<article class="course-card" data-category="free" data-search="Introduction to Geographic Information Systems (GIS) Learn the fundamentals of GIS, including spatial data models, map projections, and basic analysis techniques using open-source tools. Free Course What is GIS and why it matters Spatial data models: raster and vector Map projections and coordinate systems Basic spatial analysis and queries Creating and sharing maps Introduction to open-source GIS tools" style="--accent: #087f5b">
+  <a class="card-cover" href="courses/introduction-to-geographic-information-systems-gis.html" aria-label="Open Introduction to Geographic Information Systems (GIS)"><img src="assets/covers/qgis-course.png" alt="Introduction to Geographic Information Systems (GIS) cover" loading="lazy"></a>
+  <div class="card-body">
+    <div class="badges">
+      <span class="badge ">Free</span>
+      <span class="badge soft">6 modules</span>
+    </div>
+    <h3><a href="courses/introduction-to-geographic-information-systems-gis.html">Introduction to Geographic Information Systems (GIS)</a></h3>
+    <p>Learn the fundamentals of GIS, including spatial data models, map projections, and basic analysis techniques using open-source tools.</p>
+    <div class="card-meta">
+      <span>Free</span>
+      <span>No processing fee</span>
+    </div>
+    <div class="card-actions">
+      <a class="button button-outline" href="courses/introduction-to-geographic-information-systems-gis.html">Open Course</a>
+      <a class="button button-ghost" style="color: var(--green); border-color: var(--green); background: white;" href="docs/courses/introduction-to-geographic-information-systems-gis.md">MkDocs</a>
+    </div>
+  </div>
+</article>
+<article class="course-card" data-category="certificate" data-search="Web Mapping and Geospatial Visualization Build interactive web maps using Leaflet, Mapbox, and other modern mapping libraries. This certificate course takes you from web fundamentals to deploying production-ready interactive maps and geospatial dashboards. Certificate Course Introduction to web mapping technologies and the geospatial web HTML, CSS, and JavaScript fundamentals for mapping Using Leaflet to create interactive maps Vector and raster tiles, Web Map Services (WMS/WMTS) Geospatial data formats: GeoJSON, GeoPackage, KML Styling and customizing map layers Adding data layers from external sources and APIs Advanced interactivity: popups, markers, heatmaps, choropleths Spatial analysis in the browser with Turf.js Building geospatial dashboards and data visualizations Deploying and hosting your web map online Capstone project: a complete interactive web map" style="--accent: #1864ab">
+  <a class="card-cover" href="courses/web-mapping-and-geospatial-visualization.html" aria-label="Open Web Mapping and Geospatial Visualization"><img src="assets/covers/python-satellite.jpg" alt="Web Mapping and Geospatial Visualization cover" loading="lazy"></a>
+  <div class="card-body">
+    <div class="badges">
+      <span class="badge paid">Certificate</span>
+      <span class="badge soft">12 modules</span>
+    </div>
+    <h3><a href="courses/web-mapping-and-geospatial-visualization.html">Web Mapping and Geospatial Visualization</a></h3>
+    <p>Build interactive web maps using Leaflet, Mapbox, and other modern mapping libraries. This certificate course takes you from web fundamentals to deploying production-ready interactive maps and geospatial dashboards.</p>
+    <div class="card-meta">
+      <span>4,000 ETB</span>
+      <span>+ 200 ETB processing fee</span>
+    </div>
+    <div class="card-actions">
+      <a class="button button-outline" href="courses/web-mapping-and-geospatial-visualization.html">Open Course</a>
+      <a class="button button-ghost" style="color: var(--green); border-color: var(--green); background: white;" href="docs/courses/web-mapping-and-geospatial-visualization.md">MkDocs</a>
+    </div>
+  </div>
+</article>
+<article class="course-card" data-category="certificate" data-search="Data Visualization for Geospatial Analysis Learn how to create compelling, publication-ready geospatial visualizations using open-source tools. Covers thematic mapping, charting, interactive dashboards, and communicating spatial data effectively. Certificate Course Principles of geospatial data visualization and cartographic design Spatial data types and preprocessing for visualization Creating thematic maps with QGIS (choropleth, graduated, proportional symbols) Interactive web maps with Folium and Plotly Time-series and animated visualization of satellite data Building geospatial dashboards Color theory, legends, and visual hierarchy for maps 3D visualization and terrain rendering Best practices for communicating spatial data Capstone project: a complete geospatial visualization dashboard" style="--accent: #9c36b5">
+  <a class="card-cover" href="courses/data-visualization-for-geospatial-analysis.html" aria-label="Open Data Visualization for Geospatial Analysis"><img src="assets/covers/Population_count.png" alt="Data Visualization for Geospatial Analysis cover" loading="lazy"></a>
+  <div class="card-body">
+    <div class="badges">
+      <span class="badge paid">Certificate</span>
+      <span class="badge soft">10 modules</span>
+    </div>
+    <h3><a href="courses/data-visualization-for-geospatial-analysis.html">Data Visualization for Geospatial Analysis</a></h3>
+    <p>Learn how to create compelling, publication-ready geospatial visualizations using open-source tools. Covers thematic mapping, charting, interactive dashboards, and communicating spatial data effectively.</p>
+    <div class="card-meta">
+      <span>3,800 ETB</span>
+      <span>+ 200 ETB processing fee</span>
+    </div>
+    <div class="card-actions">
+      <a class="button button-outline" href="courses/data-visualization-for-geospatial-analysis.html">Open Course</a>
+      <a class="button button-ghost" style="color: var(--green); border-color: var(--green); background: white;" href="docs/courses/data-visualization-for-geospatial-analysis.md">MkDocs</a>
+    </div>
+  </div>
+</article>
+<article class="course-card" data-category="certificate" data-search="Satellite Data Analysis with Python Analyze satellite imagery using Python. Covers NumPy, Pandas, Matplotlib, and real-world examples. Certificate Course Introduction to satellite imagery and data formats Python basics for geospatial analysis NumPy for numerical operations Pandas for data manipulation Matplotlib for visualization Processing raster data (GeoTIFF) Case studies and projects" style="--accent: #c92a2a">
+  <a class="card-cover" href="courses/satellite-data-analysis-with-python.html" aria-label="Open Satellite Data Analysis with Python"><img src="assets/covers/python-satellite.jpg" alt="Satellite Data Analysis with Python cover" loading="lazy"></a>
+  <div class="card-body">
+    <div class="badges">
+      <span class="badge paid">Certificate</span>
+      <span class="badge soft">7 modules</span>
+    </div>
+    <h3><a href="courses/satellite-data-analysis-with-python.html">Satellite Data Analysis with Python</a></h3>
+    <p>Analyze satellite imagery using Python. Covers NumPy, Pandas, Matplotlib, and real-world examples.</p>
+    <div class="card-meta">
+      <span>3,500 ETB</span>
+      <span>+ 200 ETB processing fee</span>
+    </div>
+    <div class="card-actions">
+      <a class="button button-outline" href="courses/satellite-data-analysis-with-python.html">Open Course</a>
+      <a class="button button-ghost" style="color: var(--green); border-color: var(--green); background: white;" href="docs/courses/satellite-data-analysis-with-python.md">MkDocs</a>
+    </div>
+  </div>
+</article>
+<article class="course-card" data-category="certificate" data-search="Geospatial Analysis using QGIS Master QGIS for data management, visualization, and spatial analysis. Ideal for practical learners. Certificate Course Introduction to QGIS interface and tools Importing and managing spatial data Vector and raster data analysis Map projections and coordinate systems Spatial queries and geoprocessing Cartographic design and map layout Exporting maps and results Case studies: Land use, environmental monitoring, urban planning" style="--accent: #0b7a3b">
+  <a class="card-cover" href="courses/geospatial-analysis-using-qgis.html" aria-label="Open Geospatial Analysis using QGIS"><img src="assets/covers/qgis-course.png" alt="Geospatial Analysis using QGIS cover" loading="lazy"></a>
+  <div class="card-body">
+    <div class="badges">
+      <span class="badge paid">Certificate</span>
+      <span class="badge soft">8 modules</span>
+    </div>
+    <h3><a href="courses/geospatial-analysis-using-qgis.html">Geospatial Analysis using QGIS</a></h3>
+    <p>Master QGIS for data management, visualization, and spatial analysis. Ideal for practical learners.</p>
+    <div class="card-meta">
+      <span>3,000 ETB</span>
+      <span>+ 200 ETB processing fee</span>
+    </div>
+    <div class="card-actions">
+      <a class="button button-outline" href="courses/geospatial-analysis-using-qgis.html">Open Course</a>
+      <a class="button button-ghost" style="color: var(--green); border-color: var(--green); background: white;" href="docs/courses/geospatial-analysis-using-qgis.md">MkDocs</a>
+    </div>
+  </div>
+</article>
+<article class="course-card" data-category="certificate" data-search="Google Earth Engine for Environmental Monitoring Use Google Earth Engine for large-scale monitoring, land cover change, and climate analysis. Certificate Course Introduction to Google Earth Engine (GEE) platform Accessing and visualizing satellite data in GEE Land cover classification and change detection Time series analysis for environmental monitoring Exporting results and maps from GEE Case studies: Deforestation, water resources, urban expansion" style="--accent: #0d6efd">
+  <a class="card-cover" href="courses/google-earth-engine-for-environmental-monitoring.html" aria-label="Open Google Earth Engine for Environmental Monitoring"><img src="assets/covers/gee-course.png" alt="Google Earth Engine for Environmental Monitoring cover" loading="lazy"></a>
+  <div class="card-body">
+    <div class="badges">
+      <span class="badge paid">Certificate</span>
+      <span class="badge soft">6 modules</span>
+    </div>
+    <h3><a href="courses/google-earth-engine-for-environmental-monitoring.html">Google Earth Engine for Environmental Monitoring</a></h3>
+    <p>Use Google Earth Engine for large-scale monitoring, land cover change, and climate analysis.</p>
+    <div class="card-meta">
+      <span>4,500 ETB</span>
+      <span>+ 200 ETB processing fee</span>
+    </div>
+    <div class="card-actions">
+      <a class="button button-outline" href="courses/google-earth-engine-for-environmental-monitoring.html">Open Course</a>
+      <a class="button button-ghost" style="color: var(--green); border-color: var(--green); background: white;" href="docs/courses/google-earth-engine-for-environmental-monitoring.md">MkDocs</a>
+    </div>
+  </div>
+</article>
+<article class="course-card" data-category="certificate" data-search="Machine Learning in Remote Sensing Apply machine learning to satellite data for classification, prediction, and anomaly detection. Certificate Course Introduction to machine learning concepts Overview of remote sensing data types Data preprocessing and feature extraction Supervised and unsupervised classification Regression and prediction models Model evaluation and validation Case studies: Land cover mapping, change detection, anomaly detection" style="--accent: #7048e8">
+  <a class="card-cover" href="courses/machine-learning-in-remote-sensing.html" aria-label="Open Machine Learning in Remote Sensing"><img src="assets/covers/FIG4.png" alt="Machine Learning in Remote Sensing cover" loading="lazy"></a>
+  <div class="card-body">
+    <div class="badges">
+      <span class="badge paid">Certificate</span>
+      <span class="badge soft">7 modules</span>
+    </div>
+    <h3><a href="courses/machine-learning-in-remote-sensing.html">Machine Learning in Remote Sensing</a></h3>
+    <p>Apply machine learning to satellite data for classification, prediction, and anomaly detection.</p>
+    <div class="card-meta">
+      <span>5,500 ETB</span>
+      <span>+ 200 ETB processing fee</span>
+    </div>
+    <div class="card-actions">
+      <a class="button button-outline" href="courses/machine-learning-in-remote-sensing.html">Open Course</a>
+      <a class="button button-ghost" style="color: var(--green); border-color: var(--green); background: white;" href="docs/courses/machine-learning-in-remote-sensing.md">MkDocs</a>
+    </div>
+  </div>
+</article>
+<article class="course-card" data-category="certificate" data-search="Introduction to Numerical Analysis with MATLAB Applications Master the fundamentals of numerical analysis and learn to solve real-world problems using MATLAB. Ideal for students, engineers, and researchers seeking practical computational skills. Certificate Course Fundamentals of numerical analysis Root finding and solving nonlinear equations Interpolation and curve fitting techniques Numerical integration and differentiation Solving systems of linear equations Numerical solutions to ordinary differential equations Practical MATLAB programming for numerical methods" style="--accent: #d9480f">
+  <a class="card-cover" href="courses/introduction-to-numerical-analysis-with-matlab-applications.html" aria-label="Open Introduction to Numerical Analysis with MATLAB Applications"><img src="assets/covers/matlab-course.jpg" alt="Introduction to Numerical Analysis with MATLAB Applications cover" loading="lazy"></a>
+  <div class="card-body">
+    <div class="badges">
+      <span class="badge paid">Certificate</span>
+      <span class="badge soft">7 modules</span>
+    </div>
+    <h3><a href="courses/introduction-to-numerical-analysis-with-matlab-applications.html">Introduction to Numerical Analysis with MATLAB Applications</a></h3>
+    <p>Master the fundamentals of numerical analysis and learn to solve real-world problems using MATLAB. Ideal for students, engineers, and researchers seeking practical computational skills.</p>
+    <div class="card-meta">
+      <span>4,000 ETB</span>
+      <span>+ 200 ETB processing fee</span>
+    </div>
+    <div class="card-actions">
+      <a class="button button-outline" href="courses/introduction-to-numerical-analysis-with-matlab-applications.html">Open Course</a>
+      <a class="button button-ghost" style="color: var(--green); border-color: var(--green); background: white;" href="docs/courses/introduction-to-numerical-analysis-with-matlab-applications.md">MkDocs</a>
+    </div>
+  </div>
+</article>
+<article class="course-card" data-category="certificate" data-search="Introduction to Geospatial (Mapping) Analysis using MATLAB Learn geospatial data processing, mapping, and analysis using MATLAB. Ideal for those interested in scientific computing and spatial data visualization. Certificate Course Overview of MATLAB for geospatial analysis Importing and visualizing spatial data Coordinate systems and map projections Raster and vector data processing Spatial analysis and mapping techniques Automating workflows with MATLAB scripts Case studies: Environmental and urban mapping" style="--accent: #087f5b">
+  <a class="card-cover" href="courses/introduction-to-geospatial-mapping-analysis-using-matlab.html" aria-label="Open Introduction to Geospatial (Mapping) Analysis using MATLAB"><img src="assets/covers/matlab-course.jpg" alt="Introduction to Geospatial (Mapping) Analysis using MATLAB cover" loading="lazy"></a>
+  <div class="card-body">
+    <div class="badges">
+      <span class="badge paid">Certificate</span>
+      <span class="badge soft">7 modules</span>
+    </div>
+    <h3><a href="courses/introduction-to-geospatial-mapping-analysis-using-matlab.html">Introduction to Geospatial (Mapping) Analysis using MATLAB</a></h3>
+    <p>Learn geospatial data processing, mapping, and analysis using MATLAB. Ideal for those interested in scientific computing and spatial data visualization.</p>
+    <div class="card-meta">
+      <span>4,000 ETB</span>
+      <span>+ 200 ETB processing fee</span>
+    </div>
+    <div class="card-actions">
+      <a class="button button-outline" href="courses/introduction-to-geospatial-mapping-analysis-using-matlab.html">Open Course</a>
+      <a class="button button-ghost" style="color: var(--green); border-color: var(--green); background: white;" href="docs/courses/introduction-to-geospatial-mapping-analysis-using-matlab.md">MkDocs</a>
+    </div>
+  </div>
+</article>
+<article class="course-card" data-category="certificate" data-search="Geospatial Raster Data Analysis Go beyond the basics with advanced Python techniques for geospatial data processing, automation, and machine learning integration. Certificate Course Advanced NumPy and Pandas for geospatial data Rasterio and GDAL for satellite imagery processing GeoPandas for vector data analysis Automating geospatial workflows with Python scripts Integrating machine learning models with geospatial data Cloud computing for large-scale geospatial analysis Capstone project: end-to-end geospatial pipeline" style="--accent: #1864ab">
+  <a class="card-cover" href="courses/geospatial-raster-data-analysis.html" aria-label="Open Geospatial Raster Data Analysis"><img src="assets/covers/python-satellite.jpg" alt="Geospatial Raster Data Analysis cover" loading="lazy"></a>
+  <div class="card-body">
+    <div class="badges">
+      <span class="badge paid">Certificate</span>
+      <span class="badge soft">7 modules</span>
+    </div>
+    <h3><a href="courses/geospatial-raster-data-analysis.html">Geospatial Raster Data Analysis</a></h3>
+    <p>Go beyond the basics with advanced Python techniques for geospatial data processing, automation, and machine learning integration.</p>
+    <div class="card-meta">
+      <span>5,000 ETB</span>
+      <span>+ 200 ETB processing fee</span>
+    </div>
+    <div class="card-actions">
+      <a class="button button-outline" href="courses/geospatial-raster-data-analysis.html">Open Course</a>
+      <a class="button button-ghost" style="color: var(--green); border-color: var(--green); background: white;" href="docs/courses/geospatial-raster-data-analysis.md">MkDocs</a>
+    </div>
+  </div>
+</article>
+<article class="course-card" data-category="certificate" data-search="Earth Observation for Climate Change Monitoring Understand how satellite data is used to monitor climate change indicators including deforestation, urbanization, and carbon emissions. Certificate Course Climate change indicators from space Land surface temperature and heat island analysis Vegetation health monitoring (NDVI, EVI time series) Carbon stock estimation and biomass mapping Deforestation and land cover change detection Urban expansion and impervious surface mapping Reporting and visualization for policy makers" style="--accent: #9c36b5">
+  <a class="card-cover" href="courses/earth-observation-for-climate-change-monitoring.html" aria-label="Open Earth Observation for Climate Change Monitoring"><img src="assets/covers/gee-course.png" alt="Earth Observation for Climate Change Monitoring cover" loading="lazy"></a>
+  <div class="card-body">
+    <div class="badges">
+      <span class="badge paid">Certificate</span>
+      <span class="badge soft">7 modules</span>
+    </div>
+    <h3><a href="courses/earth-observation-for-climate-change-monitoring.html">Earth Observation for Climate Change Monitoring</a></h3>
+    <p>Understand how satellite data is used to monitor climate change indicators including deforestation, urbanization, and carbon emissions.</p>
+    <div class="card-meta">
+      <span>4,800 ETB</span>
+      <span>+ 200 ETB processing fee</span>
+    </div>
+    <div class="card-actions">
+      <a class="button button-outline" href="courses/earth-observation-for-climate-change-monitoring.html">Open Course</a>
+      <a class="button button-ghost" style="color: var(--green); border-color: var(--green); background: white;" href="docs/courses/earth-observation-for-climate-change-monitoring.md">MkDocs</a>
+    </div>
+  </div>
+</article>
+<article class="course-card" data-category="certificate" data-search="Deep Learning for Satellite Image Segmentation Master state-of-the-art deep learning architectures for semantic and instance segmentation of satellite and aerial imagery. Certificate Course Fundamentals of deep learning for computer vision Convolutional neural networks (CNNs) for image analysis U-Net, DeepLab, and SegFormer architectures Data preparation and augmentation for satellite imagery Training and fine-tuning segmentation models Model evaluation metrics (IoU, F1-score, accuracy) Deploying models for inference on large-scale imagery" style="--accent: #c92a2a">
+  <a class="card-cover" href="courses/deep-learning-for-satellite-image-segmentation.html" aria-label="Open Deep Learning for Satellite Image Segmentation"><img src="assets/covers/FIG26.png" alt="Deep Learning for Satellite Image Segmentation cover" loading="lazy"></a>
+  <div class="card-body">
+    <div class="badges">
+      <span class="badge paid">Certificate</span>
+      <span class="badge soft">7 modules</span>
+    </div>
+    <h3><a href="courses/deep-learning-for-satellite-image-segmentation.html">Deep Learning for Satellite Image Segmentation</a></h3>
+    <p>Master state-of-the-art deep learning architectures for semantic and instance segmentation of satellite and aerial imagery.</p>
+    <div class="card-meta">
+      <span>6,000 ETB</span>
+      <span>+ 200 ETB processing fee</span>
+    </div>
+    <div class="card-actions">
+      <a class="button button-outline" href="courses/deep-learning-for-satellite-image-segmentation.html">Open Course</a>
+      <a class="button button-ghost" style="color: var(--green); border-color: var(--green); background: white;" href="docs/courses/deep-learning-for-satellite-image-segmentation.md">MkDocs</a>
+    </div>
+  </div>
+</article>
+<article class="course-card" data-category="certificate" data-search="GIS for Urban Planning and Smart Cities Apply GIS and remote sensing techniques to urban planning, infrastructure management, and smart city development. Certificate Course Urban planning fundamentals with GIS Land use and land cover classification from satellite data Urban growth modeling and simulation Infrastructure and utility network analysis Population estimation and service area mapping Smart city indicators and spatial dashboards Case studies from Ethiopian and African cities" style="--accent: #0b7a3b">
+  <a class="card-cover" href="courses/gis-for-urban-planning-and-smart-cities.html" aria-label="Open GIS for Urban Planning and Smart Cities"><img src="assets/covers/Urban%20Growth%20Analysis.png" alt="GIS for Urban Planning and Smart Cities cover" loading="lazy"></a>
+  <div class="card-body">
+    <div class="badges">
+      <span class="badge paid">Certificate</span>
+      <span class="badge soft">7 modules</span>
+    </div>
+    <h3><a href="courses/gis-for-urban-planning-and-smart-cities.html">GIS for Urban Planning and Smart Cities</a></h3>
+    <p>Apply GIS and remote sensing techniques to urban planning, infrastructure management, and smart city development.</p>
+    <div class="card-meta">
+      <span>4,200 ETB</span>
+      <span>+ 200 ETB processing fee</span>
+    </div>
+    <div class="card-actions">
+      <a class="button button-outline" href="courses/gis-for-urban-planning-and-smart-cities.html">Open Course</a>
+      <a class="button button-ghost" style="color: var(--green); border-color: var(--green); background: white;" href="docs/courses/gis-for-urban-planning-and-smart-cities.md">MkDocs</a>
+    </div>
+  </div>
+</article>
+<article class="course-card" data-category="certificate" data-search="Artificial Intelligence for Geospatial Applications Build AI and deep learning solutions for Earth observation: from classical machine learning to foundation models, segmentation, and deployment on maps and dashboards. Certificate Course Foundations of AI and machine learning for geospatial data Preparing satellite and aerial imagery for model training Classical ML: random forests, gradient boosting, and SVMs with scikit-learn Deep learning with PyTorch and TensorFlow for image classification Semantic segmentation using U-Net and Vision Transformers Object detection for infrastructure and land features Foundation and self-supervised models for Earth observation Google Earth Engine and cloud AI workflows Model evaluation, explainability, and uncertainty (SHAP, Grad-CAM) Deploying AI models as map services and dashboards Capstone project: AI-powered land cover mapping" style="--accent: #0d6efd">
+  <a class="card-cover" href="courses/artificial-intelligence-for-geospatial-applications.html" aria-label="Open Artificial Intelligence for Geospatial Applications"><img src="assets/covers/python-satellite.jpg" alt="Artificial Intelligence for Geospatial Applications cover" loading="lazy"></a>
+  <div class="card-body">
+    <div class="badges">
+      <span class="badge paid">Certificate</span>
+      <span class="badge soft">11 modules</span>
+    </div>
+    <h3><a href="courses/artificial-intelligence-for-geospatial-applications.html">Artificial Intelligence for Geospatial Applications</a></h3>
+    <p>Build AI and deep learning solutions for Earth observation: from classical machine learning to foundation models, segmentation, and deployment on maps and dashboards.</p>
+    <div class="card-meta">
+      <span>5,800 ETB</span>
+      <span>+ 200 ETB processing fee</span>
+    </div>
+    <div class="card-actions">
+      <a class="button button-outline" href="courses/artificial-intelligence-for-geospatial-applications.html">Open Course</a>
+      <a class="button button-ghost" style="color: var(--green); border-color: var(--green); background: white;" href="docs/courses/artificial-intelligence-for-geospatial-applications.md">MkDocs</a>
+    </div>
+  </div>
+</article>
+<article class="course-card" data-category="certificate" data-search="Geospatial Analysis with Google Earth Engine Master an open-source geospatial stack: GeoPandas, Shapely, rasterio, rioxarray, xarray, cartopy, and R&#39;s sf/terra for vector, raster, and climate data analysis. Certificate Course Geospatial data models, CRS, and projections Python environment setup: conda, Jupyter, GDAL, and dependencies Vector analysis with GeoPandas and Shapely Raster processing with rasterio and rioxarray N-dimensional climate and time-series data with xarray Publication-quality maps with cartopy and matplotlib R for geospatial analysis: sf, terra, and raster Interoperability between Python and R (reticulate) Spatial joins, zonal statistics, and raster-vector integration Automating reproducible geospatial workflows Capstone project: an end-to-end geospatial analysis" style="--accent: #7048e8">
+  <a class="card-cover" href="courses/geospatial-analysis-with-google-earth-engine.html" aria-label="Open Geospatial Analysis with Google Earth Engine"><img src="assets/covers/python-satellite.jpg" alt="Geospatial Analysis with Google Earth Engine cover" loading="lazy"></a>
+  <div class="card-body">
+    <div class="badges">
+      <span class="badge paid">Certificate</span>
+      <span class="badge soft">11 modules</span>
+    </div>
+    <h3><a href="courses/geospatial-analysis-with-google-earth-engine.html">Geospatial Analysis with Google Earth Engine</a></h3>
+    <p>Master an open-source geospatial stack: GeoPandas, Shapely, rasterio, rioxarray, xarray, cartopy, and R&#39;s sf/terra for vector, raster, and climate data analysis.</p>
+    <div class="card-meta">
+      <span>5,200 ETB</span>
+      <span>+ 200 ETB processing fee</span>
+    </div>
+    <div class="card-actions">
+      <a class="button button-outline" href="courses/geospatial-analysis-with-google-earth-engine.html">Open Course</a>
+      <a class="button button-ghost" style="color: var(--green); border-color: var(--green); background: white;" href="docs/courses/geospatial-analysis-with-google-earth-engine.md">MkDocs</a>
+    </div>
+  </div>
+</article>
+    </div>
+    <div class="empty" id="emptyState" hidden>No courses match your search.</div>
+  </main>
+  <footer class="site-footer">
+  <p>Standalone HTML and MkDocs training materials generated from the site course catalog.</p>
+</footer>
+  <script>
+    var cards = Array.prototype.slice.call(document.querySelectorAll('.course-card'));
+    var filters = Array.prototype.slice.call(document.querySelectorAll('.filter'));
+    var search = document.getElementById('courseSearch');
+    var empty = document.getElementById('emptyState');
+    var active = 'all';
+
+    function applyFilters() {
+      var query = search.value.trim().toLowerCase();
+      var visible = 0;
+      cards.forEach(function (card) {
+        var categoryMatch = active === 'all' || card.dataset.category === active;
+        var searchMatch = !query || card.dataset.search.indexOf(query) !== -1;
+        var show = categoryMatch && searchMatch;
+        card.hidden = !show;
+        if (show) visible += 1;
+      });
+      empty.hidden = visible !== 0;
+    }
+
+    filters.forEach(function (button) {
+      button.addEventListener('click', function () {
+        filters.forEach(function (item) { item.classList.remove('active'); });
+        button.classList.add('active');
+        active = button.dataset.filter;
+        applyFilters();
+      });
+    });
+
+    search.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>

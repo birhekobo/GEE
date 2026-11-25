@@ -196,6 +196,7 @@ export const webApplicationCategories = [
         features: ["Exit exams", "Mock exams", "Resources"],
         status: "Completed - locally deployed",
         flagship: true,
+        screenshot: "/images/screenshot_image/Ethio%20Academic%20Hub.png",
       },
       {
         id: 20,
@@ -212,6 +213,8 @@ export const webApplicationCategories = [
           "Departmental e-learning portal with course materials, lectures, assignments and progress tracking for physics students.",
         features: ["E-learning", "Course materials", "Assignments"],
         status: "Completed - locally deployed",
+        screenshot:
+          "/images/screenshot_image/Wollo%20University%20Physics%20Department%20E-learning%20Platform.jpeg",
       },
     ],
   },
@@ -268,6 +271,16 @@ export const webApplicationCategories = [
           "Student transcript generation, verification and academic record management.",
         features: ["Transcripts", "Verification", "Academic records"],
         status: "Completed - locally deployed",
+      },
+      {
+        id: 45,
+        name: "Research Manuscript Intelligence Platform (RMIP)",
+        description:
+          "Manuscript intake, editorial tracking, reviewer matching and research-quality intelligence for journals and institutional research offices.",
+        features: ["Manuscript tracking", "Reviewer matching", "Quality checks"],
+        status: "Completed - locally deployed",
+        screenshot:
+          "/images/screenshot_image/Research%20Manuscript%20Intelligence%20Platform%20(RMIP).png",
       },
     ],
   },

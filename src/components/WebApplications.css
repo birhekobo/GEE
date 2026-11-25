@@ -245,6 +245,29 @@
   color: #1a56a8;
 }
 
+.webapp-screenshot {
+  background: #f2f8f4;
+  border: 1px solid #e1ece5;
+  border-radius: 6px;
+  margin: 0 0 0.9rem;
+  overflow: hidden;
+}
+
+.webapp-screenshot img {
+  display: block;
+  width: 100%;
+  max-height: 190px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.webapp-screenshot figcaption {
+  color: #3c6b4c;
+  font-size: 0.7rem;
+  padding: 0.3rem 0.5rem;
+  text-align: center;
+}
+
 .webapp-card h3 {
   color: #1d3f27;
   font-size: 1.1rem;

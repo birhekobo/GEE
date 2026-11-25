@@ -8,6 +8,8 @@ export const trainingCourses = [
       "Basics of remote sensing: principles, technologies, and applications. Perfect for beginners.",
     isFree: true,
     fee: 0,
+    durationHours: 20,
+    schedule: "Mon/Wed/Fri 10:00-12:00",
     contents: [
       "What is remote sensing?",
       "History and evolution of remote sensing",
@@ -25,6 +27,8 @@ export const trainingCourses = [
       "Get started with MATLAB programming for scientific computing. Learn the fundamentals of the MATLAB environment, scripting, and data analysis in this free introductory course.",
     isFree: true,
     fee: 0,
+    durationHours: 12,
+    schedule: "Self-paced (online)",
     contents: [
       "Getting to know the MATLAB interface",
       "Basic commands, variables, and data types",
@@ -42,6 +46,8 @@ export const trainingCourses = [
       "Master document preparation with LaTeX for academic and professional writing. Learn to create beautiful, structured documents with mathematical equations and scientific notation.",
     isFree: true,
     fee: 0,
+    durationHours: 12,
+    schedule: "Self-paced (online)",
     contents: [
       "Introduction to LaTeX and its advantages",
       "Basic document structure and commands",
@@ -60,6 +66,8 @@ export const trainingCourses = [
       "Free introductory module: explore the GEE platform, browse satellite catalogs, and run your first environmental analysis scripts.",
     isFree: true,
     fee: 0,
+    durationHours: 12,
+    schedule: "Self-paced (online)",
     contents: [
       "GEE account setup and Code Editor tour",
       "Browsing satellite image collections",
@@ -75,6 +83,8 @@ export const trainingCourses = [
       "Learn the fundamentals of GIS, including spatial data models, map projections, and basic analysis techniques using open-source tools.",
     isFree: true,
     fee: 0,
+    durationHours: 12,
+    schedule: "Self-paced (online)",
     contents: [
       "What is GIS and why it matters",
       "Spatial data models: raster and vector",
@@ -91,6 +101,8 @@ export const trainingCourses = [
       "Build interactive web maps using Leaflet, Mapbox, and other modern mapping libraries. This certificate course takes you from web fundamentals to deploying production-ready interactive maps and geospatial dashboards.",
     isFree: false,
     fee: 4000,
+    durationHours: 40,
+    schedule: "Mon/Wed/Fri 10:00-12:00",
     contents: [
       "Introduction to web mapping technologies and the geospatial web",
       "HTML, CSS, and JavaScript fundamentals for mapping",
@@ -113,6 +125,8 @@ export const trainingCourses = [
       "Learn how to create compelling, publication-ready geospatial visualizations using open-source tools. Covers thematic mapping, charting, interactive dashboards, and communicating spatial data effectively.",
     isFree: false,
     fee: 3800,
+    durationHours: 40,
+    schedule: "Mon/Wed/Fri 10:00-12:00",
     contents: [
       "Principles of geospatial data visualization and cartographic design",
       "Spatial data types and preprocessing for visualization",
@@ -133,6 +147,8 @@ export const trainingCourses = [
       "Analyze satellite imagery using Python. Covers NumPy, Pandas, Matplotlib, and real-world examples.",
     isFree: false,
     fee: 3500,
+    durationHours: 40,
+    schedule: "Mon/Wed/Fri 10:00-12:00",
     contents: [
       "Introduction to satellite imagery and data formats",
       "Python basics for geospatial analysis",
@@ -150,6 +166,8 @@ export const trainingCourses = [
       "Master QGIS for data management, visualization, and spatial analysis. Ideal for practical learners.",
     isFree: false,
     fee: 3000,
+    durationHours: 40,
+    schedule: "Mon/Wed/Fri 10:00-12:00",
     contents: [
       "Introduction to QGIS interface and tools",
       "Importing and managing spatial data",
@@ -168,6 +186,8 @@ export const trainingCourses = [
       "Use Google Earth Engine for large-scale monitoring, land cover change, and climate analysis.",
     isFree: false,
     fee: 4500,
+    durationHours: 40,
+    schedule: "Mon/Wed/Fri 10:00-12:00",
     contents: [
       "Introduction to Google Earth Engine (GEE) platform",
       "Accessing and visualizing satellite data in GEE",
@@ -184,6 +204,8 @@ export const trainingCourses = [
       "Apply machine learning to satellite data for classification, prediction, and anomaly detection.",
     isFree: false,
     fee: 5500,
+    durationHours: 40,
+    schedule: "Mon/Wed/Fri 10:00-12:00",
     contents: [
       "Introduction to machine learning concepts",
       "Overview of remote sensing data types",
@@ -201,6 +223,8 @@ export const trainingCourses = [
       "Master the fundamentals of numerical analysis and learn to solve real-world problems using MATLAB. Ideal for students, engineers, and researchers seeking practical computational skills.",
     isFree: false,
     fee: 4000,
+    durationHours: 40,
+    schedule: "Mon/Wed/Fri 10:00-12:00",
     contents: [
       "Fundamentals of numerical analysis",
       "Root finding and solving nonlinear equations",
@@ -218,6 +242,8 @@ export const trainingCourses = [
       "Learn geospatial data processing, mapping, and analysis using MATLAB. Ideal for those interested in scientific computing and spatial data visualization.",
     isFree: false,
     fee: 4000,
+    durationHours: 40,
+    schedule: "Mon/Wed/Fri 10:00-12:00",
     contents: [
       "Overview of MATLAB for geospatial analysis",
       "Importing and visualizing spatial data",
@@ -235,6 +261,8 @@ export const trainingCourses = [
       "Go beyond the basics with advanced Python techniques for geospatial data processing, automation, and machine learning integration.",
     isFree: false,
     fee: 5000,
+    durationHours: 40,
+    schedule: "Mon/Wed/Fri 10:00-12:00",
     contents: [
       "Advanced NumPy and Pandas for geospatial data",
       "Rasterio and GDAL for satellite imagery processing",
@@ -252,6 +280,8 @@ export const trainingCourses = [
       "Understand how satellite data is used to monitor climate change indicators including deforestation, urbanization, and carbon emissions.",
     isFree: false,
     fee: 4800,
+    durationHours: 40,
+    schedule: "Mon/Wed/Fri 10:00-12:00",
     contents: [
       "Climate change indicators from space",
       "Land surface temperature and heat island analysis",
@@ -269,6 +299,8 @@ export const trainingCourses = [
       "Master state-of-the-art deep learning architectures for semantic and instance segmentation of satellite and aerial imagery.",
     isFree: false,
     fee: 6000,
+    durationHours: 40,
+    schedule: "Mon/Wed/Fri 10:00-12:00",
     contents: [
       "Fundamentals of deep learning for computer vision",
       "Convolutional neural networks (CNNs) for image analysis",
@@ -286,6 +318,8 @@ export const trainingCourses = [
       "Apply GIS and remote sensing techniques to urban planning, infrastructure management, and smart city development.",
     isFree: false,
     fee: 4200,
+    durationHours: 40,
+    schedule: "Mon/Wed/Fri 10:00-12:00",
     contents: [
       "Urban planning fundamentals with GIS",
       "Land use and land cover classification from satellite data",
@@ -300,9 +334,11 @@ export const trainingCourses = [
   {
     title: "Artificial Intelligence for Geospatial Applications",
     description:
-      "Build AI and deep learning solutions for Earth observation — from classical machine learning to foundation models, segmentation, and deployment on maps and dashboards.",
+      "Build AI and deep learning solutions for Earth observation: from classical machine learning to foundation models, segmentation, and deployment on maps and dashboards.",
     isFree: false,
     fee: 5800,
+    durationHours: 40,
+    schedule: "Mon/Wed/Fri 10:00-12:00",
     contents: [
       "Foundations of AI and machine learning for geospatial data",
       "Preparing satellite and aerial imagery for model training",
@@ -324,6 +360,8 @@ export const trainingCourses = [
       "Master an open-source geospatial stack: GeoPandas, Shapely, rasterio, rioxarray, xarray, cartopy, and R's sf/terra for vector, raster, and climate data analysis.",
     isFree: false,
     fee: 5200,
+    durationHours: 40,
+    schedule: "Mon/Wed/Fri 10:00-12:00",
     contents: [
       "Geospatial data models, CRS, and projections",
       "Python environment setup: conda, Jupyter, GDAL, and dependencies",
@@ -346,7 +384,7 @@ export function getCourseByTitle(title) {
 }
 
 export function formatCourseFee(course) {
-  if (!course) return "—";
+  if (!course) return "-";
   return course.isFree ? "Free" : `${course.fee.toLocaleString()} ETB`;
 }
 

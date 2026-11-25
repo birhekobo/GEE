@@ -1,10 +1,28 @@
 import React, { useState, useEffect } from "react";
 import "./Publications.css";
 import PublicationCard from "./PublicationCard";
-import { publications } from "./publicationsData";
+import { publicationCategories, publications } from "./publicationsData";
+
+const getCategoryFromUrl = () => {
+  const requested = new URLSearchParams(window.location.search).get("category");
+  return publicationCategories.some((category) => category.id === requested)
+    ? requested
+    : "all";
+};
+
+const categoryUrl = (categoryId) => {
+  const params = new URLSearchParams(window.location.search);
+  if (categoryId === "all") {
+    params.delete("category");
+  } else {
+    params.set("category", categoryId);
+  }
+  const query = params.toString();
+  return `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash}`;
+};
 
 const Publications = () => {
-  const [activeCategory, setActiveCategory] = useState("all");
+  const [activeCategory, setActiveCategory] = useState(getCategoryFromUrl);
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState("year");
   const [filteredPublications, setFilteredPublications] =
@@ -21,7 +39,14 @@ const Publications = () => {
   }, []);
 
   useEffect(() => {
-    let filtered = publications;
+    const syncCategoryFromUrl = () => setActiveCategory(getCategoryFromUrl());
+    window.addEventListener("popstate", syncCategoryFromUrl);
+    return () => window.removeEventListener("popstate", syncCategoryFromUrl);
+  }, []);
+
+  useEffect(() => {
+    // Copy before filtering/sorting so the shared publications data is never mutated.
+    let filtered = [...publications];
 
     // Apply category filter
     if (activeCategory !== "all") {
@@ -56,6 +81,11 @@ const Publications = () => {
     setFilteredPublications(filtered);
   }, [activeCategory, searchQuery, sortBy]);
 
+  const handleCategoryChange = (categoryId) => {
+    setActiveCategory(categoryId);
+    window.history.pushState({}, "", categoryUrl(categoryId));
+  };
+
   return (
     <section id="publications" className="publications-section">
       <h1 className="publications-title">Our Publications</h1>
@@ -72,6 +102,7 @@ const Publications = () => {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="search-input"
+            aria-label="Search publications"
           />
         </div>
 
@@ -80,6 +111,7 @@ const Publications = () => {
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
             className="sort-select"
+            aria-label="Sort publications"
           >
             <option value="year">Sort by Year</option>
             <option value="title">Sort by Title</option>
@@ -89,38 +121,17 @@ const Publications = () => {
       </div>
 
       <div className="filter-buttons">
-        <button
-          className={`filter-button ${
-            activeCategory === "all" ? "active" : ""
-          }`}
-          onClick={() => setActiveCategory("all")}
-        >
-          All Publications
-        </button>
-        <button
-          className={`filter-button ${
-            activeCategory === "research" ? "active" : ""
-          }`}
-          onClick={() => setActiveCategory("research")}
-        >
-          Research Papers
-        </button>
-        <button
-          className={`filter-button ${
-            activeCategory === "review" ? "active" : ""
-          }`}
-          onClick={() => setActiveCategory("review")}
-        >
-          Review Articles
-        </button>
-        <button
-          className={`filter-button ${
-            activeCategory === "ebook" ? "active" : ""
-          }`}
-          onClick={() => setActiveCategory("ebook")}
-        >
-          Ebooks
-        </button>
+        {publicationCategories.map((category) => (
+          <button
+            key={category.id}
+            className={`filter-button ${
+              activeCategory === category.id ? "active" : ""
+            }`}
+            onClick={() => handleCategoryChange(category.id)}
+          >
+            {category.label}
+          </button>
+        ))}
       </div>
 
       {isLoading ? (

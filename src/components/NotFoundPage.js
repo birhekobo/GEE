@@ -13,12 +13,12 @@ const NotFoundPage = () => {
       padding: "20px",
     },
     title: {
-      fontSize: "3rem",
+      fontSize: "clamp(1.8rem, 8vw, 3rem)",
       color: "#333",
       marginBottom: "1rem",
     },
     message: {
-      fontSize: "1.2rem",
+      fontSize: "clamp(1rem, 4vw, 1.2rem)",
       color: "#555",
       marginBottom: "2rem",
     },

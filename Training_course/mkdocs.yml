@@ -1,0 +1,36 @@
+site_name: "GeoSat Training Course Library"
+site_description: "Standalone HTML and MkDocs training course materials."
+site_author: "GeoSat Intelligence"
+docs_dir: docs
+site_dir: site
+use_directory_urls: false
+theme:
+  name: mkdocs
+  features:
+    - navigation.instant
+    - navigation.tracking
+extra_css:
+  - assets/training.css
+nav:
+  - "Home": index.md
+  - "Free Courses":
+      - "Introduction to Remote Sensing": courses/introduction-to-remote-sensing.md
+      - "Introduction to MATLAB": courses/introduction-to-matlab.md
+      - "Introduction to LaTeX": courses/introduction-to-latex.md
+      - "Getting Started with Google Earth Engine": courses/getting-started-with-google-earth-engine.md
+      - "Introduction to Geographic Information Systems (GIS)": courses/introduction-to-geographic-information-systems-gis.md
+  - "Certificate Courses":
+      - "Web Mapping and Geospatial Visualization": courses/web-mapping-and-geospatial-visualization.md
+      - "Data Visualization for Geospatial Analysis": courses/data-visualization-for-geospatial-analysis.md
+      - "Satellite Data Analysis with Python": courses/satellite-data-analysis-with-python.md
+      - "Geospatial Analysis using QGIS": courses/geospatial-analysis-using-qgis.md
+      - "Google Earth Engine for Environmental Monitoring": courses/google-earth-engine-for-environmental-monitoring.md
+      - "Machine Learning in Remote Sensing": courses/machine-learning-in-remote-sensing.md
+      - "Introduction to Numerical Analysis with MATLAB Applications": courses/introduction-to-numerical-analysis-with-matlab-applications.md
+      - "Introduction to Geospatial (Mapping) Analysis using MATLAB": courses/introduction-to-geospatial-mapping-analysis-using-matlab.md
+      - "Geospatial Raster Data Analysis": courses/geospatial-raster-data-analysis.md
+      - "Earth Observation for Climate Change Monitoring": courses/earth-observation-for-climate-change-monitoring.md
+      - "Deep Learning for Satellite Image Segmentation": courses/deep-learning-for-satellite-image-segmentation.md
+      - "GIS for Urban Planning and Smart Cities": courses/gis-for-urban-planning-and-smart-cities.md
+      - "Artificial Intelligence for Geospatial Applications": courses/artificial-intelligence-for-geospatial-applications.md
+      - "Geospatial Analysis with Google Earth Engine": courses/geospatial-analysis-with-google-earth-engine.md

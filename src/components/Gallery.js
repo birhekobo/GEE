@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import "./Gallery.css";
 import ErrorBoundary from "./ErrorBoundary";
 
@@ -256,6 +256,7 @@ function Gallery() {
   const [currentImage, setCurrentImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [failedImages, setFailedImages] = useState([]);
+  const previousOverflow = useRef(null);
 
   const handleImageError = useCallback((src) => {
     setFailedImages((prev) => (prev.includes(src) ? prev : [...prev, src]));
@@ -267,6 +268,9 @@ function Gallery() {
   );
 
   const openLightbox = useCallback((image, index) => {
+    if (previousOverflow.current === null) {
+      previousOverflow.current = document.body.style.overflow;
+    }
     setCurrentImage(image);
     setCurrentIndex(index);
     setLightboxOpen(true);
@@ -275,7 +279,8 @@ function Gallery() {
 
   const closeLightbox = useCallback(() => {
     setLightboxOpen(false);
-    document.body.style.overflow = "auto";
+    document.body.style.overflow = previousOverflow.current ?? "";
+    previousOverflow.current = null;
   }, []);
 
   const navigateImage = useCallback(
@@ -288,6 +293,17 @@ function Gallery() {
     },
     [currentIndex]
   );
+
+  // Always restore page scrolling if the gallery unmounts while the lightbox is open
+  // (for example after navigating to another route).
+  useEffect(() => {
+    return () => {
+      if (previousOverflow.current !== null) {
+        document.body.style.overflow = previousOverflow.current;
+        previousOverflow.current = null;
+      }
+    };
+  }, []);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -316,7 +332,7 @@ function Gallery() {
 
   return (
     <ErrorBoundary>
-      <section className="gallery-intro">
+      <section className="gallery-intro" id="gallery">
         <h2>Gallery</h2>
         <p>
           Explore our curated collection of satellite images showcasing diverse
@@ -388,6 +404,12 @@ function Gallery() {
             <span
               className="close-button"
               onClick={closeLightbox}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  closeLightbox();
+                }
+              }}
               role="button"
               tabIndex={0}
               aria-label="Close gallery"

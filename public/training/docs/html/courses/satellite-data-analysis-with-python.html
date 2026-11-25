@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Analyze satellite imagery using Python. Covers NumPy, Pandas, Matplotlib, and real-world examples. Full training document with lessons, exercises, quizzes, and capstone project.">
+  <title>Satellite Data Analysis with Python: Full Training Document</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body style="--accent: #c92a2a;">
+  <header class="site-header">
+    <a class="brand" href="../index.html"><span class="brand-mark">G</span><span>GeoSat Training Library</span></a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="../index.html">All Courses</a>
+      <a href="../../courses/satellite-data-analysis-with-python.html">MkDocs Source</a>
+      <a href="http://localhost:3000/training">Live Training Page</a>
+    </nav>
+  </header>
+  <section class="hero course-hero">
+    <div class="hero-inner">
+      <a class="back-link" href="../index.html">← Back to course library</a>
+      <span class="eyebrow">Full training document · Certificate Course · 08</span>
+      <h1>Satellite Data Analysis with Python</h1>
+      <p>Analyze satellite imagery using Python. Covers NumPy, Pandas, Matplotlib, and real-world examples.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#modules">Jump to modules</a>
+        <button class="button button-ghost" type="button" onclick="window.print()">Print / Save PDF</button>
+        <a class="button button-ghost" href="http://localhost:3000/courses/python">React course preview</a>
+      </div>
+    </div>
+  </section>
+  <main class="container">
+    <div class="course-layout">
+      <div>
+        <nav class="document-toc" aria-label="Training document contents">
+          <h2>Document contents</h2>
+          <ol>
+            <li><a href="#module-1">satellite imagery and data formats</a></li><li><a href="#module-2">Python basics for geospatial analysis</a></li><li><a href="#module-3">NumPy for numerical operations</a></li><li><a href="#module-4">Pandas for data manipulation</a></li><li><a href="#module-5">Matplotlib for visualization</a></li><li><a href="#module-6">Processing raster data (GeoTIFF)</a></li><li><a href="#module-7">Case studies and projects</a></li>
+          </ol>
+        </nav>
+
+        <section class="panel" id="course-guide">
+          <h2>Course guide</h2>
+          <p class="doc-lead">Satellite Data Analysis with Python is a certificate / intermediate-to-advanced programme built around 7 practical modules. Work through the modules in order; each one includes objectives, notes, a hands-on exercise, a knowledge check, and a deliverable.</p>
+          <h4>Learning outcomes</h4>
+          <div class="outcomes-grid">
+            <div class="outcome"><strong>Outcome 1</strong>Use electromagnetic spectrum and platform and sensor characteristics to work with satellite imagery and data formats and explain the result.</div><div class="outcome"><strong>Outcome 2</strong>Use electromagnetic spectrum and platform and sensor characteristics to work with python basics for geospatial analysis and explain the result.</div><div class="outcome"><strong>Outcome 3</strong>Use electromagnetic spectrum and platform and sensor characteristics to work with numpy for numerical operations and explain the result.</div><div class="outcome"><strong>Outcome 4</strong>Use electromagnetic spectrum and platform and sensor characteristics to work with pandas for data manipulation and explain the result.</div><div class="outcome"><strong>Outcome 5</strong>Use electromagnetic spectrum and platform and sensor characteristics to work with matplotlib for visualization and explain the result.</div><div class="outcome"><strong>Outcome 6</strong>Use electromagnetic spectrum and platform and sensor characteristics to work with processing raster data (geotiff) and explain the result.</div>
+          </div>
+          <h4>Prerequisites</h4>
+          <ul class="checklist">
+            <li>Comfort with files, folders, and basic data tables.</li><li>Introductory knowledge of the relevant tool or programming language.</li><li>Willingness to complete short practical exercises after each module.</li>
+          </ul>
+        </section>
+
+        <section class="panel doc-section" id="modules">
+          <h2>Full module documents</h2>
+          <p class="doc-lead">Each module is a self-contained lesson that can be taught independently or sequenced into the full certificate programme.</p>
+          <article class="module" id="module-1">
+  <div class="module-head">
+    <span class="module-number">01</span>
+    <h3>satellite imagery and data formats</h3>
+  </div>
+  <h4>Learning objectives</h4>
+  <ul class="checklist">
+    <li>Explain satellite imagery and data formats and where it fits within Satellite Data Analysis with Python.</li><li>Use a satellite scene viewer and band combinations and spectral indices to complete a small, documented workflow.</li><li>Validate the result, record assumptions, and communicate the main finding clearly.</li>
+  </ul>
+  <h4>Key concepts</h4>
+  <div class="concept-chips">
+    <span class="concept-chip">electromagnetic spectrum</span><span class="concept-chip">platform and sensor characteristics</span><span class="concept-chip">spatial/spectral/temporal resolution</span><span class="concept-chip">image interpretation</span>
+  </div>
+  <h4>Lesson notes</h4>
+  <p>satellite imagery and data formats is best learned as a repeatable workflow: state the question, prepare the inputs, apply the method, check the output, and communicate the result. Keep the original data untouched and save each processing step so the work can be repeated.</p>
+  <p>The central ideas in this lesson are electromagnetic spectrum, platform and sensor characteristics, spatial/spectral/temporal resolution. Use a satellite scene viewer to demonstrate the idea, and use band combinations and spectral indices to confirm that the output behaves as expected.</p>
+  <p>Do not compare images from different dates or sensors without checking calibration, cloud cover, and spatial resolution.</p>
+  <h4>Hands-on exercise</h4>
+  <ol class="exercise-steps">
+    <li>Write a one-sentence question and define the study area or sample extent for satellite imagery and data formats.</li><li>Prepare the input data and record its source, date, resolution or scale, and coordinate system where relevant.</li><li>Apply the main technique with a satellite scene viewer: compare at least two band combinations, label three land-cover features, and explain how resolution affects interpretation.</li><li>Validate the result visually and numerically; note any unexpected patterns, missing values, or outliers.</li><li>Export the final map, table, or figure and write a short interpretation with limitations and next steps.</li>
+  </ol>
+  <details class="quiz">
+    <summary>Knowledge check: 3 questions with answers</summary>
+    <ol>
+      <li>What does spatial resolution describe?<br><span class="answer">Answer: The ground size of one pixel; smaller pixels mean finer spatial detail.</span></li><li>Why are near-infrared and red bands useful for vegetation?<br><span class="answer">Answer: Vegetation strongly reflects near-infrared and absorbs red, making their contrast useful for vegetation indices such as NDVI.</span></li><li>What should be checked before comparing two satellite images?<br><span class="answer">Answer: Date, sensor, calibration, cloud cover, projection, and spatial resolution.</span></li>
+    </ol>
+  </details>
+  <div class="deliverable"><strong>Deliverable</strong>A one-page practical note containing the question, data description, method steps, one output, and three bullet points of interpretation.</div>
+</article>
+<article class="module" id="module-2">
+  <div class="module-head">
+    <span class="module-number">02</span>
+    <h3>Python basics for geospatial analysis</h3>
+  </div>
+  <h4>Learning objectives</h4>
+  <ul class="checklist">
+    <li>Explain python basics for geospatial analysis and where it fits within Satellite Data Analysis with Python.</li><li>Use a satellite scene viewer and band combinations and spectral indices to complete a small, documented workflow.</li><li>Validate the result, record assumptions, and communicate the main finding clearly.</li>
+  </ul>
+  <h4>Key concepts</h4>
+  <div class="concept-chips">
+    <span class="concept-chip">electromagnetic spectrum</span><span class="concept-chip">platform and sensor characteristics</span><span class="concept-chip">spatial/spectral/temporal resolution</span><span class="concept-chip">image interpretation</span>
+  </div>
+  <h4>Lesson notes</h4>
+  <p>Python basics for geospatial analysis is best learned as a repeatable workflow: state the question, prepare the inputs, apply the method, check the output, and communicate the result. Keep the original data untouched and save each processing step so the work can be repeated.</p>
+  <p>The central ideas in this lesson are electromagnetic spectrum, platform and sensor characteristics, spatial/spectral/temporal resolution. Use a satellite scene viewer to demonstrate the idea, and use band combinations and spectral indices to confirm that the output behaves as expected.</p>
+  <p>Do not compare images from different dates or sensors without checking calibration, cloud cover, and spatial resolution.</p>
+  <h4>Hands-on exercise</h4>
+  <ol class="exercise-steps">
+    <li>Write a one-sentence question and define the study area or sample extent for python basics for geospatial analysis.</li><li>Prepare the input data and record its source, date, resolution or scale, and coordinate system where relevant.</li><li>Apply the main technique with a satellite scene viewer: compare at least two band combinations, label three land-cover features, and explain how resolution affects interpretation.</li><li>Validate the result visually and numerically; note any unexpected patterns, missing values, or outliers.</li><li>Export the final map, table, or figure and write a short interpretation with limitations and next steps.</li>
+  </ol>
+  <details class="quiz">
+    <summary>Knowledge check: 3 questions with answers</summary>
+    <ol>
+      <li>What does spatial resolution describe?<br><span class="answer">Answer: The ground size of one pixel; smaller pixels mean finer spatial detail.</span></li><li>Why are near-infrared and red bands useful for vegetation?<br><span class="answer">Answer: Vegetation strongly reflects near-infrared and absorbs red, making their contrast useful for vegetation indices such as NDVI.</span></li><li>What should be checked before comparing two satellite images?<br><span class="answer">Answer: Date, sensor, calibration, cloud cover, projection, and spatial resolution.</span></li>
+    </ol>
+  </details>
+  <div class="deliverable"><strong>Deliverable</strong>A one-page practical note containing the question, data description, method steps, one output, and three bullet points of interpretation.</div>
+</article>
+<article class="module" id="module-3">
+  <div class="module-head">
+    <span class="module-number">03</span>
+    <h3>NumPy for numerical operations</h3>
+  </div>
+  <h4>Learning objectives</h4>
+  <ul class="checklist">
+    <li>Explain numpy for numerical operations and where it fits within Satellite Data Analysis with Python.</li><li>Use a satellite scene viewer and band combinations and spectral indices to complete a small, documented workflow.</li><li>Validate the result, record assumptions, and communicate the main finding clearly.</li>
+  </ul>
+  <h4>Key concepts</h4>
+  <div class="concept-chips">
+    <span class="concept-chip">electromagnetic spectrum</span><span class="concept-chip">platform and sensor characteristics</span><span class="concept-chip">spatial/spectral/temporal resolution</span><span class="concept-chip">image interpretation</span>
+  </div>
+  <h4>Lesson notes</h4>
+  <p>NumPy for numerical operations is best learned as a repeatable workflow: state the question, prepare the inputs, apply the method, check the output, and communicate the result. Keep the original data untouched and save each processing step so the work can be repeated.</p>
+  <p>The central ideas in this lesson are electromagnetic spectrum, platform and sensor characteristics, spatial/spectral/temporal resolution. Use a satellite scene viewer to demonstrate the idea, and use band combinations and spectral indices to confirm that the output behaves as expected.</p>
+  <p>Do not compare images from different dates or sensors without checking calibration, cloud cover, and spatial resolution.</p>
+  <h4>Hands-on exercise</h4>
+  <ol class="exercise-steps">
+    <li>Write a one-sentence question and define the study area or sample extent for numpy for numerical operations.</li><li>Prepare the input data and record its source, date, resolution or scale, and coordinate system where relevant.</li><li>Apply the main technique with a satellite scene viewer: compare at least two band combinations, label three land-cover features, and explain how resolution affects interpretation.</li><li>Validate the result visually and numerically; note any unexpected patterns, missing values, or outliers.</li><li>Export the final map, table, or figure and write a short interpretation with limitations and next steps.</li>
+  </ol>
+  <details class="quiz">
+    <summary>Knowledge check: 3 questions with answers</summary>
+    <ol>
+      <li>What does spatial resolution describe?<br><span class="answer">Answer: The ground size of one pixel; smaller pixels mean finer spatial detail.</span></li><li>Why are near-infrared and red bands useful for vegetation?<br><span class="answer">Answer: Vegetation strongly reflects near-infrared and absorbs red, making their contrast useful for vegetation indices such as NDVI.</span></li><li>What should be checked before comparing two satellite images?<br><span class="answer">Answer: Date, sensor, calibration, cloud cover, projection, and spatial resolution.</span></li>
+    </ol>
+  </details>
+  <div class="deliverable"><strong>Deliverable</strong>A one-page practical note containing the question, data description, method steps, one output, and three bullet points of interpretation.</div>
+</article>
+<article class="module" id="module-4">
+  <div class="module-head">
+    <span class="module-number">04</span>
+    <h3>Pandas for data manipulation</h3>
+  </div>
+  <h4>Learning objectives</h4>
+  <ul class="checklist">
+    <li>Explain pandas for data manipulation and where it fits within Satellite Data Analysis with Python.</li><li>Use a satellite scene viewer and band combinations and spectral indices to complete a small, documented workflow.</li><li>Validate the result, record assumptions, and communicate the main finding clearly.</li>
+  </ul>
+  <h4>Key concepts</h4>
+  <div class="concept-chips">
+    <span class="concept-chip">electromagnetic spectrum</span><span class="concept-chip">platform and sensor characteristics</span><span class="concept-chip">spatial/spectral/temporal resolution</span><span class="concept-chip">image interpretation</span>
+  </div>
+  <h4>Lesson notes</h4>
+  <p>Pandas for data manipulation is best learned as a repeatable workflow: state the question, prepare the inputs, apply the method, check the output, and communicate the result. Keep the original data untouched and save each processing step so the work can be repeated.</p>
+  <p>The central ideas in this lesson are electromagnetic spectrum, platform and sensor characteristics, spatial/spectral/temporal resolution. Use a satellite scene viewer to demonstrate the idea, and use band combinations and spectral indices to confirm that the output behaves as expected.</p>
+  <p>Do not compare images from different dates or sensors without checking calibration, cloud cover, and spatial resolution.</p>
+  <h4>Hands-on exercise</h4>
+  <ol class="exercise-steps">
+    <li>Write a one-sentence question and define the study area or sample extent for pandas for data manipulation.</li><li>Prepare the input data and record its source, date, resolution or scale, and coordinate system where relevant.</li><li>Apply the main technique with a satellite scene viewer: compare at least two band combinations, label three land-cover features, and explain how resolution affects interpretation.</li><li>Validate the result visually and numerically; note any unexpected patterns, missing values, or outliers.</li><li>Export the final map, table, or figure and write a short interpretation with limitations and next steps.</li>
+  </ol>
+  <details class="quiz">
+    <summary>Knowledge check: 3 questions with answers</summary>
+    <ol>
+      <li>What does spatial resolution describe?<br><span class="answer">Answer: The ground size of one pixel; smaller pixels mean finer spatial detail.</span></li><li>Why are near-infrared and red bands useful for vegetation?<br><span class="answer">Answer: Vegetation strongly reflects near-infrared and absorbs red, making their contrast useful for vegetation indices such as NDVI.</span></li><li>What should be checked before comparing two satellite images?<br><span class="answer">Answer: Date, sensor, calibration, cloud cover, projection, and spatial resolution.</span></li>
+    </ol>
+  </details>
+  <div class="deliverable"><strong>Deliverable</strong>A one-page practical note containing the question, data description, method steps, one output, and three bullet points of interpretation.</div>
+</article>
+<article class="module" id="module-5">
+  <div class="module-head">
+    <span class="module-number">05</span>
+    <h3>Matplotlib for visualization</h3>
+  </div>
+  <h4>Learning objectives</h4>
+  <ul class="checklist">
+    <li>Explain matplotlib for visualization and where it fits within Satellite Data Analysis with Python.</li><li>Use a satellite scene viewer and band combinations and spectral indices to complete a small, documented workflow.</li><li>Validate the result, record assumptions, and communicate the main finding clearly.</li>
+  </ul>
+  <h4>Key concepts</h4>
+  <div class="concept-chips">
+    <span class="concept-chip">electromagnetic spectrum</span><span class="concept-chip">platform and sensor characteristics</span><span class="concept-chip">spatial/spectral/temporal resolution</span><span class="concept-chip">image interpretation</span>
+  </div>
+  <h4>Lesson notes</h4>
+  <p>Matplotlib for visualization is best learned as a repeatable workflow: state the question, prepare the inputs, apply the method, check the output, and communicate the result. Keep the original data untouched and save each processing step so the work can be repeated.</p>
+  <p>The central ideas in this lesson are electromagnetic spectrum, platform and sensor characteristics, spatial/spectral/temporal resolution. Use a satellite scene viewer to demonstrate the idea, and use band combinations and spectral indices to confirm that the output behaves as expected.</p>
+  <p>Do not compare images from different dates or sensors without checking calibration, cloud cover, and spatial resolution.</p>
+  <h4>Hands-on exercise</h4>
+  <ol class="exercise-steps">
+    <li>Write a one-sentence question and define the study area or sample extent for matplotlib for visualization.</li><li>Prepare the input data and record its source, date, resolution or scale, and coordinate system where relevant.</li><li>Apply the main technique with a satellite scene viewer: compare at least two band combinations, label three land-cover features, and explain how resolution affects interpretation.</li><li>Validate the result visually and numerically; note any unexpected patterns, missing values, or outliers.</li><li>Export the final map, table, or figure and write a short interpretation with limitations and next steps.</li>
+  </ol>
+  <details class="quiz">
+    <summary>Knowledge check: 3 questions with answers</summary>
+    <ol>
+      <li>What does spatial resolution describe?<br><span class="answer">Answer: The ground size of one pixel; smaller pixels mean finer spatial detail.</span></li><li>Why are near-infrared and red bands useful for vegetation?<br><span class="answer">Answer: Vegetation strongly reflects near-infrared and absorbs red, making their contrast useful for vegetation indices such as NDVI.</span></li><li>What should be checked before comparing two satellite images?<br><span class="answer">Answer: Date, sensor, calibration, cloud cover, projection, and spatial resolution.</span></li>
+    </ol>
+  </details>
+  <div class="deliverable"><strong>Deliverable</strong>A one-page practical note containing the question, data description, method steps, one output, and three bullet points of interpretation.</div>
+</article>
+<article class="module" id="module-6">
+  <div class="module-head">
+    <span class="module-number">06</span>
+    <h3>Processing raster data (GeoTIFF)</h3>
+  </div>
+  <h4>Learning objectives</h4>
+  <ul class="checklist">
+    <li>Explain processing raster data (geotiff) and where it fits within Satellite Data Analysis with Python.</li><li>Use a satellite scene viewer and band combinations and spectral indices to complete a small, documented workflow.</li><li>Validate the result, record assumptions, and communicate the main finding clearly.</li>
+  </ul>
+  <h4>Key concepts</h4>
+  <div class="concept-chips">
+    <span class="concept-chip">electromagnetic spectrum</span><span class="concept-chip">platform and sensor characteristics</span><span class="concept-chip">spatial/spectral/temporal resolution</span><span class="concept-chip">image interpretation</span>
+  </div>
+  <h4>Lesson notes</h4>
+  <p>Processing raster data (GeoTIFF) is best learned as a repeatable workflow: state the question, prepare the inputs, apply the method, check the output, and communicate the result. Keep the original data untouched and save each processing step so the work can be repeated.</p>
+  <p>The central ideas in this lesson are electromagnetic spectrum, platform and sensor characteristics, spatial/spectral/temporal resolution. Use a satellite scene viewer to demonstrate the idea, and use band combinations and spectral indices to confirm that the output behaves as expected.</p>
+  <p>Do not compare images from different dates or sensors without checking calibration, cloud cover, and spatial resolution.</p>
+  <h4>Hands-on exercise</h4>
+  <ol class="exercise-steps">
+    <li>Write a one-sentence question and define the study area or sample extent for processing raster data (geotiff).</li><li>Prepare the input data and record its source, date, resolution or scale, and coordinate system where relevant.</li><li>Apply the main technique with a satellite scene viewer: compare at least two band combinations, label three land-cover features, and explain how resolution affects interpretation.</li><li>Validate the result visually and numerically; note any unexpected patterns, missing values, or outliers.</li><li>Export the final map, table, or figure and write a short interpretation with limitations and next steps.</li>
+  </ol>
+  <details class="quiz">
+    <summary>Knowledge check: 3 questions with answers</summary>
+    <ol>
+      <li>What does spatial resolution describe?<br><span class="answer">Answer: The ground size of one pixel; smaller pixels mean finer spatial detail.</span></li><li>Why are near-infrared and red bands useful for vegetation?<br><span class="answer">Answer: Vegetation strongly reflects near-infrared and absorbs red, making their contrast useful for vegetation indices such as NDVI.</span></li><li>What should be checked before comparing two satellite images?<br><span class="answer">Answer: Date, sensor, calibration, cloud cover, projection, and spatial resolution.</span></li>
+    </ol>
+  </details>
+  <div class="deliverable"><strong>Deliverable</strong>A one-page practical note containing the question, data description, method steps, one output, and three bullet points of interpretation.</div>
+</article>
+<article class="module" id="module-7">
+  <div class="module-head">
+    <span class="module-number">07</span>
+    <h3>Case studies and projects</h3>
+  </div>
+  <h4>Learning objectives</h4>
+  <ul class="checklist">
+    <li>Explain case studies and projects and where it fits within Satellite Data Analysis with Python.</li><li>Use a satellite scene viewer and band combinations and spectral indices to complete a small, documented workflow.</li><li>Validate the result, record assumptions, and communicate the main finding clearly.</li>
+  </ul>
+  <h4>Key concepts</h4>
+  <div class="concept-chips">
+    <span class="concept-chip">electromagnetic spectrum</span><span class="concept-chip">platform and sensor characteristics</span><span class="concept-chip">spatial/spectral/temporal resolution</span><span class="concept-chip">image interpretation</span>
+  </div>
+  <h4>Lesson notes</h4>
+  <p>Case studies and projects is best learned as a repeatable workflow: state the question, prepare the inputs, apply the method, check the output, and communicate the result. Keep the original data untouched and save each processing step so the work can be repeated.</p>
+  <p>The central ideas in this lesson are electromagnetic spectrum, platform and sensor characteristics, spatial/spectral/temporal resolution. Use a satellite scene viewer to demonstrate the idea, and use band combinations and spectral indices to confirm that the output behaves as expected.</p>
+  <p>Do not compare images from different dates or sensors without checking calibration, cloud cover, and spatial resolution.</p>
+  <h4>Hands-on exercise</h4>
+  <ol class="exercise-steps">
+    <li>Write a one-sentence question and define the study area or sample extent for case studies and projects.</li><li>Prepare the input data and record its source, date, resolution or scale, and coordinate system where relevant.</li><li>Apply the main technique with a satellite scene viewer: compare at least two band combinations, label three land-cover features, and explain how resolution affects interpretation.</li><li>Validate the result visually and numerically; note any unexpected patterns, missing values, or outliers.</li><li>Export the final map, table, or figure and write a short interpretation with limitations and next steps.</li>
+  </ol>
+  <details class="quiz">
+    <summary>Knowledge check: 3 questions with answers</summary>
+    <ol>
+      <li>What does spatial resolution describe?<br><span class="answer">Answer: The ground size of one pixel; smaller pixels mean finer spatial detail.</span></li><li>Why are near-infrared and red bands useful for vegetation?<br><span class="answer">Answer: Vegetation strongly reflects near-infrared and absorbs red, making their contrast useful for vegetation indices such as NDVI.</span></li><li>What should be checked before comparing two satellite images?<br><span class="answer">Answer: Date, sensor, calibration, cloud cover, projection, and spatial resolution.</span></li>
+    </ol>
+  </details>
+  <div class="deliverable"><strong>Deliverable</strong>A one-page practical note containing the question, data description, method steps, one output, and three bullet points of interpretation.</div>
+</article>
+        </section>
+
+        <section class="panel doc-section" id="capstone">
+          <h2>Satellite Data Analysis with Python: Final Applied Project</h2>
+          <p class="doc-lead">The capstone consolidates the course into one applied, portfolio-ready piece of work.</p>
+          <ol class="exercise-steps">
+            <li>Choose a focused question related to the course theme and define the study area or sample dataset.</li><li>Write a short project brief with data sources, intended method, and expected deliverables.</li><li>Complete the processing workflow using at least three methods learned in this course.</li><li>Validate the outputs and document every assumption, parameter, and limitation.</li><li>Submit a final report with maps or figures, a reproducible workflow, and a concise recommendation.</li>
+          </ol>
+          <div class="deliverable"><strong>Final submission</strong>A report, reproducible workflow, maps or figures, and a five-minute presentation.</div>
+        </section>
+
+        <section class="panel doc-section" id="assessment">
+          <h2>Assessment rubric</h2>
+          <table class="rubric-table">
+            <thead><tr><th>Area</th><th>Weight</th><th>Evidence</th></tr></thead>
+            <tbody>
+              <tr><td>Participation and preparation</td><td>20%</td><td>Short reflections and completed setup checks.</td></tr><tr><td>Module exercises</td><td>40%</td><td>Practical notes, maps, tables, and annotated outputs.</td></tr><tr><td>Knowledge checks</td><td>20%</td><td>Quiz responses and corrections.</td></tr><tr><td>Capstone project</td><td>20%</td><td>Final report, reproducible workflow, and presentation.</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="panel doc-section" id="resources">
+          <h2>Resources and next steps</h2>
+          <ul class="checklist">
+            <li>Course dataset catalogue and local sample files.</li><li>Tool documentation and official user guides for the software used in the lessons.</li><li>A personal processing log that records commands, parameters, and output file names.</li><li>Peer review checklist: question, data, method, validation, interpretation, and limitations.</li>
+          </ul>
+          <p class="doc-lead">The matching MkDocs page is available at <code>docs/courses/satellite-data-analysis-with-python.md</code> for teams that prefer a documentation-site workflow.</p>
+        </section>
+      </div>
+
+      <aside class="sidebar">
+        <div class="sidebar-head"><h2>Document snapshot</h2></div>
+        <div class="sidebar-body">
+          <div class="fact-list">
+            <div class="fact"><span>Category</span><span>Certificate Course</span></div>
+            <div class="fact"><span>Level</span><span>Certificate / intermediate-to-advanced</span></div>
+            <div class="fact"><span>Modules</span><span>7</span></div>
+            <div class="fact"><span>Lessons</span><span>7</span></div>
+            <div class="fact"><span>Knowledge checks</span><span>21</span></div>
+            <div class="fact"><span>Course fee</span><span>3,500 ETB</span></div>
+            <div class="fact"><span>Total with fee</span><span>3,700 ETB</span></div>
+          </div>
+          <button class="button button-light" type="button" onclick="window.print()">Print / Save PDF</button>
+          <a class="button button-outline" href="../../courses/satellite-data-analysis-with-python.html">Open MkDocs page</a>
+          <a class="button button-outline" href="http://localhost:3000/training">Enroll through the site</a>
+          <div class="tip">A one-time 200 ETB payment processing fee applies to paid certificate courses.</div>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+  <p>Standalone HTML and MkDocs training materials generated from the site course catalog.</p>
+</footer>
+</body>
+</html>

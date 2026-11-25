@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Build AI and deep learning solutions for Earth observation: from classical machine learning to foundation models, segmentation, and deployment on maps and dashboards. Full training document with lessons, exercises, quizzes, and capstone project.">
+  <title>Artificial Intelligence for Geospatial Applications: Full Training Document</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body style="--accent: #0d6efd;">
+  <header class="site-header">
+    <a class="brand" href="../index.html"><span class="brand-mark">G</span><span>GeoSat Training Library</span></a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="../index.html">All Courses</a>
+      <a href="../../courses/artificial-intelligence-for-geospatial-applications.html">MkDocs Source</a>
+      <a href="http://localhost:3000/training">Live Training Page</a>
+    </nav>
+  </header>
+  <section class="hero course-hero">
+    <div class="hero-inner">
+      <a class="back-link" href="../index.html">← Back to course library</a>
+      <span class="eyebrow">Full training document · Certificate Course · 18</span>
+      <h1>Artificial Intelligence for Geospatial Applications</h1>
+      <p>Build AI and deep learning solutions for Earth observation: from classical machine learning to foundation models, segmentation, and deployment on maps and dashboards.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#modules">Jump to modules</a>
+        <button class="button button-ghost" type="button" onclick="window.print()">Print / Save PDF</button>
+        <a class="button button-ghost" href="http://localhost:3000/courses/ai-geospatial">React course preview</a>
+      </div>
+    </div>
+  </section>
+  <main class="container">
+    <div class="course-layout">
+      <div>
+        <nav class="document-toc" aria-label="Training document contents">
+          <h2>Document contents</h2>
+          <ol>
+            <li><a href="#module-1">Foundations of AI and machine learning for geospatial data</a></li><li><a href="#module-2">Preparing satellite and aerial imagery for model training</a></li><li><a href="#module-3">Classical ML: random forests, gradient boosting, and SVMs with scikit-learn</a></li><li><a href="#module-4">Deep learning with PyTorch and TensorFlow for image classification</a></li><li><a href="#module-5">Semantic segmentation using U-Net and Vision Transformers</a></li><li><a href="#module-6">Object detection for infrastructure and land features</a></li><li><a href="#module-7">Foundation and self-supervised models for Earth observation</a></li><li><a href="#module-8">Google Earth Engine and cloud AI workflows</a></li><li><a href="#module-9">Model evaluation, explainability, and uncertainty (SHAP, Grad-CAM)</a></li><li><a href="#module-10">Deploying AI models as map services and dashboards</a></li><li><a href="#module-11">Capstone project: AI-powered land cover mapping</a></li>
+          </ol>
+        </nav>
+
+        <section class="panel" id="course-guide">
+          <h2>Course guide</h2>
+          <p class="doc-lead">Artificial Intelligence for Geospatial Applications is a certificate / intermediate-to-advanced programme built around 11 practical modules. Work through the modules in order; each one includes objectives, notes, a hands-on exercise, a knowledge check, and a deliverable.</p>
+          <h4>Learning outcomes</h4>
+          <div class="outcomes-grid">
+            <div class="outcome"><strong>Outcome 1</strong>Use training and test data and feature engineering to work with foundations of ai and machine learning for geospatial data and explain the result.</div><div class="outcome"><strong>Outcome 2</strong>Use electromagnetic spectrum and platform and sensor characteristics to work with preparing satellite and aerial imagery for model training and explain the result.</div><div class="outcome"><strong>Outcome 3</strong>Use training and test data and feature engineering to work with classical ml: random forests, gradient boosting, and svms with scikit-learn and explain the result.</div><div class="outcome"><strong>Outcome 4</strong>Use Earth Engine data catalog and ImageCollection filtering to work with deep learning with pytorch and tensorflow for image classification and explain the result.</div><div class="outcome"><strong>Outcome 5</strong>Use convolutional feature learning and encoder-decoder segmentation to work with semantic segmentation using u-net and vision transformers and explain the result.</div><div class="outcome"><strong>Outcome 6</strong>Use training and test data and feature engineering to work with object detection for infrastructure and land features and explain the result.</div>
+          </div>
+          <h4>Prerequisites</h4>
+          <ul class="checklist">
+            <li>Comfort with files, folders, and basic data tables.</li><li>Introductory knowledge of the relevant tool or programming language.</li><li>Willingness to complete short practical exercises after each module.</li>
+          </ul>
+        </section>
+
+        <section class="panel doc-section" id="modules">
+          <h2>Full module documents</h2>
+          <p class="doc-lead">Each module is a self-contained lesson that can be taught independently or sequenced into the full certificate programme.</p>
+          <article class="module" id="module-1">
+  <div class="module-head">
+    <span class="module-number">01</span>
+    <h3>Foundations of AI and machine learning for geospatial data</h3>
+  </div>
+  <h4>Learning objectives</h4>
+  <ul class="checklist">
+    <li>Explain foundations of ai and machine learning for geospatial data and where it fits within Artificial Intelligence for Geospatial Applications.</li><li>Use scikit-learn or Earth Engine classifiers and training samples to complete a small, documented workflow.</li><li>Validate the result, record assumptions, and communicate the main finding clearly.</li>
+  </ul>
+  <h4>Key concepts</h4>
+  <div class="concept-chips">
+    <span class="concept-chip">training and test data</span><span class="concept-chip">feature engineering</span><span class="concept-chip">model selection</span><span class="concept-chip">validation metrics</span>
+  </div>
+  <h4>Lesson notes</h4>
+  <p>Foundations of AI and machine learning for geospatial data is best learned as a repeatable workflow: state the question, prepare the inputs, apply the method, check the output, and communicate the result. Keep the original data untouched and save each processing step so the work can be repeated.</p>
+  <p>The central ideas in this lesson are training and test data, feature engineering, model selection. Use scikit-learn or Earth Engine classifiers to demonstrate the idea, and use training samples to confirm that the output behaves as expected.</p>
+  <p>Never evaluate a model on the same data used to train it; use a held-out test set or cross-validation.</p>
+  <h4>Hands-on exercise</h4>
+  <ol class="exercise-steps">
+    <li>Write a one-sentence question and define the study area or sample extent for foundations of ai and machine learning for geospatial data.</li><li>Prepare the input data and record its source, date, resolution or scale, and coordinate system where relevant.</li><li>Apply the main technique with scikit-learn or Earth Engine classifiers: prepare labelled samples, train two models, compare confusion matrices, and explain which model is preferable.</li><li>Validate the result visually and numerically; note any unexpected patterns, missing values, or outliers.</li><li>Export the final map, table, or figure and write a short interpretation with limitations and next steps.</li>
+  </ol>
+  <details class="quiz">
+    <summary>Knowledge check: 3 questions with answers</summary>
+    <ol>
+      <li>What is overfitting?<br><span class="answer">Answer: When a model learns training noise and performs poorly on unseen data.</span></li><li>What does a confusion matrix show?<br><span class="answer">Answer: Correct and incorrect counts by class, enabling precision, recall, and accuracy calculations.</span></li><li>Why are training samples important?<br><span class="answer">Answer: They define what the model learns; biased or mixed samples produce unreliable predictions.</span></li>
+    </ol>
+  </details>
+  <div class="deliverable"><strong>Deliverable</strong>A one-page practical note containing the question, data description, method steps, one output, and three bullet points of interpretation.</div>
+</article>
+<article class="module" id="module-2">
+  <div class="module-head">
+    <span class="module-number">02</span>
+    <h3>Preparing satellite and aerial imagery for model training</h3>
+  </div>
+  <h4>Learning objectives</h4>
+  <ul class="checklist">
+    <li>Explain preparing satellite and aerial imagery for model training and where it fits within Artificial Intelligence for Geospatial Applications.</li><li>Use a satellite scene viewer and band combinations and spectral indices to complete a small, documented workflow.</li><li>Validate the result, record assumptions, and communicate the main finding clearly.</li>
+  </ul>
+  <h4>Key concepts</h4>
+  <div class="concept-chips">
+    <span class="concept-chip">electromagnetic spectrum</span><span class="concept-chip">platform and sensor characteristics</span><span class="concept-chip">spatial/spectral/temporal resolution</span><span class="concept-chip">image interpretation</span>
+  </div>
+  <h4>Lesson notes</h4>
+  <p>Preparing satellite and aerial imagery for model training is best learned as a repeatable workflow: state the question, prepare the inputs, apply the method, check the output, and communicate the result. Keep the original data untouched and save each processing step so the work can be repeated.</p>
+  <p>The central ideas in this lesson are electromagnetic spectrum, platform and sensor characteristics, spatial/spectral/temporal resolution. Use a satellite scene viewer to demonstrate the idea, and use band combinations and spectral indices to confirm that the output behaves as expected.</p>
+  <p>Do not compare images from different dates or sensors without checking calibration, cloud cover, and spatial resolution.</p>
+  <h4>Hands-on exercise</h4>
+  <ol class="exercise-steps">
+    <li>Write a one-sentence question and define the study area or sample extent for preparing satellite and aerial imagery for model training.</li><li>Prepare the input data and record its source, date, resolution or scale, and coordinate system where relevant.</li><li>Apply the main technique with a satellite scene viewer: compare at least two band combinations, label three land-cover features, and explain how resolution affects interpretation.</li><li>Validate the result visually and numerically; note any unexpected patterns, missing values, or outliers.</li><li>Export the final map, table, or figure and write a short interpretation with limitations and next steps.</li>
+  </ol>
+  <details class="quiz">
+    <summary>Knowledge check: 3 questions with answers</summary>
+    <ol>
+      <li>What does spatial resolution describe?<br><span class="answer">Answer: The ground size of one pixel; smaller pixels mean finer spatial detail.</span></li><li>Why are near-infrared and red bands useful for vegetation?<br><span class="answer">Answer: Vegetation strongly reflects near-infrared and absorbs red, making their contrast useful for vegetation indices such as NDVI.</span></li><li>What should be checked before comparing two satellite images?<br><span class="answer">Answer: Date, sensor, calibration, cloud cover, projection, and spatial resolution.</span></li>
+    </ol>
+  </details>
+  <div class="deliverable"><strong>Deliverable</strong>A one-page practical note containing the question, data description, method steps, one output, and three bullet points of interpretation.</div>
+</article>
+<article class="module" id="module-3">
+  <div class="module-head">
+    <span class="module-number">03</span>
+    <h3>Classical ML: random forests, gradient boosting, and SVMs with scikit-learn</h3>
+  </div>
+  <h4>Learning objectives</h4>
+  <ul class="checklist">
+    <li>Explain classical ml: random forests, gradient boosting, and svms with scikit-learn and where it fits within Artificial Intelligence for Geospatial Applications.</li><li>Use scikit-learn or Earth Engine classifiers and training samples to complete a small, documented workflow.</li><li>Validate the result, record assumptions, and communicate the main finding clearly.</li>
+  </ul>
+  <h4>Key concepts</h4>
+  <div class="concept-chips">
+    <span class="concept-chip">training and test data</span><span class="concept-chip">feature engineering</span><span class="concept-chip">model selection</span><span class="concept-chip">validation metrics</span>
+  </div>
+  <h4>Lesson notes</h4>
+  <p>Classical ML: random forests, gradient boosting, and SVMs with scikit-learn is best learned as a repeatable workflow: state the question, prepare the inputs, apply the method, check the output, and communicate the result. Keep the original data untouched and save each processing step so the work can be repeated.</p>
+  <p>The central ideas in this lesson are training and test data, feature engineering, model selection. Use scikit-learn or Earth Engine classifiers to demonstrate the idea, and use training samples to confirm that the output behaves as expected.</p>
+  <p>Never evaluate a model on the same data used to train it; use a held-out test set or cross-validation.</p>
+  <h4>Hands-on exercise</h4>
+  <ol class="exercise-steps">
+    <li>Write a one-sentence question and define the study area or sample extent for classical ml: random forests, gradient boosting, and svms with scikit-learn.</li><li>Prepare the input data and record its source, date, resolution or scale, and coordinate system where relevant.</li><li>Apply the main technique with scikit-learn or Earth Engine classifiers: prepare labelled samples, train two models, compare confusion matrices, and explain which model is preferable.</li><li>Validate the result visually and numerically; note any unexpected patterns, missing values, or outliers.</li><li>Export the final map, table, or figure and write a short interpretation with limitations and next steps.</li>
+  </ol>
+  <details class="quiz">
+    <summary>Knowledge check: 3 questions with answers</summary>
+    <ol>
+      <li>What is overfitting?<br><span class="answer">Answer: When a model learns training noise and performs poorly on unseen data.</span></li><li>What does a confusion matrix show?<br><span class="answer">Answer: Correct and incorrect counts by class, enabling precision, recall, and accuracy calculations.</span></li><li>Why are training samples important?<br><span class="answer">Answer: They define what the model learns; biased or mixed samples produce unreliable predictions.</span></li>
+    </ol>
+  </details>
+  <div class="deliverable"><strong>Deliverable</strong>A one-page practical note containing the question, data description, method steps, one output, and three bullet points of interpretation.</div>
+</article>
+<article class="module" id="module-4">
+  <div class="module-head">
+    <span class="module-number">04</span>
+    <h3>Deep learning with PyTorch and TensorFlow for image classification</h3>
+  </div>
+  <h4>Learning objectives</h4>
+  <ul class="checklist">
+    <li>Explain deep learning with pytorch and tensorflow for image classification and where it fits within Artificial Intelligence for Geospatial Applications.</li><li>Use Google Earth Engine Code Editor or rgee and ImageCollection filters to complete a small, documented workflow.</li><li>Validate the result, record assumptions, and communicate the main finding clearly.</li>
+  </ul>
+  <h4>Key concepts</h4>
+  <div class="concept-chips">
+    <span class="concept-chip">Earth Engine data catalog</span><span class="concept-chip">ImageCollection filtering</span><span class="concept-chip">cloud masking and compositing</span><span class="concept-chip">classification and change detection</span>
+  </div>
+  <h4>Lesson notes</h4>
+  <p>Deep learning with PyTorch and TensorFlow for image classification is best learned as a repeatable workflow: state the question, prepare the inputs, apply the method, check the output, and communicate the result. Keep the original data untouched and save each processing step so the work can be repeated.</p>
+  <p>The central ideas in this lesson are Earth Engine data catalog, ImageCollection filtering, cloud masking and compositing. Use Google Earth Engine Code Editor or rgee to demonstrate the idea, and use ImageCollection filters to confirm that the output behaves as expected.</p>
+  <p>Unfiltered ImageCollections can be very large; always limit date, region, and bands before running expensive operations.</p>
+  <h4>Hands-on exercise</h4>
+  <ol class="exercise-steps">
+    <li>Write a one-sentence question and define the study area or sample extent for deep learning with pytorch and tensorflow for image classification.</li><li>Prepare the input data and record its source, date, resolution or scale, and coordinate system where relevant.</li><li>Apply the main technique with Google Earth Engine Code Editor or rgee: filter an ImageCollection by date and region, apply a cloud mask, calculate an index, and export a small result for validation.</li><li>Validate the result visually and numerically; note any unexpected patterns, missing values, or outliers.</li><li>Export the final map, table, or figure and write a short interpretation with limitations and next steps.</li>
+  </ol>
+  <details class="quiz">
+    <summary>Knowledge check: 3 questions with answers</summary>
+    <ol>
+      <li>How do you reduce an ImageCollection to one image?<br><span class="answer">Answer: Use a reducer such as median, mean, or qualityMosaic over the collection.</span></li><li>Why is cloud masking important?<br><span class="answer">Answer: Clouds and shadows distort spectral values and can lead to false change or index results.</span></li><li>What should be specified when exporting an Earth Engine result?<br><span class="answer">Answer: Region, resolution or scale, projection/CRS, file format, and asset or drive destination.</span></li>
+    </ol>
+  </details>
+  <div class="deliverable"><strong>Deliverable</strong>A one-page practical note containing the question, data description, method steps, one output, and three bullet points of interpretation.</div>
+</article>
+<article class="module" id="module-5">
+  <div class="module-head">
+    <span class="module-number">05</span>
+    <h3>Semantic segmentation using U-Net and Vision Transformers</h3>
+  </div>
+  <h4>Learning objectives</h4>
+  <ul class="checklist">
+    <li>Explain semantic segmentation using u-net and vision transformers and where it fits within Artificial Intelligence for Geospatial Applications.</li><li>Use PyTorch or TensorFlow and labelled image tiles to complete a small, documented workflow.</li><li>Validate the result, record assumptions, and communicate the main finding clearly.</li>
+  </ul>
+  <h4>Key concepts</h4>
+  <div class="concept-chips">
+    <span class="concept-chip">convolutional feature learning</span><span class="concept-chip">encoder-decoder segmentation</span><span class="concept-chip">data augmentation</span><span class="concept-chip">IoU/F1 evaluation</span>
+  </div>
+  <h4>Lesson notes</h4>
+  <p>Semantic segmentation using U-Net and Vision Transformers is best learned as a repeatable workflow: state the question, prepare the inputs, apply the method, check the output, and communicate the result. Keep the original data untouched and save each processing step so the work can be repeated.</p>
+  <p>The central ideas in this lesson are convolutional feature learning, encoder-decoder segmentation, data augmentation. Use PyTorch or TensorFlow to demonstrate the idea, and use labelled image tiles to confirm that the output behaves as expected.</p>
+  <p>Check for train/validation leakage caused by overlapping tiles from the same scene.</p>
+  <h4>Hands-on exercise</h4>
+  <ol class="exercise-steps">
+    <li>Write a one-sentence question and define the study area or sample extent for semantic segmentation using u-net and vision transformers.</li><li>Prepare the input data and record its source, date, resolution or scale, and coordinate system where relevant.</li><li>Apply the main technique with PyTorch or TensorFlow: prepare a small tile dataset, train or fine-tune a compact model, inspect predictions, and compute IoU.</li><li>Validate the result visually and numerically; note any unexpected patterns, missing values, or outliers.</li><li>Export the final map, table, or figure and write a short interpretation with limitations and next steps.</li>
+  </ol>
+  <details class="quiz">
+    <summary>Knowledge check: 3 questions with answers</summary>
+    <ol>
+      <li>What does a U-Net architecture do?<br><span class="answer">Answer: It combines a contracting encoder with an expanding decoder and skip connections for pixel-level prediction.</span></li><li>Why augment training images?<br><span class="answer">Answer: To improve generalisation by exposing the model to rotations, flips, brightness changes, and crops.</span></li><li>What does IoU measure?<br><span class="answer">Answer: The overlap between predicted and reference shapes divided by their union.</span></li>
+    </ol>
+  </details>
+  <div class="deliverable"><strong>Deliverable</strong>A one-page practical note containing the question, data description, method steps, one output, and three bullet points of interpretation.</div>
+</article>
+<article class="module" id="module-6">
+  <div class="module-head">
+    <span class="module-number">06</span>
+    <h3>Object detection for infrastructure and land features</h3>
+  </div>
+  <h4>Learning objectives</h4>
+  <ul class="checklist">
+    <li>Explain object detection for infrastructure and land features and where it fits within Artificial Intelligence for Geospatial Applications.</li><li>Use scikit-learn or Earth Engine classifiers and training samples to complete a small, documented workflow.</li><li>Validate the result, record assumptions, and communicate the main finding clearly.</li>
+  </ul>
+  <h4>Key concepts</h4>
+  <div class="concept-chips">
+    <span class="concept-chip">training and test data</span><span class="concept-chip">feature engineering</span><span class="concept-chip">model selection</span><span class="concept-chip">validation metrics</span>
+  </div>
+  <h4>Lesson notes</h4>
+  <p>Object detection for infrastructure and land features is best learned as a repeatable workflow: state the question, prepare the inputs, apply the method, check the output, and communicate the result. Keep the original data untouched and save each processing step so the work can be repeated.</p>
+  <p>The central ideas in this lesson are training and test data, feature engineering, model selection. Use scikit-learn or Earth Engine classifiers to demonstrate the idea, and use training samples to confirm that the output behaves as expected.</p>
+  <p>Never evaluate a model on the same data used to train it; use a held-out test set or cross-validation.</p>
+  <h4>Hands-on exercise</h4>
+  <ol class="exercise-steps">
+    <li>Write a one-sentence question and define the study area or sample extent for object detection for infrastructure and land features.</li><li>Prepare the input data and record its source, date, resolution or scale, and coordinate system where relevant.</li><li>Apply the main technique with scikit-learn or Earth Engine classifiers: prepare labelled samples, train two models, compare confusion matrices, and explain which model is preferable.</li><li>Validate the result visually and numerically; note any unexpected patterns, missing values, or outliers.</li><li>Export the final map, table, or figure and write a short interpretation with limitations and next steps.</li>
+  </ol>
+  <details class="quiz">
+    <summary>Knowledge check: 3 questions with answers</summary>
+    <ol>
+      <li>What is overfitting?<br><span class="answer">Answer: When a model learns training noise and performs poorly on unseen data.</span></li><li>What does a confusion matrix show?<br><span class="answer">Answer: Correct and incorrect counts by class, enabling precision, recall, and accuracy calculations.</span></li><li>Why are training samples important?<br><span class="answer">Answer: They define what the model learns; biased or mixed samples produce unreliable predictions.</span></li>
+    </ol>
+  </details>
+  <div class="deliverable"><strong>Deliverable</strong>A one-page practical note containing the question, data description, method steps, one output, and three bullet points of interpretation.</div>
+</article>
+<article class="module" id="module-7">
+  <div class="module-head">
+    <span class="module-number">07</span>
+    <h3>Foundation and self-supervised models for Earth observation</h3>
+  </div>
+  <h4>Learning objectives</h4>
+  <ul class="checklist">
+    <li>Explain foundation and self-supervised models for earth observation and where it fits within Artificial Intelligence for Geospatial Applications.</li><li>Use MATLAB and built-in numerical functions to complete a small, documented workflow.</li><li>Validate the result, record assumptions, and communicate the main finding clearly.</li>
+  </ul>
+  <h4>Key concepts</h4>
+  <div class="concept-chips">
+    <span class="concept-chip">matrix-based computation</span><span class="concept-chip">script and function design</span><span class="concept-chip">numerical approximation</span><span class="concept-chip">visualisation of results</span>
+  </div>
+  <h4>Lesson notes</h4>
+  <p>Foundation and self-supervised models for Earth observation is best learned as a repeatable workflow: state the question, prepare the inputs, apply the method, check the output, and communicate the result. Keep the original data untouched and save each processing step so the work can be repeated.</p>
+  <p>The central ideas in this lesson are matrix-based computation, script and function design, numerical approximation. Use MATLAB to demonstrate the idea, and use built-in numerical functions to confirm that the output behaves as expected.</p>
+  <p>Check vector dimensions and convergence criteria; many MATLAB errors come from shape mismatches or stopping too early.</p>
+  <h4>Hands-on exercise</h4>
+  <ol class="exercise-steps">
+    <li>Write a one-sentence question and define the study area or sample extent for foundation and self-supervised models for earth observation.</li><li>Prepare the input data and record its source, date, resolution or scale, and coordinate system where relevant.</li><li>Apply the main technique with MATLAB: implement the method in a script, test it against a simple known case, plot the result, and document error behaviour.</li><li>Validate the result visually and numerically; note any unexpected patterns, missing values, or outliers.</li><li>Export the final map, table, or figure and write a short interpretation with limitations and next steps.</li>
+  </ol>
+  <details class="quiz">
+    <summary>Knowledge check: 3 questions with answers</summary>
+    <ol>
+      <li>Why is MATLAB well suited to numerical work?<br><span class="answer">Answer: It provides matrix operations, numerical libraries, and visualisation in one environment.</span></li><li>Why test a numerical method on a known case?<br><span class="answer">Answer: It verifies the implementation before applying it to harder problems.</span></li><li>What is convergence in an iterative method?<br><span class="answer">Answer: The sequence of approximations approaches a stable solution within a tolerance.</span></li>
+    </ol>
+  </details>
+  <div class="deliverable"><strong>Deliverable</strong>A one-page practical note containing the question, data description, method steps, one output, and three bullet points of interpretation.</div>
+</article>
+<article class="module" id="module-8">
+  <div class="module-head">
+    <span class="module-number">08</span>
+    <h3>Google Earth Engine and cloud AI workflows</h3>
+  </div>
+  <h4>Learning objectives</h4>
+  <ul class="checklist">
+    <li>Explain google earth engine and cloud ai workflows and where it fits within Artificial Intelligence for Geospatial Applications.</li><li>Use Google Earth Engine Code Editor or rgee and ImageCollection filters to complete a small, documented workflow.</li><li>Validate the result, record assumptions, and communicate the main finding clearly.</li>
+  </ul>
+  <h4>Key concepts</h4>
+  <div class="concept-chips">
+    <span class="concept-chip">Earth Engine data catalog</span><span class="concept-chip">ImageCollection filtering</span><span class="concept-chip">cloud masking and compositing</span><span class="concept-chip">classification and change detection</span>
+  </div>
+  <h4>Lesson notes</h4>
+  <p>Google Earth Engine and cloud AI workflows is best learned as a repeatable workflow: state the question, prepare the inputs, apply the method, check the output, and communicate the result. Keep the original data untouched and save each processing step so the work can be repeated.</p>
+  <p>The central ideas in this lesson are Earth Engine data catalog, ImageCollection filtering, cloud masking and compositing. Use Google Earth Engine Code Editor or rgee to demonstrate the idea, and use ImageCollection filters to confirm that the output behaves as expected.</p>
+  <p>Unfiltered ImageCollections can be very large; always limit date, region, and bands before running expensive operations.</p>
+  <h4>Hands-on exercise</h4>
+  <ol class="exercise-steps">
+    <li>Write a one-sentence question and define the study area or sample extent for google earth engine and cloud ai workflows.</li><li>Prepare the input data and record its source, date, resolution or scale, and coordinate system where relevant.</li><li>Apply the main technique with Google Earth Engine Code Editor or rgee: filter an ImageCollection by date and region, apply a cloud mask, calculate an index, and export a small result for validation.</li><li>Validate the result visually and numerically; note any unexpected patterns, missing values, or outliers.</li><li>Export the final map, table, or figure and write a short interpretation with limitations and next steps.</li>
+  </ol>
+  <details class="quiz">
+    <summary>Knowledge check: 3 questions with answers</summary>
+    <ol>
+      <li>How do you reduce an ImageCollection to one image?<br><span class="answer">Answer: Use a reducer such as median, mean, or qualityMosaic over the collection.</span></li><li>Why is cloud masking important?<br><span class="answer">Answer: Clouds and shadows distort spectral values and can lead to false change or index results.</span></li><li>What should be specified when exporting an Earth Engine result?<br><span class="answer">Answer: Region, resolution or scale, projection/CRS, file format, and asset or drive destination.</span></li>
+    </ol>
+  </details>
+  <div class="deliverable"><strong>Deliverable</strong>A one-page practical note containing the question, data description, method steps, one output, and three bullet points of interpretation.</div>
+</article>
+<article class="module" id="module-9">
+  <div class="module-head">
+    <span class="module-number">09</span>
+    <h3>Model evaluation, explainability, and uncertainty (SHAP, Grad-CAM)</h3>
+  </div>
+  <h4>Learning objectives</h4>
+  <ul class="checklist">
+    <li>Explain model evaluation, explainability, and uncertainty (shap, grad-cam) and where it fits within Artificial Intelligence for Geospatial Applications.</li><li>Use MATLAB and built-in numerical functions to complete a small, documented workflow.</li><li>Validate the result, record assumptions, and communicate the main finding clearly.</li>
+  </ul>
+  <h4>Key concepts</h4>
+  <div class="concept-chips">
+    <span class="concept-chip">matrix-based computation</span><span class="concept-chip">script and function design</span><span class="concept-chip">numerical approximation</span><span class="concept-chip">visualisation of results</span>
+  </div>
+  <h4>Lesson notes</h4>
+  <p>Model evaluation, explainability, and uncertainty (SHAP, Grad-CAM) is best learned as a repeatable workflow: state the question, prepare the inputs, apply the method, check the output, and communicate the result. Keep the original data untouched and save each processing step so the work can be repeated.</p>
+  <p>The central ideas in this lesson are matrix-based computation, script and function design, numerical approximation. Use MATLAB to demonstrate the idea, and use built-in numerical functions to confirm that the output behaves as expected.</p>
+  <p>Check vector dimensions and convergence criteria; many MATLAB errors come from shape mismatches or stopping too early.</p>
+  <h4>Hands-on exercise</h4>
+  <ol class="exercise-steps">
+    <li>Write a one-sentence question and define the study area or sample extent for model evaluation, explainability, and uncertainty (shap, grad-cam).</li><li>Prepare the input data and record its source, date, resolution or scale, and coordinate system where relevant.</li><li>Apply the main technique with MATLAB: implement the method in a script, test it against a simple known case, plot the result, and document error behaviour.</li><li>Validate the result visually and numerically; note any unexpected patterns, missing values, or outliers.</li><li>Export the final map, table, or figure and write a short interpretation with limitations and next steps.</li>
+  </ol>
+  <details class="quiz">
+    <summary>Knowledge check: 3 questions with answers</summary>
+    <ol>
+      <li>Why is MATLAB well suited to numerical work?<br><span class="answer">Answer: It provides matrix operations, numerical libraries, and visualisation in one environment.</span></li><li>Why test a numerical method on a known case?<br><span class="answer">Answer: It verifies the implementation before applying it to harder problems.</span></li><li>What is convergence in an iterative method?<br><span class="answer">Answer: The sequence of approximations approaches a stable solution within a tolerance.</span></li>
+    </ol>
+  </details>
+  <div class="deliverable"><strong>Deliverable</strong>A one-page practical note containing the question, data description, method steps, one output, and three bullet points of interpretation.</div>
+</article>
+<article class="module" id="module-10">
+  <div class="module-head">
+    <span class="module-number">10</span>
+    <h3>Deploying AI models as map services and dashboards</h3>
+  </div>
+  <h4>Learning objectives</h4>
+  <ul class="checklist">
+    <li>Explain deploying ai models as map services and dashboards and where it fits within Artificial Intelligence for Geospatial Applications.</li><li>Use MATLAB and built-in numerical functions to complete a small, documented workflow.</li><li>Validate the result, record assumptions, and communicate the main finding clearly.</li>
+  </ul>
+  <h4>Key concepts</h4>
+  <div class="concept-chips">
+    <span class="concept-chip">matrix-based computation</span><span class="concept-chip">script and function design</span><span class="concept-chip">numerical approximation</span><span class="concept-chip">visualisation of results</span>
+  </div>
+  <h4>Lesson notes</h4>
+  <p>Deploying AI models as map services and dashboards is best learned as a repeatable workflow: state the question, prepare the inputs, apply the method, check the output, and communicate the result. Keep the original data untouched and save each processing step so the work can be repeated.</p>
+  <p>The central ideas in this lesson are matrix-based computation, script and function design, numerical approximation. Use MATLAB to demonstrate the idea, and use built-in numerical functions to confirm that the output behaves as expected.</p>
+  <p>Check vector dimensions and convergence criteria; many MATLAB errors come from shape mismatches or stopping too early.</p>
+  <h4>Hands-on exercise</h4>
+  <ol class="exercise-steps">
+    <li>Write a one-sentence question and define the study area or sample extent for deploying ai models as map services and dashboards.</li><li>Prepare the input data and record its source, date, resolution or scale, and coordinate system where relevant.</li><li>Apply the main technique with MATLAB: implement the method in a script, test it against a simple known case, plot the result, and document error behaviour.</li><li>Validate the result visually and numerically; note any unexpected patterns, missing values, or outliers.</li><li>Export the final map, table, or figure and write a short interpretation with limitations and next steps.</li>
+  </ol>
+  <details class="quiz">
+    <summary>Knowledge check: 3 questions with answers</summary>
+    <ol>
+      <li>Why is MATLAB well suited to numerical work?<br><span class="answer">Answer: It provides matrix operations, numerical libraries, and visualisation in one environment.</span></li><li>Why test a numerical method on a known case?<br><span class="answer">Answer: It verifies the implementation before applying it to harder problems.</span></li><li>What is convergence in an iterative method?<br><span class="answer">Answer: The sequence of approximations approaches a stable solution within a tolerance.</span></li>
+    </ol>
+  </details>
+  <div class="deliverable"><strong>Deliverable</strong>A one-page practical note containing the question, data description, method steps, one output, and three bullet points of interpretation.</div>
+</article>
+<article class="module" id="module-11">
+  <div class="module-head">
+    <span class="module-number">11</span>
+    <h3>Capstone project: AI-powered land cover mapping</h3>
+  </div>
+  <h4>Learning objectives</h4>
+  <ul class="checklist">
+    <li>Explain capstone project: ai-powered land cover mapping and where it fits within Artificial Intelligence for Geospatial Applications.</li><li>Use Python deep-learning libraries and model explanation tools to complete a small, documented workflow.</li><li>Validate the result, record assumptions, and communicate the main finding clearly.</li>
+  </ul>
+  <h4>Key concepts</h4>
+  <div class="concept-chips">
+    <span class="concept-chip">classical ML versus deep learning</span><span class="concept-chip">foundation and self-supervised models</span><span class="concept-chip">explainability</span><span class="concept-chip">deployment on map services</span>
+  </div>
+  <h4>Lesson notes</h4>
+  <p>Capstone project: AI-powered land cover mapping is best learned as a repeatable workflow: state the question, prepare the inputs, apply the method, check the output, and communicate the result. Keep the original data untouched and save each processing step so the work can be repeated.</p>
+  <p>The central ideas in this lesson are classical ML versus deep learning, foundation and self-supervised models, explainability. Use Python deep-learning libraries to demonstrate the idea, and use model explanation tools to confirm that the output behaves as expected.</p>
+  <p>A high accuracy score is not enough; consider latency, interpretability, bias, and maintenance cost.</p>
+  <h4>Hands-on exercise</h4>
+  <ol class="exercise-steps">
+    <li>Write a one-sentence question and define the study area or sample extent for capstone project: ai-powered land cover mapping.</li><li>Prepare the input data and record its source, date, resolution or scale, and coordinate system where relevant.</li><li>Apply the main technique with Python deep-learning libraries: compare a classical model with a deep model, generate one explanation view, and discuss deployment constraints.</li><li>Validate the result visually and numerically; note any unexpected patterns, missing values, or outliers.</li><li>Export the final map, table, or figure and write a short interpretation with limitations and next steps.</li>
+  </ol>
+  <details class="quiz">
+    <summary>Knowledge check: 3 questions with answers</summary>
+    <ol>
+      <li>What is a foundation model?<br><span class="answer">Answer: A large pre-trained model that can be adapted to many downstream tasks.</span></li><li>What does SHAP or Grad-CAM help with?<br><span class="answer">Answer: Explaining which features or image regions influenced a model&#39;s prediction.</span></li><li>What should be considered before deployment?<br><span class="answer">Answer: Latency, compute cost, data drift, explainability, and user trust.</span></li>
+    </ol>
+  </details>
+  <div class="deliverable"><strong>Deliverable</strong>A one-page practical note containing the question, data description, method steps, one output, and three bullet points of interpretation.</div>
+</article>
+        </section>
+
+        <section class="panel doc-section" id="capstone">
+          <h2>Artificial Intelligence for Geospatial Applications: Final Applied Project</h2>
+          <p class="doc-lead">The capstone consolidates the course into one applied, portfolio-ready piece of work.</p>
+          <ol class="exercise-steps">
+            <li>Choose a focused question related to the course theme and define the study area or sample dataset.</li><li>Write a short project brief with data sources, intended method, and expected deliverables.</li><li>Complete the processing workflow using at least three methods learned in this course.</li><li>Validate the outputs and document every assumption, parameter, and limitation.</li><li>Submit a final report with maps or figures, a reproducible workflow, and a concise recommendation.</li>
+          </ol>
+          <div class="deliverable"><strong>Final submission</strong>A report, reproducible workflow, maps or figures, and a five-minute presentation.</div>
+        </section>
+
+        <section class="panel doc-section" id="assessment">
+          <h2>Assessment rubric</h2>
+          <table class="rubric-table">
+            <thead><tr><th>Area</th><th>Weight</th><th>Evidence</th></tr></thead>
+            <tbody>
+              <tr><td>Participation and preparation</td><td>20%</td><td>Short reflections and completed setup checks.</td></tr><tr><td>Module exercises</td><td>40%</td><td>Practical notes, maps, tables, and annotated outputs.</td></tr><tr><td>Knowledge checks</td><td>20%</td><td>Quiz responses and corrections.</td></tr><tr><td>Capstone project</td><td>20%</td><td>Final report, reproducible workflow, and presentation.</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="panel doc-section" id="resources">
+          <h2>Resources and next steps</h2>
+          <ul class="checklist">
+            <li>Course dataset catalogue and local sample files.</li><li>Tool documentation and official user guides for the software used in the lessons.</li><li>A personal processing log that records commands, parameters, and output file names.</li><li>Peer review checklist: question, data, method, validation, interpretation, and limitations.</li>
+          </ul>
+          <p class="doc-lead">The matching MkDocs page is available at <code>docs/courses/artificial-intelligence-for-geospatial-applications.md</code> for teams that prefer a documentation-site workflow.</p>
+        </section>
+      </div>
+
+      <aside class="sidebar">
+        <div class="sidebar-head"><h2>Document snapshot</h2></div>
+        <div class="sidebar-body">
+          <div class="fact-list">
+            <div class="fact"><span>Category</span><span>Certificate Course</span></div>
+            <div class="fact"><span>Level</span><span>Certificate / intermediate-to-advanced</span></div>
+            <div class="fact"><span>Modules</span><span>11</span></div>
+            <div class="fact"><span>Lessons</span><span>11</span></div>
+            <div class="fact"><span>Knowledge checks</span><span>33</span></div>
+            <div class="fact"><span>Course fee</span><span>5,800 ETB</span></div>
+            <div class="fact"><span>Total with fee</span><span>6,000 ETB</span></div>
+          </div>
+          <button class="button button-light" type="button" onclick="window.print()">Print / Save PDF</button>
+          <a class="button button-outline" href="../../courses/artificial-intelligence-for-geospatial-applications.html">Open MkDocs page</a>
+          <a class="button button-outline" href="http://localhost:3000/training">Enroll through the site</a>
+          <div class="tip">A one-time 200 ETB payment processing fee applies to paid certificate courses.</div>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+  <p>Standalone HTML and MkDocs training materials generated from the site course catalog.</p>
+</footer>
+</body>
+</html>
